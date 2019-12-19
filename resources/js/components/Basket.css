@@ -1,0 +1,55 @@
+* {
+    -webkit-border-radius: 0 !important;
+       -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+  }
+
+.basket{
+    padding: 0.5cm 0.5cm;
+    background-color: #ffffff;
+    color: #757455;
+}
+
+
+  .btn-danger {
+    color: #ffffff;
+    background-color: #f96666 !important;
+  }
+
+
+
+  /* .btn-primary:hover {
+    color: red;
+    background-color: red !important;
+  }
+  
+  .btn-primary:focus {
+    color: red;
+    background-color: orange !important;
+  }
+  
+  .btn-primary:active {
+    color: white;
+    background-color: green !important;
+  } */
+
+
+
+  /* button increment an desencrement*/
+
+
+  .input-group-prepend {
+    width : 65%; /*adjust as needed*/
+  }
+
+  .input-group-prepend label {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+
+  .center {
+    text-align: center;
+    padding-top: 5px;
+    margin: 0 8px;
+}

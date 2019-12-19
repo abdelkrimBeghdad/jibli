@@ -1,0 +1,11 @@
+#cart-icon i {
+    font-size: 34px;
+   
+    color:#00363F;
+}
+
+#cart-icon span {
+    position: absolute;
+    top: 6px;
+    right: 19px;
+}

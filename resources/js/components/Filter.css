@@ -1,0 +1,13 @@
+.form-control:focus {
+    border-color: #f96666;
+    box-shadow: 0 0 0 0.2rem rgba(249, 102, 102, 0.25);
+} 
+
+
+
+.form-control > select option:focus {
+    border-color: #f96666;
+    box-shadow: 0 0 0 0.2rem rgba(249, 102, 102, 0.25);   
+}
+
+  
