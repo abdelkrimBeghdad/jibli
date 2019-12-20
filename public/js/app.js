@@ -16129,7 +16129,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".carousel{\r\n    background-size: cover   ;\r\n    margin-top: 4cm;\r\n    margin-bottom: 5cm;\r\n\r\n    width:100%;\r\n    height:100%;\r\n}\r\n\r\n\r\n.carousel h1{\r\n    color: black;\r\n    text-align: center;\r\n    font-style: oblique;\r\n    font-size: 65px;\r\n}\r\n\r\nh5{\r\n    color: #565656;\r\n    text-align: center;\r\n    \r\n    \r\n}", ""]);
+exports.push([module.i, "/* .carousel{\r\n    background-size: cover   ;\r\n    margin-top: 4cm;\r\n    margin-bottom: 5cm;\r\n\r\n    width:100%;\r\n    height:100%;\r\n}\r\n */\r\n .carousel-content {\r\n    position: absolute;\r\n    bottom: 10%;\r\n    left: 5%;\r\n    z-index: 20;\r\n    color: black;\r\n    text-align: center;\r\n    font-style: oblique;\r\n    font-size: 65px;\r\n  }\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -102213,6 +102213,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! jsonwebtoken */ "./node_modules/jsonwebtoken/index.js");
 /* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(jsonwebtoken__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/Home */ "./resources/js/components/Home.js");
+
 
 
 
@@ -102868,9 +102870,95 @@ function (_Component) {
   _createClass(Carousel, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "carousel"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Anything, anytime, anywhere."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Postmate it."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Food, drinks and groceries available for delivery or pickup."));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "carouselExampleFade",
+        "class": "carousel slide carousel-fade",
+        "data-ride": "carousel"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "carousel-inner"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "carousel-item active"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "d-block w-100",
+        src: "https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg",
+        alt: "First slide"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "carousel-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Anything, anytime, anywhere."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "carousel-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "d-block w-100",
+        src: "https://mdbootstrap.com/img/Photos/Slides/img%20(16).jpg",
+        alt: "Second slide"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "carousel-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Postmate it."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "carousel-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "d-block w-100",
+        src: "https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg",
+        alt: "Third slide"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "carousel-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Food, drinks and groceries available for delivery or pickup.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        "class": "carousel-control-prev",
+        href: "#carouselExampleFade",
+        role: "button",
+        "data-slide": "prev"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        "class": "carousel-control-prev-icon",
+        "aria-hidden": "true"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        "class": "sr-only"
+      }, "Previous")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        "class": "carousel-control-next",
+        href: "#carouselExampleFade",
+        role: "button",
+        "data-slide": "next"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        "class": "carousel-control-next-icon",
+        "aria-hidden": "true"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        "class": "sr-only"
+      }, "Next")))), "//categorie", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "card-deck col-md-12 col-sm-12 col-lg-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "card"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "card-img-top",
+        src: "carousel/friuts.jpg",
+        alt: "Card image cap"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "card-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        "class": "card-text"
+      }, "Friute"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "card"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "card-img-top",
+        src: "carousel/legume.jpg",
+        alt: "Card image cap"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "card-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        "class": "card-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+        "class": "text-muted"
+      }, "legume")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "card"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "card-img-top",
+        src: "carousel/alimentatinGenerale.jpg",
+        alt: "Card image cap"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "card-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        "class": "card-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+        "class": "text-muted"
+      }, "alimentationGenerale"))))));
     }
   }]);
 
@@ -103206,6 +103294,65 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
+/***/ "./resources/js/components/Home.js":
+/*!*****************************************!*\
+  !*** ./resources/js/components/Home.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Carousel */ "./resources/js/components/Carousel.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var Home =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Home, _Component);
+
+  function Home() {
+    _classCallCheck(this, Home);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Home).apply(this, arguments));
+  }
+
+  _createClass(Home, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Carousel__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+    }
+  }]);
+
+  return Home;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Login.js":
 /*!******************************************!*\
   !*** ./resources/js/components/Login.js ***!
@@ -103405,6 +103552,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AuthRoute__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./AuthRoute */ "./resources/js/components/AuthRoute.js");
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Home */ "./resources/js/components/Home.js");
+
 
 
 
@@ -103497,7 +103646,8 @@ function NavBar(props) {
     onClick: handleLogout
   }, "Logout")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CardIcon__WEBPACK_IMPORTED_MODULE_5__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     exact: true,
-    path: "/"
+    path: "/",
+    component: _Carousel__WEBPACK_IMPORTED_MODULE_9__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     exact: true,
     path: "/cart",

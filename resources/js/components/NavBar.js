@@ -18,6 +18,7 @@ import GuestRoute  from './GesteRoute';
 import AuthRoute from './AuthRoute';
 import {connect} from 'react-redux';
 import cookie from 'js-cookie';
+import Home from './Home';
 
  
     function NavBar(props) {
@@ -85,7 +86,7 @@ import cookie from 'js-cookie';
                   
                         {/* <Route exact path="/" />
                         {<Route exact path="/product" component={App} />} */}
-                        {<Route exact path="/"  />}
+                        {<Route exact path="/" component={Carousel} />}
                         {<Route exact path="/cart" component={Cart} />}
                         {<Route exact path="/product" component={App} />}
                         {<Route exact path="/liste" component={Cart} />}

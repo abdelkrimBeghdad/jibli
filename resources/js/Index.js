@@ -11,6 +11,7 @@ import store from './components/Store';
 import {Provider} from 'react-redux';
 import cookie from 'js-cookie';
 import jwt from 'jsonwebtoken';
+import Home from './components/Home';
 
 const jwt_secret = 'MYqAWQBdM6Qjqgtp42mnZTP57EitWPBawqwLVUX5o8LBVbLwePxRU8zyBQiLR9ds'
 
@@ -33,8 +34,8 @@ if (token) {
 const render = () =>{
  ReactDOM.render(
                 <Provider store={store}>  
-                <Contact />
-                <NavBar />
+                  <Contact />
+                  <NavBar />
                </Provider> 
                , document.getElementById('example')
    )
