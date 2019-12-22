@@ -19,3 +19,37 @@
   }
 
 
+
+
+
+/*categorire*/
+
+
+
+
+  .section-header{
+    text-align: center;
+}
+
+.section-padding{
+    padding: 40px 0;
+}
+.section-title{
+    font-size: 30px;
+    margin-bottom:10px ;
+}
+
+.section-header .line{
+    
+    display: block;
+    width: 50px;
+    margin: auto;
+    height: 2px;
+    background: #7b5244;
+    transition: width 0.5s;
+}
+
+.section-header:hover .line{
+    width: 300px;
+}
+

@@ -16129,7 +16129,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* .carousel{\r\n    background-size: cover   ;\r\n    margin-top: 4cm;\r\n    margin-bottom: 5cm;\r\n\r\n    width:100%;\r\n    height:100%;\r\n}\r\n */\r\n .carousel-content {\r\n    position: absolute;\r\n    bottom: 10%;\r\n    left: 5%;\r\n    z-index: 20;\r\n    color: black;\r\n    text-align: center;\r\n    font-style: oblique;\r\n    font-size: 65px;\r\n  }\r\n\r\n\r\n", ""]);
+exports.push([module.i, "/* .carousel{\r\n    background-size: cover   ;\r\n    margin-top: 4cm;\r\n    margin-bottom: 5cm;\r\n\r\n    width:100%;\r\n    height:100%;\r\n}\r\n */\r\n .carousel-content {\r\n    position: absolute;\r\n    bottom: 10%;\r\n    left: 5%;\r\n    z-index: 20;\r\n    color: black;\r\n    text-align: center;\r\n    font-style: oblique;\r\n    font-size: 65px;\r\n  }\r\n\r\n\r\n\r\n\r\n\r\n/*categorire*/\r\n\r\n\r\n\r\n\r\n  .section-header{\r\n    text-align: center;\r\n}\r\n\r\n.section-padding{\r\n    padding: 40px 0;\r\n}\r\n.section-title{\r\n    font-size: 30px;\r\n    margin-bottom:10px ;\r\n}\r\n\r\n.section-header .line{\r\n    \r\n    display: block;\r\n    width: 50px;\r\n    margin: auto;\r\n    height: 2px;\r\n    background: #7b5244;\r\n    transition: width 0.5s;\r\n}\r\n\r\n.section-header:hover .line{\r\n    width: 300px;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -102874,90 +102874,100 @@ function (_Component) {
         className: "carousel"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "carouselExampleFade",
-        "class": "carousel slide carousel-fade",
+        className: "carousel slide carousel-fade",
         "data-ride": "carousel"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "carousel-inner"
+        className: "carousel-inner"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "carousel-item active"
+        className: "carousel-item active"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "d-block w-100",
+        className: "d-block w-100",
         src: "https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg",
         alt: "First slide"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "carousel-content"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Anything, anytime, anywhere."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "carousel-item"
+        className: "carousel-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "d-block w-100",
+        className: "d-block w-100",
         src: "https://mdbootstrap.com/img/Photos/Slides/img%20(16).jpg",
         alt: "Second slide"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "carousel-content"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Postmate it."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "carousel-item"
+        className: "carousel-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "d-block w-100",
+        className: "d-block w-100",
         src: "https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg",
         alt: "Third slide"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "carousel-content"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Food, drinks and groceries available for delivery or pickup.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        "class": "carousel-control-prev",
+        className: "carousel-control-prev",
         href: "#carouselExampleFade",
         role: "button",
         "data-slide": "prev"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        "class": "carousel-control-prev-icon",
+        className: "carousel-control-prev-icon",
         "aria-hidden": "true"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        "class": "sr-only"
+        className: "sr-only"
       }, "Previous")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        "class": "carousel-control-next",
+        className: "carousel-control-next",
         href: "#carouselExampleFade",
         role: "button",
         "data-slide": "next"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        "class": "carousel-control-next-icon",
+        className: "carousel-control-next-icon",
         "aria-hidden": "true"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        "class": "sr-only"
-      }, "Next")))), "//categorie", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "card-deck col-md-12 col-sm-12 col-lg-12"
+        className: "sr-only"
+      }, "Next")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "categorie section-padding"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "card"
+        className: "section-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "section-title"
+      }, "Popular Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "line"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card-deck col-md-12 col-sm-12 col-lg-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "card-img-top",
+        className: "card-img-top",
         src: "carousel/friuts.jpg",
         alt: "Card image cap"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "card-body"
+        className: "card-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        "class": "card-text"
+        className: "card-text"
       }, "Friute"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "card"
+        className: "card"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "card-img-top",
+        className: "card-img-top",
         src: "carousel/legume.jpg",
         alt: "Card image cap"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "card-body"
+        className: "card-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        "class": "card-text"
+        className: "card-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
-        "class": "text-muted"
+        className: "text-muted"
       }, "legume")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "card"
+        className: "card"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "card-img-top",
+        className: "card-img-top",
         src: "carousel/alimentatinGenerale.jpg",
         alt: "Card image cap"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "card-body"
+        className: "card-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        "class": "card-text"
+        className: "card-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
-        "class": "text-muted"
+        className: "text-muted"
       }, "alimentationGenerale"))))));
     }
   }]);
