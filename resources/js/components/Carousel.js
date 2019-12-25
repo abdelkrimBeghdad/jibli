@@ -107,46 +107,46 @@ export default class Carousel extends Component {
 
         
 
-        <section classNmae="ftco-section">
-<div classNmae="container">
-<div classNmae="row no-gutters ftco-services">
-<div classNmae="col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
-<div classNmae="media block-6 services mb-md-0 mb-4">
-<div classNmae="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+        <section className="ftco-section">
+<div className="container">
+<div className="row no-gutters ftco-services">
+<div className="col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
+<div className="media block-6 services mb-md-0 mb-4">
+<div className="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
 <img src="carousel/shipped.png" />
 </div>
-<div classNmae="media-body">
-<h3 classNmae="heading">Free Shipping</h3>
+<div className="media-body">
+<h3 className="heading">Free Shipping</h3>
 <span>On order over $100</span>
 </div>
 </div>
 </div>
-<div classNmae="col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
-<div classNmae="media block-6 services mb-md-0 mb-4">
-<div classNmae="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
-<span classNmae="flaticon-diet"></span>
+<div className="col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
+<div className="media block-6 services mb-md-0 mb-4">
+<div className="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
+<span className="flaticon-diet"></span>
 </div>
-<div classNmae="media-body">
-<h3 classNmae="heading">Always Fresh</h3>
+<div className="media-body">
+<h3 className="heading">Always Fresh</h3>
 <span>Product well package</span>
 </div>
 </div>
 </div>
-<div classNmae="col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
-<div classNmae="media block-6 services mb-md-0 mb-4">
-<div classNmae="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
-<span classNmae="flaticon-award"></span>
+<div className="col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
+<div className="media block-6 services mb-md-0 mb-4">
+<div className="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
+<span className="flaticon-award"></span>
 </div>
-<div classNmae="media-body">
-<h3 classNmae="heading">Superior Quality</h3>
+<div className="media-body">
+<h3 className="heading">Superior Quality</h3>
 <span>Quality Products</span>
 </div>
 </div>
 </div>
-<div classNmae="col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
-<div classNmae="media block-6 services mb-md-0 mb-4">
-<div classNmae="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
-<span classNmae="flaticon-customer-service"></span>
+<div className="col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
+<div className="media block-6 services mb-md-0 mb-4">
+<div className="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
+<span className="flaticon-customer-service"></span>
 </div>
 <div className="media-body">
 <h3 className="heading">Support</h3>
