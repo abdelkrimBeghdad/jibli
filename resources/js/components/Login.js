@@ -18,7 +18,7 @@ class Login extends Component {
         const data ={email:this.state.email,password:this.state.password}
         
         axios
-        .post("http://127.0.0.1:8000/api/auth/login",data)
+        .post("https://127.0.0.1:8000/api/auth/login",data)
         .then(res =>{
             cookie.set('token',res.data.access_token);
             //cookie.set('user',res.data.user);

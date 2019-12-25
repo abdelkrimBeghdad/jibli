@@ -16129,7 +16129,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* .carousel{\r\n    background-size: cover   ;\r\n    margin-top: 4cm;\r\n    margin-bottom: 5cm;\r\n\r\n    width:100%;\r\n    height:100%;\r\n}\r\n */\r\n .carousel-content {\r\n    position: absolute;\r\n    bottom: 10%;\r\n    left: 5%;\r\n    z-index: 20;\r\n    color: black;\r\n    text-align: center;\r\n    font-style: oblique;\r\n    font-size: 65px;\r\n  }\r\n\r\n\r\n\r\n\r\n\r\n/*categorire*/\r\n\r\n\r\n\r\n\r\n  .section-header{\r\n    text-align: center;\r\n}\r\n\r\n.section-padding{\r\n    padding: 40px 0;\r\n}\r\n.section-title{\r\n    font-size: 30px;\r\n    margin-bottom:10px ;\r\n}\r\n\r\n.section-header .line{\r\n    \r\n    display: block;\r\n    width: 50px;\r\n    margin: auto;\r\n    height: 2px;\r\n    background: #7b5244;\r\n    transition: width 0.5s;\r\n}\r\n\r\n.section-header:hover .line{\r\n    width: 300px;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, "/* .carousel{\r\n    background-size: cover   ;\r\n    margin-top: 4cm;\r\n    margin-bottom: 5cm;\r\n\r\n    width:100%;\r\n    height:100%;\r\n}\r\n */\r\n .carousel-content {\r\n    position: absolute;\r\n    bottom: 10%;\r\n    left: 5%;\r\n    z-index: 20;\r\n    color: black;\r\n    text-align: center;\r\n    font-style: oblique;\r\n    font-size: 65px;\r\n  }\r\n\r\n\r\n\r\n\r\n\r\n/*categorire*/\r\n\r\n\r\n\r\n\r\n  .section-header{\r\n    text-align: center;\r\n}\r\n\r\n.section-padding{\r\n    padding: 40px 0;\r\n}\r\n.section-title{\r\n    font-size: 30px;\r\n    margin-bottom:10px ;\r\n}\r\n\r\n.section-header .line{\r\n    \r\n    display: block;\r\n    width: 50px;\r\n    margin: auto;\r\n    height: 2px;\r\n    background: #7b5244;\r\n    transition: width 0.5s;\r\n}\r\n\r\n.section-header:hover .line{\r\n    width: 300px;\r\n}\r\n\r\n\r\n\r\n\r\n.ftco-services .services .icon {\r\n    line-height: 1.3;\r\n    position: relative;\r\n    margin: 0 auto;\r\n    width: 100px;\r\n    height: 100px;\r\n    border-radius: 50%;\r\n    transition: all .3s ease;\r\n}\r\n\r\n\r\n.bg-color-1 {\r\n    background: #e4b2d6;\r\n}\r\n\r\n\r\n.mb-2, .my-2 {\r\n    margin-bottom: .5rem!important;\r\n}\r\n\r\n\r\n.align-items-center {\r\n    align-items: center!important;\r\n}\r\n\r\n.justify-content-center {\r\n    justify-content: center!important;\r\n}\r\n\r\n\r\n.d-flex {\r\n    display: flex!important;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -88652,7 +88652,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -102968,7 +102968,61 @@ function (_Component) {
         className: "card-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
         className: "text-muted"
-      }, "alimentationGenerale"))))));
+      }, "alimentationGenerale"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "abdelkrim"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "ftco-section"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row no-gutters ftco-services"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "media block-6 services mb-md-0 mb-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "icon bg-color-1 active d-flex justify-content-center align-items-center mb-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "carousel/shipped.png"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "media-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "heading"
+      }, "Free Shipping"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "On order over $100")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "media block-6 services mb-md-0 mb-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "icon bg-color-2 d-flex justify-content-center align-items-center mb-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "flaticon-diet"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "media-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "heading"
+      }, "Always Fresh"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Product well package")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "media block-6 services mb-md-0 mb-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "icon bg-color-3 d-flex justify-content-center align-items-center mb-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "flaticon-award"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "media-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "heading"
+      }, "Superior Quality"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Quality Products")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "media block-6 services mb-md-0 mb-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "icon bg-color-4 d-flex justify-content-center align-items-center mb-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "flaticon-customer-service"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "media-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "heading"
+      }, "Support"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "24/7 Support"))))))));
     }
   }]);
 
@@ -103424,7 +103478,7 @@ function (_Component) {
         email: _this.state.email,
         password: _this.state.password
       };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://127.0.0.1:8000/api/auth/login", data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('https://jiblii.herokuapp.com/api/auth/login', data).then(function (res) {
         js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('token', res.data.access_token); //cookie.set('user',res.data.user);
 
         _this.props.setLogin(res.data.user);
@@ -104005,7 +104059,7 @@ function (_Component) {
         phone: _this.state.phone,
         email: _this.state.email
       };
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.patch("http://127.0.0.1:8000/api/auth/update", data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.patch("https://jiblii.herokuapp.com/api/auth/update", data).then(function (res) {
         console.log(res.data); // this.props.updateUser(res.data.user);
       })["catch"](function (e) {
         return _this.setState({
@@ -104255,7 +104309,7 @@ function (_Component) {
         password: _this.state.password,
         password_confirme: _this.state.password_confirme
       };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://127.0.0.1:8000/api/auth/register", data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('https://jiblii.herokuapp.com/api/auth/register', data).then(function (res) {
         js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('token', res.data.access_token);
         js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('user', res.data.user);
 
