@@ -33,7 +33,7 @@ class Basket extends Component {
             price: 5,          }
         console.log(daa);
           axios
-          .post('http://127.0.0.1:8000/api/auth/order',data)
+          .post('https://jiblii.herokuapp.com/api/auth/order',data)
           .then(res => {
             console.log(res.daa);
     
