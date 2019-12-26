@@ -98,7 +98,13 @@ export default class Carousel extends Component {
 
 
 
+<h1>abdelkrim</h1>
 
+<h1>abdelkrim</h1> <h1>abdelkrim</h1>
+
+<h1>abdelkrim</h1> <h1>abdelkrim</h1>
+
+<h1>abdelkrim</h1>
 
 
 
