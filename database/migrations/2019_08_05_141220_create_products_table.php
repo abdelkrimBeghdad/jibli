@@ -18,8 +18,8 @@ class CreateProductsTable extends Migration
             $table->integer('code');
             $table->string('name');
             $table->string('description',200);
-            $table->integer('category_id');
-            $table->integer('supplier_id');
+            $table->string('category_name');
+            $table->string('nameCompany');
             $table->string('quantity')->nullable();
             $table->string('brand');
             $table->integer('price');

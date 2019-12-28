@@ -48,9 +48,9 @@
                     <div class="form-group row">
                         <label for="category_id" class="col-sm-2 col-form-label">Category</label>
                         <div class="col-sm-10">
-                          <select class="browser-default custom-select" id="category_id" name="category_id">
+                          <select class="browser-default custom-select" id="category_name" name="category_name">
                             @foreach ($categorie as $item)
-                              <option value={{$item->id}}>{{$item->name}}</option>
+                              <option value={{$item->name}}>{{$item->name}}</option>
                             @endforeach
                             
                           </select>
@@ -60,9 +60,9 @@
                     <div class="form-group row">
                       <label for="supplier_id" class="col-sm-2 col-form-label">Supplier</label>
                       <div class="col-sm-10">
-                        <select class="browser-default custom-select" id="supplier_id" name="supplier_id">
+                        <select class="browser-default custom-select" id="nameCompany" name="nameCompany">
                           @foreach ($supplier as $item)
-                            <option value={{$item->id}}>{{$item->nameCompany}}</option>
+                            <option value={{$item->nameCompany}}>{{$item->nameCompany}}</option>
                           @endforeach
                           
                         </select>

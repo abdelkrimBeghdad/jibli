@@ -43,7 +43,7 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {  
 
         request()->validate([
 
@@ -69,8 +69,8 @@ class ProductController extends Controller
             'code'       =>   $request->code,
             'name'        =>   $request->name,
             'description'        =>   $request->description,
-            'category_id'        =>   $request->category_id,
-            'supplier_id'        =>   $request->supplier_id,
+            'category_name'        =>   $request->category_name,
+            'nameCompany'        =>   $request->nameCompany,
             'quantity'        =>   $request->quantity,
             'brand'        =>   $request->brand,
             'price'        =>   $request->price,
@@ -105,7 +105,8 @@ class ProductController extends Controller
     {
         $product = Products::find($id);
         $categorie = Categorie::all();
-        return view('product.EditProduct',compact('product','categorie'));
+        $supplier = Suppliers::all();
+        return view('product.EditProduct',compact('product','categorie','supplier'));
        
     }
 

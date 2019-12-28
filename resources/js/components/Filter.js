@@ -24,11 +24,13 @@ class Filter extends Component{
 
                 <div className="col-md-4">
                     <label> Filter Name
-                        <select className="form-control" value={this.props.name} 
+                        <select className="form-control" value={this.props.category_name} 
                           onChange={(e) =>this.props.filterProducts(this.props.products, e.target.value)}>
                                     <option value="">ALL</option>
-                                    <option value="pain">pain</option>
-                                    <option value="tomate">tomate</option>
+                                    <option value="fruit">fruit</option>
+                                    <option value="legume">legume</option>
+                                    <option value="alimentation">alimentation</option>
+
                         </select>
                     </label>
                 </div>
@@ -41,7 +43,7 @@ class Filter extends Component{
 const mapStateToProps = state =>({
     products :state.products.items,
     filtredProducts :state.products.filtredItems,
-    name :state.products.name,
+    category_name :state.products.category_name,
     sort :state.products.sort,
 
 })

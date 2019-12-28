@@ -41,14 +41,27 @@
                 <div class="form-group row">
                     <label for="category_id" class="col-sm-2 col-form-label">category</label>
                       <div class="col-sm-10">
-                        <select class="browser-default custom-select" id="category_id" name="category_id">
-                          <option value={{ $product->category->id }}>{{ $product->category->name }}</option>                         
+                        <select class="browser-default custom-select" id="category_name" name="category_name">
+                          <option value={{ $product->category_name }}>{{ $product->category_name }}</option>                         
                           @foreach ($categorie as $item)
-                            <option value={{$item->id}}>{{$item->name}}</option>
+                            <option value={{$item->name}}>{{$item->name}}</option>
                           @endforeach
                         </select>
                       </div>
                     </div> 
+
+
+                    <div class="form-group row">
+                      <label for="category_id" class="col-sm-2 col-form-label">suplire</label>
+                        <div class="col-sm-10">
+                          <select class="browser-default custom-select" id="nameCompany" name="nameCompany">
+                            <option value={{ $product->nameCompany }}>{{ $product->nameCompany }}</option>                         
+                            @foreach ($supplier as $item)
+                              <option value={{$item->nameCompany}}>{{$item->nameCompany}}</option>
+                            @endforeach
+                          </select>
+                        </div>
+                      </div>     
 
                 <div class="form-group row">
                     <label for="quantity" class="col-sm-2 col-form-label">quantity</label>

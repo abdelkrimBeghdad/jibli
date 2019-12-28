@@ -47,9 +47,10 @@
                             <td scope="row">{{$item->id}}</td>
                             <td >{{$item->code}}</td  >                            
                             <td>{{$item->name}}</td>
-                            <td>{{$item->suppliers_id}}</td>
+                            <td>{{$item->nameCompany}}</td>
                             <td>{{$item->description}}</td>
-                            <td>{{$item->category->name}}</td>
+                            {{-- <td>{{$item->category->name}}</td> --}}
+                            <td>{{$item->category_name}}</td>
                             <td>{{$item->quantity}}</td>  
                             <td>{{$item->brand}}</td>
                             <td>{{$item->price}}</td>

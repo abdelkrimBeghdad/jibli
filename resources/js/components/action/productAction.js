@@ -10,12 +10,12 @@ export const fetchProducts =() =>(dispatch)=>{
 }
 
 
-export const filterProducts =(products,name) =>(dispatch)=>{
+export const filterProducts =(products,category_name) =>(dispatch)=>{
     return dispatch({
         type:FILTER_PRODUCTS_BY_NAME,
         payload:{
-            name : name ,
-            items: name === ''? products : products.filter(a => a.name.indexOf(name)>=0)
+            category_name : category_name ,
+            items: category_name === ''? products : products.filter(a => a.category_name.indexOf(category_name)>=0)
         }
     })
 

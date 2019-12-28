@@ -16129,7 +16129,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* .carousel{\r\n    background-size: cover   ;\r\n    margin-top: 4cm;\r\n    margin-bottom: 5cm;\r\n\r\n    width:100%;\r\n    height:100%;\r\n}\r\n */\r\n .carousel-content {\r\n    position: absolute;\r\n    bottom: 10%;\r\n    left: 5%;\r\n    z-index: 20;\r\n    color: black;\r\n    text-align: center;\r\n    font-style: oblique;\r\n    font-size: 65px;\r\n  }\r\n\r\n\r\n\r\n\r\n\r\n/*categorire*/\r\n\r\n\r\n\r\n\r\n  .section-header{\r\n    text-align: center;\r\n}\r\n\r\n.section-padding{\r\n    padding: 40px 0;\r\n}\r\n.section-title{\r\n    font-size: 30px;\r\n    margin-bottom:10px ;\r\n}\r\n\r\n.section-header .line{\r\n    \r\n    display: block;\r\n    width: 50px;\r\n    margin: auto;\r\n    height: 2px;\r\n    background: #7b5244;\r\n    transition: width 0.5s;\r\n}\r\n\r\n.section-header:hover .line{\r\n    width: 300px;\r\n}\r\n\r\n\r\n\r\n\r\n.ftco-services .services .icon {\r\n    line-height: 1.3;\r\n    position: relative;\r\n    margin: 0 auto;\r\n    width: 100px;\r\n    height: 100px;\r\n    border-radius: 50%;\r\n    transition: all .3s ease;\r\n}\r\n\r\n\r\n.bg-color-1 {\r\n    background: #e4b2d6;\r\n}\r\n\r\n\r\n.mb-2, .my-2 {\r\n    margin-bottom: .5rem!important;\r\n}\r\n\r\n\r\n.align-items-center {\r\n    align-items: center!important;\r\n}\r\n\r\n.justify-content-center {\r\n    justify-content: center!important;\r\n}\r\n\r\n\r\n.d-flex {\r\n    display: flex!important;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, "/* .carousel{\r\n    background-size: cover   ;\r\n    margin-top: 4cm;\r\n    margin-bottom: 5cm;\r\n\r\n    width:100%;\r\n    height:100%;\r\n}\r\n */\r\n .carousel-content {\r\n    position: absolute;\r\n    bottom: 10%;\r\n    left: 5%;\r\n    z-index: 20;\r\n    color: black;\r\n    text-align: center;\r\n    font-style: oblique;\r\n    font-size: 65px;\r\n  }\r\n\r\n\r\n\r\n\r\n\r\n/*categorire*/\r\n\r\n\r\n\r\n\r\n  .section-header{\r\n    text-align: center;\r\n}\r\n\r\n.section-padding{\r\n    padding: 40px 0;\r\n}\r\n.section-title{\r\n    font-size: 30px;\r\n    margin-bottom:10px ;\r\n}\r\n\r\n.section-header .line{\r\n    \r\n    display: block;\r\n    width: 50px;\r\n    margin: auto;\r\n    height: 2px;\r\n    background: #7b5244;\r\n    transition: width 0.5s;\r\n}\r\n\r\n.section-header:hover .line{\r\n    width: 300px;\r\n}\r\n\r\n\r\n\r\n/*suport and quality*/\r\n\r\n.bg-color-1 {\r\n    background: #e4b2d6;\r\n}\r\n\r\n.bg-color-2 {\r\n    background: #dcc698;\r\n}\r\n\r\n.bg-color-3 {\r\n    background: #a2d1e1;\r\n}\r\n\r\n.bg-color-4 {\r\n    background: #dcd691;\r\n}\r\n\r\n\r\n\r\n\r\n.im{\r\n    line-height: 1.3;\r\n    position: relative;\r\n    margin: 0 auto;\r\n    width: 100px;\r\n    height: 100px;\r\n    border-radius: 50% !important;\r\n    transition: all .3s ease;\r\n    \r\n    \r\n}\r\n.align-items-center{\r\n    align-items: center!important;\r\n}\r\n\r\n\r\n\r\n/*biging efeect of card categorie*/\r\n\r\n.hovereffect {\r\n    width: 100%;\r\n    height: 100%;\r\n    float: left;\r\n    overflow: hidden;\r\n    position: relative;\r\n    text-align: center;\r\n    cursor: default;\r\n  }\r\n  \r\n  .hovereffect .overlay {\r\n    width: 100%;\r\n    height: 100%;\r\n    position: absolute;\r\n    overflow: hidden;\r\n    top: 0;\r\n    left: 0;\r\n  }\r\n  \r\n  .hovereffect img {\r\n    display: block;\r\n    position: relative;\r\n    transition: all 0.4s ease-in;\r\n  }\r\n  \r\n  .hovereffect:hover img {\r\n    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"matrix\" color-interpolation-filters=\"sRGB\" values=\"0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0\" /><feGaussianBlur stdDeviation=\"3\" /></filter></svg>#filter');\r\n    filter: grayscale(1) blur(3px);\r\n    -webkit-filter: grayscale(1) blur(3px);\r\n    transform: scale(1.2);\r\n  }\r\n  \r\n  .hovereffect h2 {\r\n    text-transform: uppercase;\r\n    text-align: center;\r\n    position: relative;\r\n    font-size: 17px;\r\n    padding: 10px;\r\n    background: rgba(0, 0, 0, 0.6);\r\n  }\r\n  \r\n  .hovereffect a.info {\r\n    display: inline-block;\r\n    text-decoration: none;\r\n    padding: 7px 14px;\r\n    border: 1px solid #fff;\r\n    margin: 50px 0 0 0;\r\n    background-color: transparent;\r\n  }\r\n  \r\n  .hovereffect a.info:hover {\r\n    box-shadow: 0 0 5px #fff;\r\n  }\r\n  \r\n  .hovereffect a.info, .hovereffect h2 {\r\n    transform: scale(0.7);\r\n    transition: all 0.4s ease-in;\r\n    opacity: 0;\r\n    filter: alpha(opacity=0);\r\n    color: #fff;\r\n    text-transform: uppercase;\r\n  }\r\n  \r\n  .hovereffect:hover a.info, .hovereffect:hover h2 {\r\n    opacity: 1;\r\n    filter: alpha(opacity=100);\r\n    transform: scale(1);\r\n  }\r\n\r\n\r\n/*end  efeect of card categorie*/\r\n", ""]);
 
 // exports
 
@@ -88652,7 +88652,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -102620,7 +102620,7 @@ function (_Component) {
         price: 5
       };
       console.log(daa);
-      axios.post('http://127.0.0.1:8000/api/auth/order', data).then(function (res) {
+      axios.post('https://jiblii.herokuapp.com/api/auth/order', data).then(function (res) {
         console.log(res.daa); // this.props.updateUser(res.data.user);
       })["catch"](function (e) {
         return _this.setState({
@@ -102835,6 +102835,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _carousel_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./carousel.css */ "./resources/js/components/carousel.css");
 /* harmony import */ var _carousel_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_carousel_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -102852,6 +102853,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -102882,7 +102884,7 @@ function (_Component) {
         className: "carousel-item active"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "d-block w-100",
-        src: "https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg",
+        src: "carousel/car1.jpg",
         alt: "First slide"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "carousel-content"
@@ -102890,15 +102892,15 @@ function (_Component) {
         className: "carousel-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "d-block w-100",
-        src: "https://mdbootstrap.com/img/Photos/Slides/img%20(16).jpg",
+        src: "carousel/car3.jpg",
         alt: "Second slide"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "carousel-content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Postmate it."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "carousel-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "d-block w-100",
-        src: "https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg",
+        src: "carousel/car2.jpg",
         alt: "Third slide"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "carousel-content"
@@ -102931,98 +102933,109 @@ function (_Component) {
       }, "Popular Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "line"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container my-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "card-deck col-md-12 col-sm-12 col-lg-12"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card"
+        className: "col-lg-4 col-md-4 col-sm-6 col-xs-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "hovereffect"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "card-img-top",
-        src: "carousel/friuts.jpg",
-        alt: "Card image cap"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "card-text"
-      }, "Friute"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "card-img-top",
-        src: "carousel/legume.jpg",
-        alt: "Card image cap"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "card-text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
-        className: "text-muted"
-      }, "legume")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "card-img-top",
+        className: "img-responsive",
         src: "carousel/alimentatinGenerale.jpg",
-        alt: "Card image cap"
+        width: 350,
+        height: 200,
+        alt: ""
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "card-text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
-        className: "text-muted"
-      }, "alimentationGenerale"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "abdelkrim"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        className: "ftco-section"
+        className: "overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Alimentation Generale"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "info",
+        href: "#"
+      }, "link here")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-lg-4 col-md-4 col-sm-6 col-xs-12"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row no-gutters ftco-services"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "media block-6 services mb-md-0 mb-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "icon bg-color-1 active d-flex justify-content-center align-items-center mb-2"
+        className: "hovereffect"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "carousel/shipped.png"
+        className: "img-responsive",
+        src: "carousel/legume.jpg",
+        width: 350,
+        height: 200,
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Legume"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: "/product",
+        className: "info"
+      }, "legume")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-lg-4 col-md-4 col-sm-6 col-xs-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "hovereffect"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "img-responsive",
+        src: "carousel/friuts.jpg",
+        width: 350,
+        height: 200,
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Friuts"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "info",
+        href: "#"
+      }, "link here"))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "section-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "section-title"
+      }, "Why Choose Us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "line"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "media-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "container my-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 mb-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "im  bg-color-1 d-flex justify-content-center align-items-center mb-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "bg-color-1",
+        alt: "64*64",
+        src: "carousel/shipped.png",
+        "data-holder-rendered": "true"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "heading"
-      }, "Free Shipping"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "On order over $100")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated"
+      }, "Free Shipping"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "On order over $100")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 mb-4"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "media block-6 services mb-md-0 mb-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "icon bg-color-2 d-flex justify-content-center align-items-center mb-2"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "flaticon-diet"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "media-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "im  bg-color-2 d-flex justify-content-center align-items-center mb-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: " bg-color-2",
+        alt: "100*100",
+        src: "carousel/diet(1).png",
+        "data-holder-rendered": "true"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "heading"
-      }, "Always Fresh"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Product well package")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated"
+      }, "Always Fresh"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Product well package")), "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 mb-4"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "media block-6 services mb-md-0 mb-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "icon bg-color-3 d-flex justify-content-center align-items-center mb-2"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "flaticon-award"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "media-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "im  bg-color-3 d-flex justify-content-center align-items-center mb-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "bg-color-3",
+        alt: "100*100",
+        src: "carousel/quality(1).png",
+        "data-holder-rendered": "true"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "heading"
-      }, "Superior Quality"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Quality Products")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 text-center d-flex align-self-stretch ftco-animate fadeInUp ftco-animated"
+      }, "Superior Quality"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Quality Products")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 mb-4"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "media block-6 services mb-md-0 mb-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "icon bg-color-4 d-flex justify-content-center align-items-center mb-2"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "flaticon-customer-service"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "media-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "im  bg-color-4 d-flex justify-content-center align-items-center mb-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "bg-color-4",
+        alt: "100x100",
+        src: "carousel/customer-service(1).png",
+        "data-holder-rendered": "true"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "heading"
-      }, "Support"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "24/7 Support"))))))));
+      }, "Support"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "24/7 Support"))))));
     }
   }]);
 
@@ -103271,17 +103284,19 @@ function (_Component) {
         className: "col-md-4"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, " Filter Name", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         className: "form-control",
-        value: this.props.name,
+        value: this.props.category_name,
         onChange: function onChange(e) {
           return _this.props.filterProducts(_this.props.products, e.target.value);
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: ""
       }, "ALL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "pain"
-      }, "pain"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        value: "tomate"
-      }, "tomate")))));
+        value: "fruit"
+      }, "fruit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "legume"
+      }, "legume"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "alimentation"
+      }, "alimentation")))));
     }
   }]);
 
@@ -103292,7 +103307,7 @@ var mapStateToProps = function mapStateToProps(state) {
   return {
     products: state.products.items,
     filtredProducts: state.products.filtredItems,
-    name: state.products.name,
+    category_name: state.products.category_name,
     sort: state.products.sort
   };
 };
@@ -103478,7 +103493,7 @@ function (_Component) {
         email: _this.state.email,
         password: _this.state.password
       };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('https://jiblii.herokuapp.com/api/auth/login', data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("https://127.0.0.1:8000/api/auth/login", data).then(function (res) {
         js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('token', res.data.access_token); //cookie.set('user',res.data.user);
 
         _this.props.setLogin(res.data.user);
@@ -104637,14 +104652,14 @@ var fetchProducts = function fetchProducts() {
     });
   };
 };
-var filterProducts = function filterProducts(products, name) {
+var filterProducts = function filterProducts(products, category_name) {
   return function (dispatch) {
     return dispatch({
       type: _types__WEBPACK_IMPORTED_MODULE_0__["FILTER_PRODUCTS_BY_NAME"],
       payload: {
-        name: name,
-        items: name === '' ? products : products.filter(function (a) {
-          return a.name.indexOf(name) >= 0;
+        category_name: category_name,
+        items: category_name === '' ? products : products.filter(function (a) {
+          return a.category_name.indexOf(category_name) >= 0;
         })
       }
     });
