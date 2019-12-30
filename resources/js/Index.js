@@ -12,6 +12,7 @@ import {Provider} from 'react-redux';
 import cookie from 'js-cookie';
 import jwt from 'jsonwebtoken';
 import Home from './components/Home';
+import Footer from './components/Footer';
 
 const jwt_secret = 'MYqAWQBdM6Qjqgtp42mnZTP57EitWPBawqwLVUX5o8LBVbLwePxRU8zyBQiLR9ds'
 
@@ -36,6 +37,7 @@ const render = () =>{
                 <Provider store={store}>  
                   <Contact />
                   <NavBar />
+                  <Footer />
                </Provider> 
                , document.getElementById('example')
    )

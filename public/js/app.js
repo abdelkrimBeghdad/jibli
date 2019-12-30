@@ -16060,6 +16060,25 @@ exports.push([module.i, "#cart-icon i {\r\n    font-size: 34px;\r\n   \r\n    co
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Contact.css":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Contact.css ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".contact{\r\n    background-color: #82ae46;\r\n    height: 40px;\r\n    text-align: center;\r\n    padding-top: 8px;\r\n    color:white;\r\n    font-family: 'Times New Roman';\r\n    font-size: 16px;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n/* foooter */\r\n\r\n\r\n\r\n.site-footer\r\n{\r\n  background-color:#26272b;\r\n  padding:45px 0 20px;\r\n  font-size:15px;\r\n  line-height:24px;\r\n  color:#737373;\r\n}\r\n.site-footer hr\r\n{\r\n  border-top-color:#bbb;\r\n  opacity:0.5\r\n}\r\n.site-footer hr.small\r\n{\r\n  margin:20px 0\r\n}\r\n.site-footer h6\r\n{\r\n  color:#fff;\r\n  font-size:16px;\r\n  text-transform:uppercase;\r\n  margin-top:5px;\r\n  letter-spacing:2px\r\n}\r\n.site-footer a\r\n{\r\n  color:#737373;\r\n}\r\n.site-footer a:hover\r\n{\r\n  color:#3366cc;\r\n  text-decoration:none;\r\n}\r\n.footer-links\r\n{\r\n  padding-left:0;\r\n  list-style:none\r\n}\r\n.footer-links li\r\n{\r\n  display:block\r\n}\r\n.footer-links a\r\n{\r\n  color:#737373\r\n}\r\n.footer-links a:active,.footer-links a:focus,.footer-links a:hover\r\n{\r\n  color:#3366cc;\r\n  text-decoration:none;\r\n}\r\n.footer-links.inline li\r\n{\r\n  display:inline-block\r\n}\r\n.site-footer .social-icons\r\n{\r\n  text-align:right\r\n}\r\n.site-footer .social-icons a\r\n{\r\n  width:40px;\r\n  height:40px;\r\n  line-height:40px;\r\n  margin-left:6px;\r\n  margin-right:0;\r\n  border-radius:100%;\r\n  background-color:#33353d\r\n}\r\n.copyright-text\r\n{\r\n  margin:0\r\n}\r\n@media (max-width:991px)\r\n{\r\n  .site-footer [class^=col-]\r\n  {\r\n    margin-bottom:30px\r\n  }\r\n}\r\n@media (max-width:767px)\r\n{\r\n  .site-footer\r\n  {\r\n    padding-bottom:0\r\n  }\r\n  .site-footer .copyright-text,.site-footer .social-icons\r\n  {\r\n    text-align:center\r\n  }\r\n}\r\n.social-icons\r\n{\r\n  padding-left:0;\r\n  margin-bottom:0;\r\n  list-style:none\r\n}\r\n.social-icons li\r\n{\r\n  display:inline-block;\r\n  margin-bottom:4px\r\n}\r\n.social-icons li.title\r\n{\r\n  margin-right:15px;\r\n  text-transform:uppercase;\r\n  color:#96a2b2;\r\n  font-weight:700;\r\n  font-size:13px\r\n}\r\n.social-icons a{\r\n  background-color:#eceeef;\r\n  color:#818a91;\r\n  font-size:16px;\r\n  display:inline-block;\r\n  line-height:44px;\r\n  width:44px;\r\n  height:44px;\r\n  text-align:center;\r\n  margin-right:8px;\r\n  border-radius:100%;\r\n  transition:all .2s linear\r\n}\r\n.social-icons a:active,.social-icons a:focus,.social-icons a:hover\r\n{\r\n  color:#fff;\r\n  background-color:#29aafe\r\n}\r\n.social-icons.size-sm a\r\n{\r\n  line-height:34px;\r\n  height:34px;\r\n  width:34px;\r\n  font-size:14px\r\n}\r\n.social-icons a.facebook:hover\r\n{\r\n  background-color:#3b5998\r\n}\r\n.social-icons a.twitter:hover\r\n{\r\n  background-color:#00aced\r\n}\r\n.social-icons a.linkedin:hover\r\n{\r\n  background-color:#007bb6\r\n}\r\n.social-icons a.dribbble:hover\r\n{\r\n  background-color:#ea4c89\r\n}\r\n@media (max-width:767px)\r\n{\r\n  .social-icons li.title\r\n  {\r\n    display:block;\r\n    margin-right:0;\r\n    font-weight:600\r\n  }\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Filter.css":
 /*!****************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/Filter.css ***!
@@ -16129,7 +16148,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/* .carousel{\r\n    background-size: cover   ;\r\n    margin-top: 4cm;\r\n    margin-bottom: 5cm;\r\n\r\n    width:100%;\r\n    height:100%;\r\n}\r\n */\r\n .carousel-content {\r\n    position: absolute;\r\n    bottom: 10%;\r\n    left: 5%;\r\n    z-index: 20;\r\n    color: black;\r\n    text-align: center;\r\n    font-style: oblique;\r\n    font-size: 65px;\r\n  }\r\n\r\n\r\n\r\n\r\n\r\n/*categorire*/\r\n\r\n\r\n\r\n\r\n  .section-header{\r\n    text-align: center;\r\n}\r\n\r\n.section-padding{\r\n    padding: 40px 0;\r\n}\r\n.section-title{\r\n    font-size: 30px;\r\n    margin-bottom:10px ;\r\n}\r\n\r\n.section-header .line{\r\n    \r\n    display: block;\r\n    width: 50px;\r\n    margin: auto;\r\n    height: 2px;\r\n    background: #7b5244;\r\n    transition: width 0.5s;\r\n}\r\n\r\n.section-header:hover .line{\r\n    width: 300px;\r\n}\r\n\r\n\r\n\r\n/*suport and quality*/\r\n\r\n.bg-color-1 {\r\n    background: #e4b2d6;\r\n}\r\n\r\n.bg-color-2 {\r\n    background: #dcc698;\r\n}\r\n\r\n.bg-color-3 {\r\n    background: #a2d1e1;\r\n}\r\n\r\n.bg-color-4 {\r\n    background: #dcd691;\r\n}\r\n\r\n\r\n\r\n\r\n.im{\r\n    line-height: 1.3;\r\n    position: relative;\r\n    margin: 0 auto;\r\n    width: 100px;\r\n    height: 100px;\r\n    border-radius: 50% !important;\r\n    transition: all .3s ease;\r\n    \r\n    \r\n}\r\n.align-items-center{\r\n    align-items: center!important;\r\n}\r\n\r\n\r\n\r\n/*biging efeect of card categorie*/\r\n\r\n.hovereffect {\r\n    width: 100%;\r\n    height: 100%;\r\n    float: left;\r\n    overflow: hidden;\r\n    position: relative;\r\n    text-align: center;\r\n    cursor: default;\r\n  }\r\n  \r\n  .hovereffect .overlay {\r\n    width: 100%;\r\n    height: 100%;\r\n    position: absolute;\r\n    overflow: hidden;\r\n    top: 0;\r\n    left: 0;\r\n  }\r\n  \r\n  .hovereffect img {\r\n    display: block;\r\n    position: relative;\r\n    transition: all 0.4s ease-in;\r\n  }\r\n  \r\n  .hovereffect:hover img {\r\n    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"matrix\" color-interpolation-filters=\"sRGB\" values=\"0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0\" /><feGaussianBlur stdDeviation=\"3\" /></filter></svg>#filter');\r\n    filter: grayscale(1) blur(3px);\r\n    -webkit-filter: grayscale(1) blur(3px);\r\n    transform: scale(1.2);\r\n  }\r\n  \r\n  .hovereffect h2 {\r\n    text-transform: uppercase;\r\n    text-align: center;\r\n    position: relative;\r\n    font-size: 17px;\r\n    padding: 10px;\r\n    background: rgba(0, 0, 0, 0.6);\r\n  }\r\n  \r\n  .hovereffect a.info {\r\n    display: inline-block;\r\n    text-decoration: none;\r\n    padding: 7px 14px;\r\n    border: 1px solid #fff;\r\n    margin: 50px 0 0 0;\r\n    background-color: transparent;\r\n  }\r\n  \r\n  .hovereffect a.info:hover {\r\n    box-shadow: 0 0 5px #fff;\r\n  }\r\n  \r\n  .hovereffect a.info, .hovereffect h2 {\r\n    transform: scale(0.7);\r\n    transition: all 0.4s ease-in;\r\n    opacity: 0;\r\n    filter: alpha(opacity=0);\r\n    color: #fff;\r\n    text-transform: uppercase;\r\n  }\r\n  \r\n  .hovereffect:hover a.info, .hovereffect:hover h2 {\r\n    opacity: 1;\r\n    filter: alpha(opacity=100);\r\n    transform: scale(1);\r\n  }\r\n\r\n\r\n/*end  efeect of card categorie*/\r\n", ""]);
+exports.push([module.i, "/* .carousel{\r\n    background-size: cover   ;\r\n    margin-top: 4cm;\r\n    margin-bottom: 5cm;\r\n\r\n    width:100%;\r\n    height:100%;\r\n}\r\n */\r\n .carousel-content {\r\n    position: absolute;\r\n    bottom: 10%;\r\n    left: 5%;\r\n    z-index: 20;\r\n    color: black;\r\n    text-align: center;\r\n    font-style: oblique;\r\n    font-size: 65px;\r\n  }\r\n\r\n\r\n\r\n\r\n\r\n/*categorire*/\r\n\r\n\r\n\r\n\r\n  .section-header{\r\n    text-align: center;\r\n}\r\n\r\n.section-padding{\r\n    padding: 40px 0;\r\n}\r\n.section-title{\r\n    font-size: 30px;\r\n    margin-bottom:10px ;\r\n}\r\n\r\n.section-header .line{\r\n    \r\n    display: block;\r\n    width: 50px;\r\n    margin: auto;\r\n    height: 2px;\r\n    background: #82ae46;\r\n    transition: width 0.5s;\r\n}\r\n\r\n.section-header:hover .line{\r\n    width: 300px;\r\n}\r\n\r\n\r\n\r\n/*suport and quality*/\r\n\r\n.bg-color-1 {\r\n    background: #e4b2d6;\r\n}\r\n\r\n.bg-color-2 {\r\n    background: #dcc698;\r\n}\r\n\r\n.bg-color-3 {\r\n    background: #a2d1e1;\r\n}\r\n\r\n.bg-color-4 {\r\n    background: #dcd691;\r\n}\r\n\r\n\r\n\r\n\r\n.im{\r\n    line-height: 1.3;\r\n    position: relative;\r\n    margin: 0 auto;\r\n    width: 100px;\r\n    height: 100px;\r\n    border-radius: 50% !important;\r\n    transition: all .3s ease;\r\n    \r\n    \r\n}\r\n.align-items-center{\r\n    align-items: center!important;\r\n}\r\n\r\n\r\n\r\n/*biging efeect of card categorie*/\r\n.categorie{\r\n    background-color: #fff;  \r\n}\r\n.hovereffect {\r\n    width: 100%;\r\n    height: 100%;\r\n    float: left;\r\n    overflow: hidden;\r\n    position: relative;\r\n    text-align: center;\r\n    cursor: default;\r\n  }\r\n  \r\n  .hovereffect .overlay {\r\n    width: 100%;\r\n    height: 100%;\r\n    position: absolute;\r\n    overflow: hidden;\r\n    top: 0;\r\n    left: 0;\r\n  }\r\n  \r\n  .hovereffect img {\r\n    display: block;\r\n    position: relative;\r\n    transition: all 0.4s ease-in;\r\n  }\r\n  \r\n  .hovereffect:hover img {\r\n    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"matrix\" color-interpolation-filters=\"sRGB\" values=\"0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0\" /><feGaussianBlur stdDeviation=\"3\" /></filter></svg>#filter');\r\n    filter: grayscale(1) blur(3px);\r\n    -webkit-filter: grayscale(1) blur(3px);\r\n    transform: scale(1.2);\r\n  }\r\n  \r\n  .hovereffect h2 {\r\n    text-transform: uppercase;\r\n    text-align: center;\r\n    position: relative;\r\n    font-size: 17px;\r\n    padding: 10px;\r\n    background: rgba(0, 0, 0, 0.6);\r\n  }\r\n  \r\n  .hovereffect a.info {\r\n    display: inline-block;\r\n    text-decoration: none;\r\n    padding: 7px 14px;\r\n    border: 1px solid #fff;\r\n    margin: 50px 0 0 0;\r\n    background-color: transparent;\r\n  }\r\n  \r\n  .hovereffect a.info:hover {\r\n    box-shadow: 0 0 5px #fff;\r\n  }\r\n  \r\n  .hovereffect a.info, .hovereffect h2 {\r\n    transform: scale(0.7);\r\n    transition: all 0.4s ease-in;\r\n    opacity: 0;\r\n    filter: alpha(opacity=0);\r\n    color: #fff;\r\n    text-transform: uppercase;\r\n  }\r\n  \r\n  .hovereffect:hover a.info, .hovereffect:hover h2 {\r\n    opacity: 1;\r\n    filter: alpha(opacity=100);\r\n    transform: scale(1);\r\n  }\r\n\r\n\r\n/*end  efeect of card categorie*/\r\n", ""]);
 
 // exports
 
@@ -102214,6 +102233,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! jsonwebtoken */ "./node_modules/jsonwebtoken/index.js");
 /* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(jsonwebtoken__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/Home */ "./resources/js/components/Home.js");
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/Footer */ "./resources/js/components/Footer.js");
+
 
 
 
@@ -102247,7 +102268,7 @@ if (token) {
 var render = function render() {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_9__["Provider"], {
     store: _components_Store__WEBPACK_IMPORTED_MODULE_8__["default"]
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Contact__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], null)), document.getElementById('example'));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Contact__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_13__["default"], null)), document.getElementById('example'));
 };
 
 if (token) {
@@ -102620,7 +102641,7 @@ function (_Component) {
         price: 5
       };
       console.log(daa);
-      axios.post('https://jiblii.herokuapp.com/api/auth/order', data).then(function (res) {
+      axios.post('http://127.0.0.1/api/auth/order', data).then(function (res) {
         console.log(res.daa); // this.props.updateUser(res.data.user);
       })["catch"](function (e) {
         return _this.setState({
@@ -102836,6 +102857,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _carousel_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./carousel.css */ "./resources/js/components/carousel.css");
 /* harmony import */ var _carousel_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_carousel_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _Filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Filter */ "./resources/js/components/Filter.js");
+/* harmony import */ var _Product__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Product */ "./resources/js/components/Product.js");
+/* harmony import */ var _Fruits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Fruits */ "./resources/js/components/Fruits.js");
+/* harmony import */ var _Fruits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_Fruits__WEBPACK_IMPORTED_MODULE_5__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -102853,6 +102878,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
 
 
 
@@ -103121,6 +103149,36 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./resources/js/components/Contact.css":
+/*!*********************************************!*\
+  !*** ./resources/js/components/Contact.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./Contact.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/Contact.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/js/components/Contact.js":
 /*!********************************************!*\
   !*** ./resources/js/components/Contact.js ***!
@@ -103133,6 +103191,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Contact; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Contact_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Contact.css */ "./resources/js/components/Contact.css");
+/* harmony import */ var _Contact_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Contact_css__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -103153,6 +103213,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var Contact =
 /*#__PURE__*/
 function (_Component) {
@@ -103167,7 +103228,19 @@ function (_Component) {
   _createClass(Contact, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "abdelkrim"));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "contact"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-xl-4 col-lg-4 col-sm-4 col-4"
+      }, "0778335611"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-xl-4 col-lg-4 col-sm-4 col-4"
+      }, "krimo4992@gmail.Com"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-xl-4 col-lg-4 col-sm-4 col-4"
+      }, "slammmmmmmmmmmmmmmmmmmmm"))));
     }
   }]);
 
@@ -103316,6 +103389,151 @@ var mapStateToProps = function mapStateToProps(state) {
   filterProducts: _action_productAction__WEBPACK_IMPORTED_MODULE_2__["filterProducts"],
   sortProducts: _action_productAction__WEBPACK_IMPORTED_MODULE_2__["sortProducts"]
 })(Filter));
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer.js":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Footer.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Footer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Contact_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Contact.css */ "./resources/js/components/Contact.css");
+/* harmony import */ var _Contact_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Contact_css__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var Footer =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Footer, _Component);
+
+  function Footer() {
+    _classCallCheck(this, Footer);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Footer).apply(this, arguments));
+  }
+
+  _createClass(Footer, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+        className: "site-footer"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-12 col-md-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "text-justify"
+      }, "Scanfcode.com ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, "CODE WANTS TO BE SIMPLE "), " is an initiative to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-xs-6 col-md-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Categories"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "footer-links"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "http://scanfcode.com/category/c-language/"
+      }, "C")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "http://scanfcode.com/category/front-end-development/"
+      }, "UI Design")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "http://scanfcode.com/category/back-end-development/"
+      }, "PHP")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "http://scanfcode.com/category/java-programming-language/"
+      }, "Java")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "http://scanfcode.com/category/android/"
+      }, "Android")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "http://scanfcode.com/category/templates/"
+      }, "Templates")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-xs-6 col-md-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Quick Links"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "footer-links"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "http://scanfcode.com/about/"
+      }, "About Us")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "http://scanfcode.com/contact/"
+      }, "Contact Us")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "http://scanfcode.com/contribute-at-scanfcode/"
+      }, "Contribute")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "http://scanfcode.com/privacy-policy/"
+      }, "Privacy Policy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "http://scanfcode.com/sitemap/"
+      }, "Sitemap"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-8 col-sm-6 col-xs-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "copyright-text"
+      }, "Copyright \xA9 2017 All Rights Reserved by", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "Scanfcode"), ".")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-4 col-sm-6 col-xs-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "social-icons"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "facebook",
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fa fa-facebook"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "twitter",
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fa fa-twitter"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "dribbble",
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fa fa-dribbble"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "linkedin",
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fa fa-linkedin"
+      })))))))));
+    }
+  }]);
+
+  return Footer;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Fruits.js":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Fruits.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -103493,7 +103711,7 @@ function (_Component) {
         email: _this.state.email,
         password: _this.state.password
       };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("https://127.0.0.1:8000/api/auth/login", data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://127.0.0.1:8000/api/auth/login", data).then(function (res) {
         js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('token', res.data.access_token); //cookie.set('user',res.data.user);
 
         _this.props.setLogin(res.data.user);
@@ -104074,7 +104292,7 @@ function (_Component) {
         phone: _this.state.phone,
         email: _this.state.email
       };
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.patch("https://jiblii.herokuapp.com/api/auth/update", data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.patch("http://127.0.0.1:8000//api/auth/update", data).then(function (res) {
         console.log(res.data); // this.props.updateUser(res.data.user);
       })["catch"](function (e) {
         return _this.setState({
@@ -104324,7 +104542,7 @@ function (_Component) {
         password: _this.state.password,
         password_confirme: _this.state.password_confirme
       };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('https://jiblii.herokuapp.com/api/auth/register', data).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('http://127.0.0.1:8000/api/auth/register', data).then(function (res) {
         js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('token', res.data.access_token);
         js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('user', res.data.user);
 

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './carousel.css';
 import {BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import Filter from './Filter';
+import Product from './Product';
+import Fruits from './Fruits';
 
 export default class Carousel extends Component {
 
@@ -160,7 +162,6 @@ export default class Carousel extends Component {
 
 </div>
 </section>
-
       </div>
     )
   }
