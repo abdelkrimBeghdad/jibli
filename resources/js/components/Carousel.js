@@ -57,7 +57,7 @@ export default class Carousel extends Component {
         {/* categorie */}
 
 
-
+{/* 
         <section className="categorie section-padding">
           <div className="section-header">
             <h2 className="section-title">Popular Categories</h2>
@@ -113,7 +113,7 @@ export default class Carousel extends Component {
 <br></br>
 <br></br>
 <br></br>
-
+ */}
 <section>
 
 

@@ -86,9 +86,9 @@ import Home from './Home';
                         {/* <Route exact path="/" />
                         {<Route exact path="/product" component={App} />} */}
                         {<Route exact path="/" component={Carousel} />}
-                        {<Route exact path="/cart" component={Cart} />}
+                        {<AuthRoute exact path="/cart" component={Cart} />}
                         {<Route exact path="/product" component={App} />}
-                        {<Route exact path="/liste" component={Cart} />}
+                        {<AuthRoute exact path="/liste" component={Cart} />}
                         {/* <Provider store={store}> */}
                         {<GuestRoute  exact path="/login" component={Login} />}
                         {<AuthRoute  exact path="/profile" component={Profile} />}

@@ -5,7 +5,7 @@ import './Contact.css';
 export default class Footer extends Component{
     render(){
         return(
-           <div>
+           <div className="ftr">
              
 <footer className="site-footer">
   <div className="container">

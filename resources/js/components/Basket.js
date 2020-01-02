@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { connect  } from 'react-redux';
+import { Route, Redirect } from "react-router-dom";
+
 import {removeFromCart ,addToCart ,decriseToCart} from './action/cartAction';
 
 import './Basket.css';
@@ -7,52 +9,12 @@ import './Basket.css';
 
 class Basket extends Component {
 
-    validate=()=>{
-        const { cartItems ,id_user } = this.props;
-        const data ={
-           /* cartLength: cartItems.length ,
-           id_user:id_user,
-           items_name :cartItems.map(item => ([id_user,item.name,item.count,item.price])),
-           data:this.props.cartItems */
-
-
-           /* user_id:5,
-           product_id :cartItems.map(item => (item.id)),
-           name :cartItems.map(item => (item.name)),
-           count :cartItems.map(item => (item.count)),
-           price :cartItems.map(item => (item.price)), */
-
-
-
-           itemOrder :cartItems.map(item => ([id_user,item.id,item.name,item.price,item.count])),
-        }
-        //console.log('abdelkrim',data)
-        const daa=JSON.stringify(data)
-        const products = {
-            name: 'abdelkrim',
-            price: 5,          }
-        console.log(daa);
-          axios
-          .post('http://127.0.0.1/api/auth/order',data)
-          .then(res => {
-            console.log(res.daa);
-          
-           
-            // this.props.updateUser(res.data.user);
-          })
-          .catch(e => this.setState({ errors: e.response.data }));
-    }
-
-    
+   
     render() {
         const { cartItems } = this.props;
         
-        
         return (
-
-
-
-            <div className="basket">
+ <div className="basket">
                 {cartItems.length === 0
                     ? "Basket is empty" :
                     <div>You have {cartItems.length} items in the basket. <hr /></div>
@@ -99,7 +61,7 @@ class Basket extends Component {
 
                         <b>Sum: {cartItems.reduce((a, c) => (a + c.price * c.count), 0)}
                         </b>
-                        <button style={{ float: 'right' }} onClick={this.validate} className="btn btn-primary">checkout</button>
+                        
                     </div>
                 }
             </div>

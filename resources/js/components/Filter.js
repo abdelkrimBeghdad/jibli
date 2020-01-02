@@ -6,7 +6,7 @@ import './Filter.css';
 class Filter extends Component{
     render(){
         return(
-             <div className="row">
+             <div className="row ab">
                 <div className="col-md-4">
                     {this.props.filtredProducts.length} products found
                 </div>
