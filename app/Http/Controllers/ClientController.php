@@ -3,12 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Hash;
 use App\Customer;
-
+use App\User;
 
 class ClientController extends Controller
 {
+
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +23,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $client = Customer::all();
+        $client = User::all();
        return view('client.indexClient',compact('client'));
     }
 
@@ -38,8 +45,20 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        Customer::create($request->all());
+        
+        $form_data = array(
+            'firstName'       =>   $request->firstName,
+            'lastName'        =>   $request->lastName,
+            'address'        =>   $request->address,
+            'phone'        =>   $request->phone,
+            'point'        =>   $request->point,
+            'email'        =>   $request->email,
+            'password' => Hash::make($request['password']),
+        );
+
+       
+
+        User::create($form_data);
         return redirect('Admin/client/create')->with('success', 'Client saved!');
     }
 
@@ -62,7 +81,7 @@ class ClientController extends Controller
      */
     public function edit($id)
     {
-        $client = Customer::find($id);
+        $client = User::find($id);
         return view('client.EditClient',compact('client'));
     }
 
@@ -76,7 +95,7 @@ class ClientController extends Controller
     public function update(Request $request, $id)
     {   
         
-        $client = Customer::findOrFail($id);
+        $client = User::findOrFail($id);
         $client->update($request->all());
         return redirect('Admin/client')->with('success', 'Client updated!');
     }
@@ -89,7 +108,7 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-        $client = Customer::find($id);
+        $client = User::find($id);
         $client->delete();
 
         return redirect('/Admin/client')->with('success', 'Client deleted!');

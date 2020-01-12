@@ -34,3 +34,4 @@ Route::prefix('Admin')->group(function () {
     Auth::routes();
 
 });
+

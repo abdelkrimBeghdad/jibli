@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
 
 
+
 class AuthController extends Controller
 {   
   
@@ -18,9 +19,11 @@ class AuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function __construct()
-    {   
-     Auth::shouldUse('api');
-     // $this->middleware('auth:api', ['except' => ['login','register']]);
+    {   Auth::shouldUse('web');
+        //$this->middleware('auth:web', ['except' => ['login','register']]);
+        //$this->middleware('guest');
+        //$this->middleware('auth:customusers')->except('logout');
+       
     }
     /**
      * Get a JWT via given credentials.
