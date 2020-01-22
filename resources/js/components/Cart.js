@@ -20,7 +20,7 @@ class Cart extends Component {
     }
 
     axios
-      .post('http://127.0.0.1/api/auth/order', data)
+      .post('http://127.0.0.1:8000/api/auth/order', data)
       .then(res => {
         // this.props.updateUser(res.data.user);
       })

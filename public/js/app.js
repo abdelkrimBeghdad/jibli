@@ -88690,7 +88690,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -103063,7 +103063,7 @@ function (_Component) {
           return [id_user, item.id, item.name, item.price, item.count];
         })
       };
-      axios.post('http://127.0.0.1/api/auth/order', data).then(function (res) {// this.props.updateUser(res.data.user);
+      axios.post('http://127.0.0.1:8000/api/auth/order', data).then(function (res) {// this.props.updateUser(res.data.user);
       })["catch"](function (e) {
         return _this.setState({
           errors: e.response.data
