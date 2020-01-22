@@ -14,7 +14,7 @@ export default class Contact extends Component{
                                     krimo4992@gmail.Com
                                 </div>
                                 <div className="col-xl-4 col-lg-4 col-sm-4 col-4">
-                                    slammmmmmmmmmmmmmmmmmmmm
+                                    slammmmmmmmmmm
                                 </div>
                             </div>
                             </div>
