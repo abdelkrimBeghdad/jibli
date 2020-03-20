@@ -31,6 +31,7 @@ Route::prefix('Admin')->group(function () {
     Route::resource('product','ProductController');
     Route::resource('categorie','CategorieController');
     Route::resource('supplier','SupplierController');
+    Route::resource('orders','OrdersController');
     Auth::routes();
 
 });

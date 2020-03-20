@@ -4,6 +4,7 @@ import Filter from './Filter';
 import Basket from './Basket';
 import store from './Store';
 import {Provider} from 'react-redux';
+import Pagination from './Pagination';
 
 export default class App extends Component{
      
@@ -28,6 +29,9 @@ export default class App extends Component{
                       
             </div>
             </div>
+            <div className="col-md-4">
+                      <Pagination  />
+                    </div>
             </Provider>  
         );
     }

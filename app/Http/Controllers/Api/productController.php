@@ -12,7 +12,7 @@ class productController extends Controller
     public function index()
     {
        
-        $product = Products::all();
+        $product = Products::All();
        
         return response()->json($product);
     }

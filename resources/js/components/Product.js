@@ -1,80 +1,113 @@
-import React, { Component } from 'react';
-import {connect} from 'react-redux';
-import {fetchProducts} from '../components/action/productAction';
-import {addToCart} from '../components/action/cartAction';
+import React, { Component, useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { fetchProducts } from '../components/action/productAction';
+import { addToCart } from '../components/action/cartAction';
 import './Product.css';
- class Product extends Component {
-     
-    UNSAFE_componentWillMount(){
-         this.props.fetchProducts()
-     }
-    render() {
- 
-        const productItems = this.props.products.map(product =>(
-            <div  className="col-sm-12 col-md-12 col-lg-4 ftco-animate d-flex" key={product.id}>
-       {/*                    <div className="card mt-2" >
-                            <a href={`#${product.id}`}onClick={()=>this.props.addToCart(this.props.cartItems, product)}>
-
-                                <img src={"upload/image/" +product.image} width={60} height={200} className="card-img-top" alt='Not Faund'/>
-                            </a>
-                                <div className="card-body" >
-                                    <h5 className="card-title">{product.name}</h5>
-                                    <h3 className="card-text">{product.price} Da</h3>
-                                </div>
-                                <button className="btn btn-danger"
-                                onClick={()=>this.props.addToCart(this.props.cartItems, product)}>Add To Card</button>
-                            </div>  */}
-
-<div >
-		    				<div className="product d-flex flex-column">
-		    					<a href="#" className="img-prod"><img className="img-fluid" src={"upload/image/" +product.image} alt="Colorlib Template"/>
-		    						
-		    						<div className="overlay"></div>
-		    					</a>
-		    					<div className="text py-3 pb-4 px-3">
-		    						<div className="d-flex">
-		    							<div className="cat">
-				    						<span>{product.category_name}</span>
-				    					</div>
-			    					</div>
-		    						<h3>{product.name}</h3>
-		  							<div className="pricing">
-			    						<p className="price"><span className="price-sale">{product.price} Da</span></p>
-			    					</div>
-			    					<p className="bottom-area d-flex px-3">
-									<a className="buy-now text-center py-2"
-                                onClick={()=>this.props.addToCart(this.props.cartItems, product)}>Add To Card</a>
-		    						</p>
-		    					</div>
-		    				</div>
-		    			</div>
+import PropTypes from "prop-types";
+import Pagination from './Pagination';
+import ProductItem from './ProductItem'
+import Items from './Items';
 
 
+class Product extends Component {
+  state = {
+    loading: false,
+    currentPage: 1,
+    itemsPerPage: 12,
+    search :"",
+
+  }
 
 
+  UNSAFE_componentWillMount() {
+    this.props.fetchProducts()
+  }
 
-         </div>                       
-                  
-         ))
+   /* onChange = e =>{
+    this.setState({search :e.target.value})
+  }   */
+  render() {
+    const {search} = this.state
+    const items = this.props.products
+
+    const indexOfLastItem = this.state.currentPage * this.state.itemsPerPage
+    const indexOfFirstItem = indexOfLastItem - this.state.itemsPerPage
+    const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
+    const paginate = (pageNumber) => this.setState({ currentPage: pageNumber });;
+   /*  console.log(items.length)
+
+    const nameProducts = items.map(product=>product.name)
+    console.log(nameProducts)
+    if (search !== "" && nameProducts.indexOf( search )=== -1){
+      return null
+    } */
+
+    const productItems = currentItems.map(item => (
       
-                                
-                              
+      <div className="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex" key={item.id}>
+        <div >
+          <div className="product d-flex flex-column">
+            <a href="#" className="img-prod"><img className="img-fluid" src={"upload/image/" + item.image} alt="Colorlib Template" />
 
-                        
-
-      
-        return (
-            <div className='row'>
-                {productItems}
+              <div className="overlay"></div>
+            </a>
+            <div className="text py-3 pb-4 px-3">
+              <div className="d-flex">
+                <div className="cat">
+                  <span>{item.category_name}</span>
+                </div>
+              </div>
+              <h3>{item.name}</h3>
+              <div className="pricing">
+                <p className="price"><span className="price-sale">{item.price} Da</span></p>
+              </div>
+              <p className="bottom-area d-flex px-3">
+                <a className="buy-now text-center py-2"
+                  onClick={() => this.props.addToCart(this.props.cartItems, item)}>Add To Card</a>
+              </p>
             </div>
-        )
-    }
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+
+    ))
+
+
+
+
+
+
+
+
+
+
+    return (
+      <div >
+        <div className='row'>
+
+        {productItems}
+        </div>
+        <Pagination itemsPerPage={this.state.itemsPerPage} totalIems={items.length} paginate={paginate} />
+      </div>
+    )
+
+
+
+
+  }
 }
 
 
-const mapStateToProps =  state =>({
-    products: state.products.filtredItems,
-    cartItems:state.cart.items
+
+const mapStateToProps = state => ({
+  products: state.products.filtredItems,
+  cartItems: state.cart.items,
+
 });
 
-export default connect (mapStateToProps,{fetchProducts,addToCart})(Product);
+export default connect(mapStateToProps, { fetchProducts, addToCart })(Product);

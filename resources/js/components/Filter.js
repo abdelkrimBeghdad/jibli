@@ -1,12 +1,15 @@
 import React ,{ Component } from 'react';
 import { connect } from 'react-redux';
-import { filterProducts,sortProducts } from './action/productAction';
+import { filterProducts,sortProducts,searchProducts } from './action/productAction';
 import './Filter.css';
 
 class Filter extends Component{
     render(){
         return(
              <div className="row ab">
+    <input  onChange={(e) =>this.props.searchProducts(this.props.products, e.target.value)}
+    className="form-control" name="search" id="search"/>
+
                 <div className="col-md-4">
                     {this.props.filtredProducts.length} products found
                 </div>
@@ -45,6 +48,7 @@ const mapStateToProps = state =>({
     filtredProducts :state.products.filtredItems,
     category_name :state.products.category_name,
     sort :state.products.sort,
+    searchProducts :state.products.filtredItems,
 
 })
-export default connect(mapStateToProps,{filterProducts,sortProducts})(Filter);
+export default connect(mapStateToProps,{filterProducts,sortProducts,searchProducts})(Filter);

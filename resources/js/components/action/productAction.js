@@ -1,12 +1,16 @@
-import {FETCH_PRODUCTS, FILTER_PRODUCTS_BY_NAME,ORDER_PRODUCTS_BY_PRICE} from "./types";
+import {FETCH_PRODUCTS, FILTER_PRODUCTS_BY_NAME,ORDER_PRODUCTS_BY_PRICE,SEARCH} from "./types";
 
 
 export const fetchProducts =() =>(dispatch)=>{
-
-    fetch('/api/product').then(res => res.json()).then(data=> {  
+    const  url ='/api/product'
+    fetch(url)
+    .then(res => res.json())
+    
+    .then(data=> {  
         return  dispatch({type : FETCH_PRODUCTS , payload : data}) ;
     });
 
+   
 }
 
 
@@ -16,6 +20,18 @@ export const filterProducts =(products,category_name) =>(dispatch)=>{
         payload:{
             category_name : category_name ,
             items: category_name === ''? products : products.filter(a => a.category_name.indexOf(category_name)>=0)
+        }
+    })
+
+}
+
+
+export const searchProducts =(products,search_name) =>(dispatch)=>{
+    return dispatch({
+        type:SEARCH,
+        payload:{
+            search_name : search_name ,
+            items: search_name === ''? products : products.filter(a => a.name.indexOf(search_name)>=0)
         }
     })
 
