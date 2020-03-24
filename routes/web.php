@@ -34,5 +34,9 @@ Route::prefix('Admin')->group(function () {
     Route::resource('orders','OrdersController');
     Auth::routes();
 
+    Route::get('/orders/Delivred/{id}', 'OrdersController@Delivred')->name('Delivred_order');
+    Route::get('/orders/NoDelivred/{id}', 'OrdersController@NoDelivred')->name('NoDelivred_order');
+
+
 });
 

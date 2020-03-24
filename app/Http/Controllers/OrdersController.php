@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Orders;
+use App\order_items;
+
 use Illuminate\Http\Request;
 
 class OrdersController extends Controller
@@ -16,10 +18,35 @@ class OrdersController extends Controller
     public function index()
     {
        
-        $order = Orders::all();
-       
+       $order = orders::with('orders')->get();
+       // $order = orders::with('orders')->where('user_id',1)->get();
+
+        /* $order = json_decode(json_encode($order));
+        echo "<pre>";print_r($order );die;
+        dd($order); */
         return view('orders.indexOrder',compact('order'));
     }
+
+
+
+
+    public function Delivred($id){
+        $order = orders::find($id);
+        $order->state = 0;
+        $order->save();
+        return back();
+    }
+
+    public function NoDelivred($id){
+        $order = orders::find($id);
+        $order->state = 1;
+        $order->save();
+        return back();
+    }
+
+
+
+
 
     /**
      * Show the form for creating a new resource.

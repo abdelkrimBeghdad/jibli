@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Orders;
-use App\OrderGenerale;
+use App\order_items;
 
 use App\Products;
 use Illuminate\Http\Request;
@@ -18,7 +18,7 @@ class OrderController extends Controller
         $a= $request->input('itemOrder');
        
 
-        $order = new OrderGenerale;
+        $order = new orders;
         $order->user_id =$a[0][0];
        
         $order->save();
@@ -26,8 +26,8 @@ class OrderController extends Controller
 
 
             foreach ($request->input('itemOrder') as $key => $value) {
-               orders::create([
-                    'OrderGenerale_id' => $order->id,
+                order_items::create([
+                    'orders_id' => $order->id,
                     'user_id'  => $value[0],
                     'product_id'  => $value[1],
                     'name'  => $value[2],

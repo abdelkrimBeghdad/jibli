@@ -26,16 +26,14 @@
                   <table class="table table-striped table-bordered dt-responsive nowrap" style="width:100%" id="tableClient" >
                     <thead>
                       <tr>
-                          <th scope="col">id</th>                        
-                          <th scope="col">OrderGenerale_id</th>
-                          <th scope="col">user_id</th>
-                          <th scope="col">order_id</th>
-                          <th scope="col">product_id</th>
-                          <th scope="col">name</th>
-                          <th scope="col">price</th>
-                          <th scope="col">quantity</th>
-                          <th scope="col">detail</th>
-                          <th scope="col">Last updated</th>
+                          <th scope="col">Order ID</th>  
+                         {{--  <th >Name</th>
+                          <th >Price</th>
+                          <th >Quantity</th> --}}
+                          <th >Status</th>
+                          <th >Detail</th>
+                          <th >Created In</th>
+                          <th >Modified In</th>
                           
 
                       </tr>
@@ -44,58 +42,123 @@
                         @foreach ($order as $item)
                         <tr>
                             <td scope="row">{{$item->id}}</td>
-                            <td >{{$item->OrderGenerale_id}}</td  >                            
-                            <td>{{$item->user_id}}</td>
-                            <td>{{$item->order_id}}</td>
-                            <td>{{$item->product_id}}</td>
-                            {{-- <td>{{$item->category->name}}</td> --}}
-                            <td>{{$item->name}}</td>
-                            <td>{{$item->price}}</td>  
-                            <td>{{$item->quantity}}</td>
                             
+                           {{--  <td >
+                              @foreach ($item->orders as $product)
+                                  {{$product->name}}<br>
+                              @endforeach  
+                            </td  >  <td >
+                              @foreach ($item->orders as $product)
+                                  {{$product->price}}<br>
+                              @endforeach  
+                            </td  >  <td >
+                              @foreach ($item->orders as $product)
+                                  {{$product->quantity}}<br>
+                              @endforeach  
+                            </td  >   --}}
+                            
+                            <td>{{$item->state == 0 ? 'No Delivred':'Delivred'}}</td>
+
                             <td>
-                              <a name="detail" id="detail" class="btn btn-success" href="" role="button">Detail</a>
-                            
-                             <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target-name="{{$item->OrderGenerale_id }}" data-target-id="{{ $item->id}}" data-target="#basicExampleModal">
-  Launch demo modal
-</button>
+                              @if ($item->state == 0)
+                            <a href="{{ route('NoDelivred_order',$item->id)}}" class="btn btn-danger btn-xs disabled"><i class="fa fa-arrow-up"></i></a>
+                                  
+                              @else
+                            <a href="{{route('Delivred_order',$item->id)}}" class="btn btn-success btn-xs disabled"><i class="fa fa-arrow-up"></i></a>
+                                  
+                              @endif
 
-<!-- Modal -->
-<div class="modal fade-lg" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog  modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        
-        abdelkrim
-        <div class="form-group">
-          <input class="form-control" name="id" type="text" id="pass_id">
-          <input class="form-control" name="name" type="text" id="pass_name">
 
-      </div>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-                            </td>
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#productModal{{ $item->id }}">
+                                Launch demo modal
+                              </button>        
+                                
+                           </td>
+                            <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $item->created_at)->diffForHumans() }}</td>                                        
                             <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $item->updated_at)->diffForHumans() }}</td>                                        
-                        </tr>
+                        
+                          </tr>
+
+
+
+                        {{-- Model --}}
+
+
+                       
+
                     @endforeach
                     
                     </tbody>
                   </table>
+
+                  @foreach ($order as $item)
+
+                  <div class="modal fade" id="productModal{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                        
+                        <table class="table table-dark">
+                          <thead>
+                            <tr>
+                              <th scope="col">id</th>
+                              <th>name</th>
+                              <th>quantity</th>
+                              <th>price</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                              @foreach ($item->orders as $product)
+                             {{$product->id}}<br>
+                               @endforeach
+                              </td> <td>
+                               @foreach ($item->orders as $product)
+                              {{$product->name}}<br> 
+                               @endforeach
+                              </td><td>
+                               @foreach ($item->orders as $product)
+                              {{$product->quantity}}<br>
+                               @endforeach
+</td> <td>
+                               @foreach ($item->orders as $product)
+                              {{$product->price}}<br>
+                               @endforeach</td> 
+                            </tr>
+                 
+                          </tbody>
+                        </table>
+                        
+                       
+                        </div>
+                        <div class="modal-footer">
+                          @if ($item->state == 0)
+                          <a href="{{ route('NoDelivred_order',$item->id)}}" type="button" role="button" class="btn btn-danger">Change To Delivred</a>
+                          @else
+                          <a href="{{ route('Delivred_order',$item->id)}}" type="button" role="button" class="btn btn-success">Change To No Delivred</a>
+                          @endif
+                         
+                         
+                         
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  @endforeach
+
+
+
+
+
 
             </div>
         </div>
@@ -113,15 +176,7 @@
 
 
 <script>
-  $(document).ready(function () {
-      $("#basicExampleModal").on("show.bs.modal", function (e) {
-          var id = $(e.relatedTarget).data('target-id');
-          var OrderGenerale_id = $(e.relatedTarget).data('target-name');
-
-          $('#pass_id').val(id);
-          $('#pass_name').val(OrderGenerale_id);
-      });
-  });
+  
 
 </script>
 @endsection
