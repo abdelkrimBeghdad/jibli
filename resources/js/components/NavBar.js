@@ -18,7 +18,8 @@ import GuestRoute  from './GesteRoute';
 import AuthRoute from './AuthRoute';
 import {connect} from 'react-redux';
 import cookie from 'js-cookie';
-import Home from './Home';
+import ListeOfOrdersOfClient from './ListeOfOrdersOfClient';
+import Account from './Account';
 
  
     function NavBar(props) {
@@ -92,6 +93,9 @@ import Home from './Home';
                         {/* <Provider store={store}> */}
                         {<GuestRoute  exact path="/login" component={Login} />}
                         {<AuthRoute  exact path="/profile" component={Profile} />}
+          {/*               {<AuthRoute  exact path="/account" component={Account} />}
+
+                        {<AuthRoute  exact path="/ListeOrders" component={ListeOfOrdersOfClient} />}  */}
                         {<GuestRoute exact path="/register" component={Register} />}
                         {/* </Provider>    */}
                         <div>

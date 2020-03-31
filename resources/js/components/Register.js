@@ -158,6 +158,7 @@ export default class Register extends Component{
                                             name="password"
                                             id="password"
                                             type="password"
+                                            autoComplete="off"
                                         />
                                         <AuthErrors
                                             error={
@@ -179,6 +180,7 @@ export default class Register extends Component{
                                             name="password_confirme"
                                             id="password_confirme"
                                             type="password"
+                                            autoComplete="off"
                                         />
                                          <AuthErrors
                                             error={

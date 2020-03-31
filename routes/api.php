@@ -17,7 +17,15 @@ use Illuminate\Http\Request;
     return $request->user();
 }); */
 
-Route::resource('product','Api\productController');
+  Route::resource('product','Api\productController');
+
+  Route::get('categorie', 'Api\productController@indexApi');
+
+Route::middleware('jwt.auth')->group( function(){
+ 
+  Route::get('ListeOrders/{id}', 'OrderController@ListeOfOrdersOfClientFrontend');
+
+} );
 
 Route::group([
 
@@ -34,6 +42,7 @@ Route::group([
     Route::post('me', 'AuthController@me');
 
     Route::post('order', 'OrderController@store');
+  
 
 
 });

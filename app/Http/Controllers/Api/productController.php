@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Orders;
+use App\Categorie;
 use App\Products;
 
 class productController extends Controller
@@ -17,6 +18,13 @@ class productController extends Controller
         return response()->json($product);
     }
 
+
+
+    public function indexApi()
+    {   
+        $categorie = Categorie::all();
+        return response()->json($categorie);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -115,4 +123,7 @@ class productController extends Controller
 
         return redirect('/Admin/product')->with('success', 'Product deleted!');
     }
+
+
+  
 }

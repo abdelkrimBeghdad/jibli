@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from "./types";
+import { ADD_TO_CART, REMOVE_FROM_CART ,RESET_CART} from "./types";
 
 export const addToCart = (items , product) =>(dispatch) =>{
 
@@ -66,4 +66,14 @@ export const removeFromCart =(items,product) => (dispatch) =>{
             }
         })
       
+}
+
+
+export const resetCart = () =>(dispatch) =>{
+  return dispatch({
+      type:RESET_CART,
+      payload:{
+          cartItems:[]
+      }
+  })  
 }

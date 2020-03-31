@@ -10,9 +10,6 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
 
-   
-
-
     public function store(Request $request){
         
         $a= $request->input('itemOrder');
@@ -22,8 +19,6 @@ class OrderController extends Controller
         $order->user_id =$a[0][0];
        
         $order->save();
-
-
 
             foreach ($request->input('itemOrder') as $key => $value) {
                 order_items::create([
@@ -41,4 +36,15 @@ class OrderController extends Controller
               
         return 'valide';
     }
+
+    public function ListeOfOrdersOfClientFrontend($id){
+        /*  $order = orders::with('orders')->get(); */
+          $listeorders = orders::with('orders')->where('user_id',$id)->get();
+  
+          /* $order = json_decode(json_encode($order));
+          echo "<pre>";print_r($order );die;
+          dd($order); */
+          return response()->json($listeorders);
+ 
+     }
 }

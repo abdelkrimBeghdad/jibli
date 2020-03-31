@@ -4,11 +4,28 @@ import { filterProducts,sortProducts,searchProducts } from './action/productActi
 import './Filter.css';
 
 class Filter extends Component{
+
+    state= {
+        categorie:[]
+    }
+    componentDidMount () {
+        
+        axios.get(`http://127.0.0.1:8000/api/categorie`).then(response => {
+            /* this.setState ( {categorie :response}); */
+          
+            this.setState({categorie:response.data})
+        })
+      }
+
+
     render(){
+       const {categorie} =this.state
+    
         return(
+            
              <div className="row ab">
-    <input  onChange={(e) =>this.props.searchProducts(this.props.products, e.target.value)}
-    className="form-control" name="search" id="search"/>
+            <input  onChange={(e) =>this.props.searchProducts(this.props.products, e.target.value)}
+            className="form-control" name="search" id="search"/>
 
                 <div className="col-md-4">
                     {this.props.filtredProducts.length} products found
@@ -30,9 +47,11 @@ class Filter extends Component{
                         <select className="form-control" value={this.props.category_name} 
                           onChange={(e) =>this.props.filterProducts(this.props.products, e.target.value)}>
                                     <option value="">ALL</option>
-                                    <option value="fruit">fruit</option>
-                                    <option value="legume">legume</option>
-                                    <option value="alimentation">alimentation</option>
+                            {categorie.map(categori =>
+                                
+                                <option key={categori.id} value={categori.name}>{categori.name}</option>
+                                   )}
+                                         
 
                         </select>
                     </label>
