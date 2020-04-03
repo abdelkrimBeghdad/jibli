@@ -19,7 +19,7 @@ export const filterProducts =(products,category_name) =>(dispatch)=>{
         type:FILTER_PRODUCTS_BY_NAME,
         payload:{
             category_name : category_name ,
-            items: category_name === ''? products : products.filter(a => a.category_name.indexOf(category_name)>=0)
+            items: category_name === ''? products : products.filter(a => a.category_name.toLowerCase().indexOf(category_name.toLowerCase())>=0)
         }
     })
 
@@ -31,7 +31,7 @@ export const searchProducts =(products,search_name) =>(dispatch)=>{
         type:SEARCH,
         payload:{
             search_name : search_name ,
-            items: search_name === ''? products : products.filter(a => a.name.indexOf(search_name)>=0)
+            items: search_name === ''? products : products.filter(a => a.name.toLowerCase().indexOf(search_name.toLowerCase())>=0)
         }
     })
 

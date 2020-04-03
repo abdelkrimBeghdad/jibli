@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Products;
 use App\Categorie;
 use App\Suppliers;
-
+use Image;
 
 class ProductController extends Controller
 {
@@ -57,15 +57,21 @@ class ProductController extends Controller
 
         ]);
        
-
-        
-        
-
+            $date=date('YmdHis');
         if($request->hasFile('image'))
-        {   $file = $request->file('image');
-            $extension = $file->getClientOriginalExtension();
-            $fileName = time().'.'.$extension;
-            $file -> move('upload/image/' , $fileName);
+        {   $image = $request->file('image');
+            $fileName= $request->name.'_'.$date.'.'.$image->getClientOriginalExtension();
+    
+            $destinationPath = public_path('/upload/image');
+            $img = Image::make($image->getRealPath());
+            $img->resize(250, 250, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($destinationPath.'/'.$fileName);
+    
+            $destinationPath = public_path('/images');
+            $image->move($destinationPath, $fileName);
+            
+         
         }else{ 
             $fileName = 'noImage.png';
         }

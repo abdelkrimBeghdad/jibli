@@ -103266,9 +103266,12 @@ function (_Component) {
       var _this$props = _this.props,
           cartItems = _this$props.cartItems,
           id_user = _this$props.id_user;
+      var PriceTotale = cartItems.reduce(function (a, c) {
+        return a + c.price * c.count;
+      }, 0);
       var data = {
         itemOrder: cartItems.map(function (item) {
-          return [id_user, item.id, item.name, item.price, item.count];
+          return [id_user, item.id, item.name, item.price, item.count, PriceTotale];
         })
       };
       axios.post('http://127.0.0.1:8000/api/auth/order', data).then(function (res) {
@@ -104054,6 +104057,7 @@ function (_Component) {
       var _this$state = this.state,
           data = _this$state.data,
           id = _this$state.id;
+      var validate;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "container",
         style: {
@@ -104063,11 +104067,11 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, data.map(function (task) {
-        return task.state === 1 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        return task.state === 2 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "col mb-4",
           key: task.id
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "card text-white bg-success  mb-3",
+          className: "card  bg-success  mb-3",
           style: {
             width: '18rem'
           }
@@ -104078,12 +104082,23 @@ function (_Component) {
         }, task.orders.map(function (items) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             key: items.id
-          }, items.name, "    ", items.price);
-        }), "  "))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          }, items.name, "    ", items.price, " ", items.quantity);
+        }), "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "card-footer "
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+          style: {
+            "float": 'left'
+          }
+        }, "Totale Price: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+          style: {
+            "float": 'right'
+          },
+          className: ""
+        }, task.priceTotale)))) : task.state === 1 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "col mb-4",
           key: task.id
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "card text-white bg-dark  mb-3",
+          className: "card  bg-warning  mb-3",
           style: {
             width: '18rem'
           }
@@ -104094,8 +104109,46 @@ function (_Component) {
         }, task.orders.map(function (items) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             key: items.id
-          }, items.name, "    ", items.price);
-        }), "  ")));
+          }, items.name, "    ", items.price, " ", items.quantity);
+        }), "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "card-footer "
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+          style: {
+            "float": 'left'
+          }
+        }, "Totale Price: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+          style: {
+            "float": 'right'
+          },
+          className: ""
+        }, task.priceTotale)))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "col mb-4",
+          key: task.id
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "card  bg-light  mb-3",
+          style: {
+            width: '18rem'
+          }
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "card-header"
+        }, task.created_at), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "card-body"
+        }, task.orders.map(function (items) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            key: items.id
+          }, items.name, "    ", items.price, " ", items.quantity);
+        }), "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "card-footer "
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+          style: {
+            "float": 'left'
+          }
+        }, "Totale Price: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+          style: {
+            "float": 'right'
+          },
+          className: ""
+        }, task.priceTotale))));
       })), "     ");
     }
   }]);
@@ -104776,7 +104829,7 @@ function (_Component) {
 
       var productItems = currentItems.map(function (item) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex",
+          className: "col-sm-12 col-md-6 col-lg-4 ftco-animate d-flex",
           key: item.id
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "product d-flex flex-column"
@@ -105469,7 +105522,7 @@ var filterProducts = function filterProducts(products, category_name) {
       payload: {
         category_name: category_name,
         items: category_name === '' ? products : products.filter(function (a) {
-          return a.category_name.indexOf(category_name) >= 0;
+          return a.category_name.toLowerCase().indexOf(category_name.toLowerCase()) >= 0;
         })
       }
     });
@@ -105482,7 +105535,7 @@ var searchProducts = function searchProducts(products, search_name) {
       payload: {
         search_name: search_name,
         items: search_name === '' ? products : products.filter(function (a) {
-          return a.name.indexOf(search_name) >= 0;
+          return a.name.toLowerCase().indexOf(search_name.toLowerCase()) >= 0;
         })
       }
     });

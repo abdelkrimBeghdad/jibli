@@ -20,6 +20,8 @@ class CreateordersTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')
                   ->onUpdate('cascade')->onDelete('set null');
             $table->integer('state')->unsigned()->default(0);
+            $table->string('nbrOrder');
+            $table->float('priceTotale', 13, 2);	
             $table->timestamps();
         });
     }

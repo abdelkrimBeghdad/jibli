@@ -32,12 +32,19 @@ class OrdersController extends Controller
 
     public function Delivred($id){
         $order = orders::find($id);
-        $order->state = 0;
+        $order->state = 2;
         $order->save();
         return back();
     }
 
     public function NoDelivred($id){
+        $order = orders::find($id);
+        $order->state = 0;
+        $order->save();
+        return back();
+    }
+
+    public function Processing($id){
         $order = orders::find($id);
         $order->state = 1;
         $order->save();

@@ -19,17 +19,20 @@ class Cart extends Component {
 
   validate = () => {
     const { cartItems, id_user } = this.props;
+    const PriceTotale= cartItems.reduce((a, c) => (a + c.price * c.count), 0)
+
     const data = {
      
-      itemOrder: cartItems.map(item => ([id_user, item.id, item.name, item.price, item.count])),
+      itemOrder: cartItems.map(item => ([id_user, item.id, item.name, item.price, item.count,PriceTotale])),
     }
 
     axios
       .post('http://127.0.0.1:8000/api/auth/order', data)
-      .then(res => {
+      .then(res => { 
         console.log('regle')
         this.setState({redirect :true})
-       
+          
+
 
         // this.props.updateUser(res.data.user);
       })

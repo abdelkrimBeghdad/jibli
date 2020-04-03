@@ -17,7 +17,19 @@ class OrderController extends Controller
 
         $order = new orders;
         $order->user_id =$a[0][0];
-       
+
+        // Get the last order id
+        $lastorderId = Orders::orderBy('id', 'desc')->first()->id;
+
+        // Get last 3 digits of last order id
+        $lastIncreament = substr($lastorderId, -4);
+
+        // Make a new order id with appending last increment + 1
+        $newOrderId = 'TXT' . date('YmdHi') . str_pad($lastIncreament + 1, 3, 0, STR_PAD_LEFT);
+
+
+        $order->nbrOrder = $newOrderId;
+        $order->priceTotale =$a[0][5];
         $order->save();
 
             foreach ($request->input('itemOrder') as $key => $value) {

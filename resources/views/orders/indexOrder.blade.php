@@ -57,21 +57,30 @@
                               @endforeach  
                             </td  >   --}}
                             
-                            <td>{{$item->state == 0 ? 'No Delivred':'Delivred'}}</td>
-
                             <td>
                               @if ($item->state == 0)
-                            <a href="{{ route('NoDelivred_order',$item->id)}}" class="btn btn-danger btn-xs disabled"><i class="fa fa-arrow-up"></i></a>
+                                No Delivred  
+                              @elseif($item->state == 1)
+                                Processing
+                              @else 
+                                Delivred 
+                              @endif
+
+                            </td>
+                            <td>
+                              @if ($item->state == 0)
+                            <a href="{{ route('NoDelivred_order',$item->id)}}" class="btn btn-dark btn-xs disabled"><i class="fa fa-arrow-up"></i></a>
                                   
-                              @else
+                              @elseif($item->state == 1)
+                            <a href="{{route('Processing',$item->id)}}" class="btn btn-warning btn-xs disabled"><i class="fa fa-arrow-up"></i></a>
+                              @else 
                             <a href="{{route('Delivred_order',$item->id)}}" class="btn btn-success btn-xs disabled"><i class="fa fa-arrow-up"></i></a>
-                                  
                               @endif
 
 
 
-                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#productModal{{ $item->id }}">
-                                Launch demo modal
+                              <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#productModal{{ $item->id }}">
+                                Detail
                               </button>        
                                 
                            </td>
@@ -128,29 +137,34 @@
                                @foreach ($item->orders as $product)
                               {{$product->quantity}}<br>
                                @endforeach
-</td> <td>
+                               <hr>Totale
+                              </td> <td>
                                @foreach ($item->orders as $product)
                               {{$product->price}}<br>
-                               @endforeach</td> 
+                               @endforeach <hr>{{$item->priceTotale}}</td> 
                             </tr>
-                 
-                          </tbody>
+                            
+                                    
+                            </tbody>
+                          
+                             
+                            
                         </table>
-                        
-                       
-                        </div>
+
+                          </div>
+                          
                         <div class="modal-footer">
                           @if ($item->state == 0)
-                          <a href="{{ route('NoDelivred_order',$item->id)}}" type="button" role="button" class="btn btn-danger">Change To Delivred</a>
+                          <a href="{{ route('Processing',$item->id)}}" type="button" role="button" class="btn btn-warning">Change To Processing</a>
+                          @elseif($item->state == 1)
+                          <a href="{{ route('Delivred_order',$item->id)}}" type="button" role="button" class="btn btn-success">Change To Delivred</a>
                           @else
-                          <a href="{{ route('Delivred_order',$item->id)}}" type="button" role="button" class="btn btn-success">Change To No Delivred</a>
+                          <a href="{{ route('NoDelivred_order',$item->id)}}" type="button" role="button" class="btn btn-dark">Change To No Delivred</a>
                           @endif
-                         
-                         
                          
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
-                      </div>
+                      </div> 
                     </div>
                   </div>
                   @endforeach

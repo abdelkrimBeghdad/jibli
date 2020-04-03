@@ -2,6 +2,7 @@ import React ,{Component} from 'react'
 import {connect} from 'react-redux'
 
 
+
  class ListeOfOrdersOfClient extends Component{
     constructor(props) {
         super(props);
@@ -22,18 +23,23 @@ import {connect} from 'react-redux'
 
     render() {
         const { data, id } = this.state
+        let validate 
+
+      
+
+
         return (
+          
           <section className="container" style={{ height: '100%', background: 'white' }}>
    <br/>
             <div className="row">
-               
-              
-           
+                     
+                   
                     {data.map(task =>(
-                      
-                      task.state === 1 ?
+                     
+                      task.state === 2 ?
                         <div className="col mb-4" key={task.id}>
-                         <div className="card text-white bg-success  mb-3" style={{width :'18rem'}} >
+                         <div className="card  bg-success  mb-3" style={{width :'18rem'}} >
                          <div className="card-header">{task.created_at}</div>
                           
                         
@@ -42,36 +48,84 @@ import {connect} from 'react-redux'
                            {task.orders.map(items => (
                             
                             <div key ={items.id}>
-                              {items.name}    {items.price}
+                              {items.name}    {items.price} {items.quantity}
                             </div>
-                      
+                               
                             
                            ))}  </div> 
+                           
+                           <div className="card-footer ">
+                              <h5 style={{ float: 'left' }}>Totale Price: </h5>     
+
+                              <h4 style={{ float: 'right' }} className="">{task.priceTotale}</h4>     
+                                       
+                                        </div>
+                            
                          </div>
                         
                        </div>
                         
-                        :
-                        <div className="col mb-4" key={task.id}>
-                        <div className="card text-white bg-dark  mb-3" style={{width :'18rem'}} >
-                        <div className="card-header">{task.created_at}</div>
 
+
+                        
+                        : task.state === 1 ?
+                        <div className="col mb-4" key={task.id}>
+                        <div className="card  bg-warning  mb-3" style={{width :'18rem'}} >
+                        <div className="card-header">{task.created_at}</div>
                          
-                        <div className="card-body">
-                           {task.orders.map(items => (
-                            
-                            <div key ={items.id}>
-                              {items.name}    {items.price}
-                            </div>
-                      
-                            
-                           ))}  </div> 
+                       
+                       
+                         <div className="card-body">
+                          {task.orders.map(items => (
+                           
+                           <div key ={items.id}>
+                             {items.name}    {items.price} {items.quantity}
+                           </div>
+                              
+                           
+                          ))}  </div> 
+                          
+                          <div className="card-footer ">
+                             <h5 style={{ float: 'left' }}>Totale Price: </h5>     
+
+                             <h4 style={{ float: 'right' }} className="">{task.priceTotale}</h4>     
+                                      
+                                       </div>
+                           
                         </div>
                        
                       </div>
-                
+                       :
+                       <div className="col mb-4" key={task.id}>
+                       <div className="card  bg-light  mb-3" style={{width :'18rem'}} >
+                       <div className="card-header">{task.created_at}</div>
+                        
+                      
+                      
+                        <div className="card-body">
+                         {task.orders.map(items => (
+                          
+                          <div key ={items.id}>
+                            {items.name}    {items.price} {items.quantity}
+                          </div>
+                             
+                          
+                         ))}  </div> 
+                         
+                         <div className="card-footer ">
+                            <h5 style={{ float: 'left' }}>Totale Price: </h5>     
+
+                            <h4 style={{ float: 'right' }} className="">{task.priceTotale}</h4>     
+                                     
+                                      </div>
+                          
+                       </div>
+                      
+                     </div>
+
+                   ))} 
           
-                   ))}
+                
                   
                   
                 
