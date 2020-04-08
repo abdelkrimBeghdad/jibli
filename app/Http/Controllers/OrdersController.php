@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Customer;
 use App\Orders;
 use App\order_items;
+use Illuminate\Notifications\DatabaseNotification;
 
 use Illuminate\Http\Request;
 
@@ -34,21 +35,21 @@ class OrdersController extends Controller
         $order = orders::find($id);
         $order->state = 2;
         $order->save();
-        return back();
+        return redirect()->route('orders.index');
     }
 
     public function NoDelivred($id){
         $order = orders::find($id);
         $order->state = 0;
         $order->save();
-        return back();
+        return redirect()->route('orders.index');
     }
 
     public function Processing($id){
         $order = orders::find($id);
         $order->state = 1;
         $order->save();
-        return back();
+        return redirect()->route('orders.index');
     }
 
 
@@ -82,9 +83,20 @@ class OrdersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function shouwNotification(Orders $order, DatabaseNotification  $notification )
+    {  /* $notification= new DatabaseNotification;  
+        $notification->markAsRead(); */
+    
+     /*    dd( $notification);
+
+     $user = Customer::first();
+        $user->unreadNotifications->where('id', '9ce6cc45-4e2d-46ae-b540-851503f84aec')->markAsRead(); */
+    $notification->markAsRead();
+
+    
+       
+        $order = Orders::with('orders')->find($order->id);
+        return view('orders.ShowOrder',compact('order'));
     }
 
     /**

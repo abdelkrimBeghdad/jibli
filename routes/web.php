@@ -37,6 +37,7 @@ Route::prefix('Admin')->group(function () {
     Route::get('/orders/Delivred/{id}', 'OrdersController@Delivred')->name('Delivred_order');
     Route::get('/orders/NoDelivred/{id}', 'OrdersController@NoDelivred')->name('NoDelivred_order');
     Route::get('/orders/Processing/{id}', 'OrdersController@Processing')->name('Processing');
+    Route::get('/orders/{order}/{notification}', 'OrdersController@shouwNotification')->name('showNotification');
 
 
 });

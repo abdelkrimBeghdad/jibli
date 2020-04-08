@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 use App\Orders;
 use App\order_items;
-
+use App\user;
+use  App\Customer;
 use App\Products;
 use Illuminate\Http\Request;
+
+
+use App\Notifications\newOrderPosted;
 
 class OrderController extends Controller
 {
@@ -19,7 +23,19 @@ class OrderController extends Controller
         $order->user_id =$a[0][0];
 
         // Get the last order id
-        $lastorderId = Orders::orderBy('id', 'desc')->first()->id;
+
+
+        $orders = Orders::all();
+
+            if($orders->isEmpty())
+            {
+                $lastorderId = 0;
+                
+            }else{
+                $lastorderId = Orders::orderBy('id', 'desc')->first()->id;
+              
+            }
+        
 
         // Get last 3 digits of last order id
         $lastIncreament = substr($lastorderId, -4);
@@ -32,6 +48,15 @@ class OrderController extends Controller
         $order->priceTotale =$a[0][5];
         $order->save();
 
+       /*  if (auth()->guard('api')->check())
+        { 
+           print_r(auth('api')->user()->firstName);
+        }else(print('nooo' )); */
+        $user = Customer::first();
+        $user->notify(new newOrderPosted($order));
+        
+
+        
             foreach ($request->input('itemOrder') as $key => $value) {
                 order_items::create([
                     'orders_id' => $order->id,

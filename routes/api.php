@@ -23,7 +23,7 @@ use Illuminate\Http\Request;
 
 Route::middleware('jwt.auth')->group( function(){
  
-  Route::get('ListeOrders/{id}', 'OrderController@ListeOfOrdersOfClientFrontend');
+  
 
 } );
 
@@ -42,7 +42,7 @@ Route::group([
     Route::post('me', 'AuthController@me');
 
     Route::post('order', 'OrderController@store');
-  
+  Route::get('ListeOrders/{id}', 'OrderController@ListeOfOrdersOfClientFrontend');
 
 
 });

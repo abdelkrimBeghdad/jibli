@@ -81,6 +81,25 @@
                                     </li>
                         </ul>
                     </li>
+
+
+                    <li>
+                        <a href="#order" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-copy"></i>
+                            Ordes
+                        </a>
+                        <ul class="collapse list-unstyled" id="order">
+                                <li>
+                                        <a href="{{route('orders.index')}}">List Of Orders</a>
+                                    </li>
+                                    
+                        </ul>
+                    </li>
+
+
+
+
+
                     <li>
                         <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                             <i class="fas fa-copy"></i>
@@ -145,6 +164,43 @@
                                     </li>
                                 @endif
                             @else
+
+
+                            
+                         {{--   {{
+                                  $orders = App\Orders::all()}}
+                           
+                            <h1>
+                                {{$orders->unreadNotifications->count()}}
+                            </h1> --}}
+                            
+                          
+
+                           
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <span class="badge badge-danger">{{ auth()->user()->unreadNotifications->count() }}</span> notification(s) <span class="caret"></span>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        @foreach (auth()->user()->unreadNotifications as $unreadNotification)
+                                    <a href="{{route('showNotification',['order' =>$unreadNotification->data['ordersId'], 'notification' => $unreadNotification->id])}}" class="dropdown-item"><strong>{{$unreadNotification->data['lastNameUser']}}
+                                        {{$unreadNotification->data['firstNameUser']}}</strong> has an order </a>
+                                        @endforeach
+                                       </div> 
+                                       </li>
+
+
+                           
+
+     
+                            </li>
+
+
+
+
+
+
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }} <span class="caret"></span>

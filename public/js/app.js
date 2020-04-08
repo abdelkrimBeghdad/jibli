@@ -104043,7 +104043,7 @@ function (_Component) {
       var _this2 = this;
 
       var id = this.props.id;
-      axios.get("http://127.0.0.1:8000/api/ListeOrders/".concat(id)).then(function (response) {
+      axios.get("http://127.0.0.1:8000//api/auth/ListeOrders/".concat(id)).then(function (response) {
         _this2.setState({
           data: response.data
         });
