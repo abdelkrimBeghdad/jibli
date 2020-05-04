@@ -33,7 +33,9 @@ export default class Register extends Component{
         }
 
         axios
-        .post('http://127.0.0.1:8000/api/auth/register',data)
+        //.post('http://127.0.0.1:8000/api/auth/register',data)
+        .post('https://jiblii.herokuapp.com/api/auth/register',data)
+
         .then(res =>{
             cookie.set('token',res.data.access_token)
             cookie.set('user',res.data.user)

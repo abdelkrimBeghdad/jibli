@@ -30,10 +30,10 @@
 
 <body>
 
-    <div class="wrapper">
+    <div class="wrapperAdmin">
         <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
+        <nav id="sidebarAdmin">
+            <div class="sidebarAdmin-header">
                 <h3>Jibli Admin</h3>
                 <strong>JIBLi</strong>
             </div>
@@ -240,7 +240,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
+                $('#sidebarAdmin').toggleClass('active');
             });
         });
     </script>

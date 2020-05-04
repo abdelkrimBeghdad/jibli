@@ -27,7 +27,8 @@ class Account extends Component {
                        email: this.state.email };
     
         axios
-          .patch("http://127.0.0.1:8000//api/auth/update", data)
+          //.patch("http://127.0.0.1:8000//api/auth/update", data)
+          .patch("https://jiblii.herokuapp.com/api/auth/update", data)
           .then(res => {
             console.log(res.data);
     

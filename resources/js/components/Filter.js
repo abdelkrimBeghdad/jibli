@@ -10,7 +10,8 @@ class Filter extends Component{
     }
     componentDidMount () {
         
-        axios.get(`http://127.0.0.1:8000/api/categorie`).then(response => {
+        //axios.get(`http://127.0.0.1:8000/api/categorie`).then(response => {
+        axios.get(`https://jiblii.herokuapp.com/api/categorie`).then(response => {
             /* this.setState ( {categorie :response}); */
           
             this.setState({categorie:response.data})
