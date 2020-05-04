@@ -15,10 +15,15 @@ class Basket extends Component {
         
         return (
  <div className="basket">
+
+
+     <div className='header'>
                 {cartItems.length === 0
                     ? "Basket is empty" :
                     <div>You have {cartItems.length} items in the basket. <hr /></div>
                 }
+     </div>
+               
                 {cartItems.length > 0 &&
                     <div>
                         <ul style={{ marginLeft: -25 }}>
@@ -59,10 +64,17 @@ class Basket extends Component {
 
                         
 
-                        <b>Sum: {cartItems.reduce((a, c) => (a + c.price * c.count), 0)}
-                        </b>
-                        
+                       
+                       <div className ='divFooter'> 
+                        <button class="footer">
+    <a class="checkout">Checkout</a>
+    <span class="s">{cartItems.reduce((a, c) => (a + c.price * c.count), 0) }Da</span>
+    </button>
                     </div>
+                    </div>
+
+
+
                 }
             </div>
         )

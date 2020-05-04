@@ -44,7 +44,7 @@ class Product extends Component {
 
     const productItems = currentItems.map(item => (
       
-      <div className="col-sm-12 col-md-6 col-lg-4 ftco-animate d-flex"  key={item.id}>
+      <div className="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 ftco-animate"  key={item.id}>
         <div >
           <div className="product d-flex flex-column">
             <a href="#" className="img-prod"><img className="img-fluid" src={"upload/image/" + item.image} alt="Colorlib Template" />

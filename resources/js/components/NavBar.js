@@ -20,6 +20,7 @@ import {connect} from 'react-redux';
 import cookie from 'js-cookie';
 import ListeOfOrdersOfClient from './ListeOfOrdersOfClient';
 import Account from './Account';
+import { useState, useEffect } from "react";
 
  
     function NavBar(props) {
@@ -28,26 +29,58 @@ import Account from './Account';
             cookie.remove("token");
             props.logout(); 
           };
+
+      const [Bg, setBg] = useState("transparent");
+      const listenScrollEvent = event => {
+        if (window.scrollY < 613) {
+          return setBg("transparent");
+        } else if (window.scrollY > 10) {
+          return setBg("#ffffff");
+        }
+      };
+    
+      useEffect(() => {
+        window.addEventListener("scroll", listenScrollEvent);
+    
+        return () => window.removeEventListener("scroll", listenScrollEvent);
+      }, []);
         return(
             <Router>
-                <div className="ab">
-                     <nav className="navbar navbar-expand-sm navbar-dark text-center sticky-top" >
+                <div className=''>
+               
+                     <nav className="navbar navbar-expand-sm fixed-top " style={{backgroundColor: Bg}} >
                         <Link className="navbar-brand" to="/">Navbar</Link>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
 
+                      
+
+                      
+            
+
+
+
+
+
+
+
                         <div className="collapse navbar-collapse " id="navbarSupportedContent">
                             <ul className="navbar-nav mr-auto mx-auto">
-                            <li className="nav-item active">
+                            <div style={{margin: '0 auto'}}> 
+                         <input  onChange={(e) =>this.props.searchProducts(this.props.products, e.target.value)}
+            className="form-control" name="search" id="search"/>
+                  </div>
+                              
+                        {/*       <li className="nav-item active">
                                 <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
                             </li>
-                            <li className="nav-item">
+                          <li className="nav-item">
                                 <Link className="nav-link" to="/product">Product</Link>
                             </li>
                              <li className="nav-item">
                                 <Link className="nav-link" to="/liste">liste</Link>
-                            </li>
+                            </li> 
                             
 
                             {!props.loggedIn ? (
@@ -73,11 +106,43 @@ import Account from './Account';
                                 
                                  </ul>
                             )}
-
+*/}
 
                             </ul>
                             {/* <Provider store={store}> */}
-                                    <CardIcon  />              
+                      
+                        
+
+
+                            {!props.loggedIn ? (
+                                <Fragment>
+                                    <Link  to="/login">  
+                                        <button class="btn btn-outline-success mr-4">Login</button>
+                                        </Link>
+                                 
+                               
+                                </Fragment>
+                            ) : (
+                                <ul className="navbar-nav mr-auto mx-auto">
+
+                                 <li className="nav-item">
+                                    <Link className="nav-link" to="/profile" >Profile</Link>
+                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/logout" onClick={handleLogout}>Logout</Link>
+                                </li>
+
+                                
+                                 </ul>
+                            )}
+                        
+                                     
+                                  
+
+
+                              <div className='mr-4'>
+                                    <CardIcon  />  
+                                    </div>            
                             {/* </Provider>     */} 
                         </div>
                        
@@ -99,13 +164,16 @@ import Account from './Account';
                         {<GuestRoute exact path="/register" component={Register} />}
                         {/* </Provider>    */}
                         <div>
-                          {/*   <Carousel />
+                          {/*   
                             <Offre_To_Client />
                              */}
                             </div>
-                </div>
+                            
+                            
+
+                </div>   
             </Router>  
-           
+        
         )   
     }
   

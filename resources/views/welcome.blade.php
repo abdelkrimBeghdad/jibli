@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="/css/app.css">
         
     </head>
-    <body style="background-color:#fdf8f1;">
+    <body style="background-color:#f7f7f7;">
        
         <div id="example" >
             <script src="/js/app.js"></script>

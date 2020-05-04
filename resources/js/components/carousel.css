@@ -7,6 +7,23 @@
     height:100%;
 }
  */
+
+
+ .bg {
+    
+  height: 100vh;
+  min-height: 500px;
+  background-image: url("/images/background.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+
+
+
+
  .carousel-content {
     position: absolute;
     bottom: 10%;
@@ -17,7 +34,7 @@
     font-style: oblique;
     font-size: 65px;
   }
-
+  
 
 
 
@@ -58,19 +75,19 @@
 /*suport and quality*/
 
 .bg-color-1 {
-    background: #e4b2d6;
+    background: #fdb36d;
 }
 
 .bg-color-2 {
-    background: #dcc698;
+    background: #fdb36d;
 }
 
 .bg-color-3 {
-    background: #a2d1e1;
+    background: #f98f7c;
 }
 
 .bg-color-4 {
-    background: #dcd691;
+    background: #e385c8;
 }
 
 

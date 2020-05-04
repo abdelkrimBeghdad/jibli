@@ -13,6 +13,7 @@ import cookie from 'js-cookie';
 import jwt from 'jsonwebtoken';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import RightSideBar from './components/RightSideBar';
 
 const jwt_secret = 'MYqAWQBdM6Qjqgtp42mnZTP57EitWPBawqwLVUX5o8LBVbLwePxRU8zyBQiLR9ds'
 
@@ -35,8 +36,10 @@ if (token) {
 const render = () =>{
  ReactDOM.render(
                 <Provider store={store}>  
-                  <Contact />
+                <RightSideBar />
+{/*                   <Contact /> */}
                   <NavBar />
+                 
                   <Footer />
                </Provider> 
                , document.getElementById('example')

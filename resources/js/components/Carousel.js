@@ -9,50 +9,10 @@ export default class Carousel extends Component {
 
   render() {
     return (
-      <div>
-        <div className="carousel">
-          <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel">
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img className="d-block w-100" src="carousel/car1.jpg"
-                  alt="First slide" />
-                <div className='carousel-content'>
-                  <h1>Anything, anytime, anywhere.</h1>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img className="d-block w-100" src="carousel/car3.jpg"
-                  alt="Second slide" />
-                <div className='carousel-content'>
-                  
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img className="d-block w-100" src="carousel/car2.jpg"
-                  alt="Third slide" />
-                <div className='carousel-content'>
-                  <h5>Food, drinks and groceries available for delivery or pickup.</h5>
-                </div>
-              </div>
-            </div>
-            <a className="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span className="sr-only">Previous</span>
-            </a>
-            <a className="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-              <span className="carousel-control-next-icon" aria-hidden="true"></span>
-              <span className="sr-only">Next</span>
-            </a>
-          </div>
+      <div >
 
-        </div>
-
-
-
-
-
-
-
+<div className="bg"></div>
+     
 
         {/* categorie */}
 
@@ -114,7 +74,7 @@ export default class Carousel extends Component {
 <br></br>
 <br></br>
  */}
-<section>
+<section style={{backgroundColor:'#ffffff' ,paddingTop:'30px'}}>
 
 
       <div className="section-header">
@@ -123,23 +83,15 @@ export default class Carousel extends Component {
           </div>
 <div className="container my-4">
 <div className="row text-center">
-  <div className="col-md-3 mb-4">
-  <div className='im  bg-color-1 d-flex justify-content-center align-items-center mb-2'>
-   
-    <img className="bg-color-1" alt="64*64" src="carousel/shipped.png"data-holder-rendered="true"/>
-    </div> 
-    <h3 className="heading">Free Shipping</h3>
-<span>On order over $100</span>
-  </div>
- 
-  <div className="col-md-3 mb-4">
+  
+  <div className="col-md-4 col-4 col-sm-4  mb-4">
    
   <div className='im  bg-color-2 d-flex justify-content-center align-items-center mb-2'>
     <img className=" bg-color-2" alt="100*100" src="carousel/diet(1).png" data-holder-rendered="true"/>
     </div> 
     <h3 className="heading">Always Fresh</h3>
       <span>Product well package</span>
-  </div>  <div className="col-md-3 mb-4">
+  </div>  <div className="col-md-4 col-4 col-sm-4 mb-4">
    
 <div className='im  bg-color-3 d-flex justify-content-center align-items-center mb-2'>
    <img className="bg-color-3" alt="100*100" src="carousel/quality(1).png" data-holder-rendered="true"/>
@@ -148,7 +100,7 @@ export default class Carousel extends Component {
 <span>Quality Products</span>
  </div> 
 
-  <div className="col-md-3 mb-4">
+  <div className="col-md-4 col-4 col-xs-4 mb-4">
   <div className='im  bg-color-4 d-flex justify-content-center align-items-center mb-2'>
     <img className="bg-color-4" alt="100x100" src="carousel/customer-service(1).png"
       data-holder-rendered="true"/>
@@ -162,8 +114,20 @@ export default class Carousel extends Component {
 
 </div>
 </section>
+<div className='container'>
+
+<div className='row'>
+<div  className='col-md-12' >
+                        <Filter  />
+                        <hr />    
+                        <Product />     
       </div>
+      </div>
+      </div>
+      </div>  
+
     )
+
   }
 
 
