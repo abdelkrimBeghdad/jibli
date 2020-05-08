@@ -19,8 +19,8 @@ class AuthController extends Controller
      */
     public function __construct()
     {   
-    // Auth::shouldUse('api');
-      $this->middleware('auth:api', ['except' => ['login','register']]);
+     Auth::shouldUse('api');
+     // $this->middleware('auth:api', ['except' => ['login','register']]);
     }
     /**
      * Get a JWT via given credentials.
