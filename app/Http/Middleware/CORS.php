@@ -15,9 +15,8 @@ class CORS
      */
     public function handle($request, Closure $next)
     {
-        header('Access-Control-Allow-Origin','*');
-        header('Access-Control-Allow-Headers','Content-type ,X-auth-Token,Authorization,Origine');
-
+        header('Access-Control-Allow-Origin : *');
+        header('Access-Control-Allow-Headers : Content-type, X-Auth-Token, Authorization, Origin');
         return $next($request);
     }
 }
