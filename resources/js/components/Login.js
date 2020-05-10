@@ -19,7 +19,7 @@ class Login extends Component {
         
         axios
        // .post("http://127.0.0.1:8000/api/auth/login",data)
-        .post("https://jiblii.herokuapp.com/api/auth/login",data)
+        .post("https://jiblii.herokuapp.com/api/login",data)
         .then(res =>{
             cookie.set('token',res.data.access_token);
             //cookie.set('user',res.data.user);
