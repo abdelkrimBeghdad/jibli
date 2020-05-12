@@ -104214,8 +104214,9 @@ function (_Component) {
         email: _this.state.email,
         password: _this.state.password
       };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://127.0.0.1:8000/api/login", data) //.post("https://jiblii.herokuapp.com/api/login",data)
-      .then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a // .post("http://127.0.0.1:8000/api/auth/login",data)
+      .post("https://jiblii.herokuapp.com/api/login", data).then(function (res) {
+        console.log('abdelkrim');
         js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('token', res.data.access_token); //cookie.set('user',res.data.user);
 
         _this.props.setLogin(res.data.user);
