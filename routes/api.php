@@ -29,7 +29,7 @@ Route::middleware('jwt.auth')->group( function(){
 
 Route::group([
 
-    'middleware' => 'api',
+    'middleware' => ['api', 'cors'],
     'prefix' => 'auth',
 
 ], function ($router) {
