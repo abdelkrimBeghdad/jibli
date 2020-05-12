@@ -102296,7 +102296,7 @@ if (token) {
       token = null;
     } else {
       //if (decoded.iss !== "http://127.0.0.1:8000/api/auth/login") {
-      if (decoded.iss !== "https://jiblii.herokuapp.com/api/login") {
+      if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {
         js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
         token = null;
       }
@@ -102313,7 +102313,7 @@ var render = function render() {
 if (token) {
   axios.defaults.headers.common["Authorization"] = "Bearer ".concat(token); //axios.post("http://127.0.0.1:8000/api/auth/me").then(res => {
 
-  axios.post("https://jiblii.herokuapp.com/api/me").then(function (res) {
+  axios.post("https://jiblii.herokuapp.com/api/auth/me").then(function (res) {
     _components_Store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch({
       type: "SET_LOGIN",
       payload: res.data
@@ -102484,7 +102484,7 @@ function (_Component) {
         email: _this.state.email
       };
       axios__WEBPACK_IMPORTED_MODULE_3___default.a //.patch("http://127.0.0.1:8000//api/auth/update", data)
-      .patch("https://jiblii.herokuapp.com/api/update", data).then(function (res) {
+      .patch("https://jiblii.herokuapp.com/api/auth/update", data).then(function (res) {
         console.log(res.data); // this.props.updateUser(res.data.user);
       })["catch"](function (e) {
         return _this.setState({
@@ -103259,7 +103259,7 @@ function (_Component) {
         })
       };
       axios //.post('http://127.0.0.1:8000/api/auth/order', data)
-      .post('https://jiblii.herokuapp.com/api/order', data).then(function (res) {
+      .post('https://jiblii.herokuapp.com/api/auth/order', data).then(function (res) {
         console.log('regle');
 
         _this.setState({
@@ -103588,7 +103588,7 @@ function (_Component) {
       var _this2 = this;
 
       //axios.get(`http://127.0.0.1:8000/api/categorie`).then(response => {
-      axios.get("https://jiblii.herokuapp.com/api/categorie").then(function (response) {
+      axios.get("https://jiblii.herokuapp.com/api/auth/categorie").then(function (response) {
         /* this.setState ( {categorie :response}); */
         _this2.setState({
           categorie: response.data
@@ -104030,7 +104030,7 @@ function (_Component) {
 
       var id = this.props.id; //axios.get(`http://127.0.0.1:8000//api/auth/ListeOrders/${id}`).then(response => {
 
-      axios.get("https://jiblii.herokuapp.com/api/ListeOrders/".concat(id)).then(function (response) {
+      axios.get("https://jiblii.herokuapp.com/api/auth/ListeOrders/".concat(id)).then(function (response) {
         _this2.setState({
           data: response.data
         });
@@ -104215,7 +104215,7 @@ function (_Component) {
         password: _this.state.password
       };
       axios__WEBPACK_IMPORTED_MODULE_1___default.a // .post("http://127.0.0.1:8000/api/auth/login",data)
-      .post("https://jiblii.herokuapp.com/api/login", data).then(function (res) {
+      .post("https://jiblii.herokuapp.com/api/auth/login", data).then(function (res) {
         js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('token', res.data.access_token); //cookie.set('user',res.data.user);
 
         _this.props.setLogin(res.data.user);
@@ -105192,7 +105192,7 @@ function (_Component) {
         password_confirme: _this.state.password_confirme
       };
       axios__WEBPACK_IMPORTED_MODULE_1___default.a //.post('http://127.0.0.1:8000/api/auth/register',data)
-      .post('https://jiblii.herokuapp.com/api/register', data).then(function (res) {
+      .post('https://jiblii.herokuapp.com/api/auth/register', data).then(function (res) {
         js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('token', res.data.access_token);
         js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('user', res.data.user);
 
