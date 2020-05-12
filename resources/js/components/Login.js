@@ -21,6 +21,7 @@ class Login extends Component {
        // .post("http://127.0.0.1:8000/api/auth/login",data)
         .post("https://jiblii.herokuapp.com/api/login",data)
         .then(res =>{
+            console.log('abdelkrim');
             cookie.set('token',res.data.access_token);
             //cookie.set('user',res.data.user);
             this.props.setLogin(res.data.user);
