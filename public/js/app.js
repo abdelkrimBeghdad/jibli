@@ -103588,7 +103588,7 @@ function (_Component) {
       var _this2 = this;
 
       //axios.get(`http://127.0.0.1:8000/api/categorie`).then(response => {
-      axios.get("https://jiblii.herokuapp.com/api/auth/categorie").then(function (response) {
+      axios.get("https://jiblii.herokuapp.com/api/categorie").then(function (response) {
         /* this.setState ( {categorie :response}); */
         _this2.setState({
           categorie: response.data
