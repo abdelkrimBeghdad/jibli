@@ -102295,8 +102295,10 @@ if (token) {
       js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
       token = null;
     } else {
-      //if (decoded.iss !== "http://127.0.0.1:8000/api/auth/login") {
-      if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {
+      // if ((decoded.iss === "http://127.0.0.1:8000/api/auth/login")|| (decoded.iss === "http://127.0.0.1:8000/api/auth/google/callback")){
+      if (decoded.iss === "https://jiblii.herokuapp.com/api/auth/login" || decoded.iss === "https://jiblii.herokuapp.com/api/auth/google/callback") {} else {
+        //  if (decoded.iss !== "http://127.0.0.1:8000/api/auth/google/callback") {
+        //if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {
         js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
         token = null;
       }
@@ -102307,13 +102309,15 @@ if (token) {
 var render = function render() {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_9__["Provider"], {
     store: _components_Store__WEBPACK_IMPORTED_MODULE_8__["default"]
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_RightSideBar__WEBPACK_IMPORTED_MODULE_14__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_13__["default"], null)), document.getElementById('example'));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_RightSideBar__WEBPACK_IMPORTED_MODULE_14__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], null)), document.getElementById('example'));
 };
 
 if (token) {
-  axios.defaults.headers.common["Authorization"] = "Bearer ".concat(token); //axios.post("http://127.0.0.1:8000/api/auth/me").then(res => {
+  axios.defaults.headers.common["Authorization"] = "Bearer ".concat(token); // axios.post("http://127.0.0.1:8000/api/auth/me").then(res => {
 
   axios.post("https://jiblii.herokuapp.com/api/auth/me").then(function (res) {
+    console.log(res.data);
+    console.log('res.data');
     _components_Store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch({
       type: "SET_LOGIN",
       payload: res.data
@@ -102483,7 +102487,7 @@ function (_Component) {
         phone: _this.state.phone,
         email: _this.state.email
       };
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a //.patch("http://127.0.0.1:8000//api/auth/update", data)
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a // .patch("http://127.0.0.1:8000//api/auth/update", data)
       .patch("https://jiblii.herokuapp.com/api/auth/update", data).then(function (res) {
         console.log(res.data); // this.props.updateUser(res.data.user);
       })["catch"](function (e) {
@@ -103065,6 +103069,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Product__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Product */ "./resources/js/components/Product.js");
 /* harmony import */ var _Fruits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Fruits */ "./resources/js/components/Fruits.js");
 /* harmony import */ var _Fruits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_Fruits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Footer */ "./resources/js/components/Footer.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -103075,13 +103080,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -103096,17 +103104,64 @@ function (_Component) {
   _inherits(Carousel, _Component);
 
   function Carousel() {
+    var _getPrototypeOf2;
+
+    var _this;
+
     _classCallCheck(this, Carousel);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Carousel).apply(this, arguments));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Carousel)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      googleLoginUrl: null
+    });
+
+    return _this;
   }
 
   _createClass(Carousel, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('/api/auth/google/url', {
+        headers: new Headers({
+          accept: 'application/json'
+        })
+      }).then(function (response) {
+        if (response.ok) {
+          return response.json();
+        }
+
+        console.log(response);
+        throw new Error('Something went wrong!');
+      }).then(function (data) {
+        return _this2.setState({
+          googleLoginUrl: data.url
+        });
+      })["catch"](function (error) {
+        return console.error(error);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var googleLoginUrl = this.state.googleLoginUrl;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "bg"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          backgroundColor: '#ffffff',
+          paddingTop: '30px'
+        }
+      }, googleLoginUrl && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "App-link",
+        href: googleLoginUrl
+      }, "Sign in with Google"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         style: {
           backgroundColor: '#ffffff',
           paddingTop: '30px'
@@ -103160,7 +103215,7 @@ function (_Component) {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-md-12"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Filter__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Product__WEBPACK_IMPORTED_MODULE_4__["default"], null)))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Filter__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Product__WEBPACK_IMPORTED_MODULE_4__["default"], null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], null));
     }
   }]);
 
@@ -103258,7 +103313,7 @@ function (_Component) {
           return [id_user, item.id, item.name, item.price, item.count, PriceTotale];
         })
       };
-      axios //.post('http://127.0.0.1:8000/api/auth/order', data)
+      axios // .post('http://127.0.0.1:8000/api/auth/order', data)
       .post('https://jiblii.herokuapp.com/api/auth/order', data).then(function (res) {
         console.log('regle');
 
@@ -103587,7 +103642,7 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      //axios.get(`http://127.0.0.1:8000/api/categorie`).then(response => {
+      // axios.get(`http://127.0.0.1:8000/api/categorie`).then(response => {
       axios.get("https://jiblii.herokuapp.com/api/categorie").then(function (response) {
         /* this.setState ( {categorie :response}); */
         _this2.setState({
@@ -103867,6 +103922,150 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
+/***/ "./resources/js/components/Google.js":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Google.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _AuthErrors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./AuthErrors */ "./resources/js/components/AuthErrors.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+var Google =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Google, _Component);
+
+  function Google(props) {
+    var _this;
+
+    _classCallCheck(this, Google);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Google).call(this, props));
+    _this.state = {
+      loading: true,
+      error: null,
+      data: {},
+      email: '',
+      password: '',
+      errors: {}
+    };
+    return _this;
+  }
+
+  _createClass(Google, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      //fetch(`http://127.0.0.1:8000/api/auth/google/callback${this.props.location.search}`, { headers: new Headers({ accept: 'application/json' }) })
+      fetch("https://jiblii.herokuapp.com/api/auth/google/callback".concat(this.props.location.search), {
+        headers: new Headers({
+          accept: 'application/json'
+        })
+      }).then(function (response) {
+        console.log('loacation1', _this2.props.location);
+
+        if (response.ok) {
+          return response.json();
+        }
+
+        throw new Error('Something went wrong!');
+      }).then(function (data) {
+        console.log('loacation2', _this2.props); //this.setState({ loading: false, data });
+
+        /*  cookie.set('token',data.user.name); */
+
+        js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('token', data.access_token);
+
+        _this2.props.setLogin(data.user);
+
+        _this2.props.history.push('/profile'); // cookie.set('user',data.user);
+        //console.log(data.user)
+
+      })["catch"](function (error) {
+        _this2.setState({
+          loading: false,
+          error: error
+        });
+
+        console.error(error);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$state = this.state,
+          loading = _this$state.loading,
+          error = _this$state.error,
+          data = _this$state.data;
+
+      if (loading) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading....");
+      }
+
+      if (error) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Error:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("code", {
+          className: "Code-block"
+        }, error.toString()));
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "abdelkrimmmmmmmmmmmmmmm"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("details", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("summary", null, "Welcome ", data.user.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Here is your info: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("code", {
+        className: "Code-block"
+      }, JSON.stringify(data, null, 2))));
+    }
+  }]);
+
+  return Google;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    setLogin: function setLogin(user) {
+      return dispatch({
+        type: "SET_LOGIN",
+        payload: user
+      });
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(null, mapDispatchToProps)(Google));
+
+/***/ }),
+
 /***/ "./resources/js/components/Home.js":
 /*!*****************************************!*\
   !*** ./resources/js/components/Home.js ***!
@@ -104028,7 +104227,7 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      var id = this.props.id; //axios.get(`http://127.0.0.1:8000//api/auth/ListeOrders/${id}`).then(response => {
+      var id = this.props.id; // axios.get(`http://127.0.0.1:8000//api/auth/ListeOrders/${id}`).then(response => {
 
       axios.get("https://jiblii.herokuapp.com/api/auth/ListeOrders/".concat(id)).then(function (response) {
         _this2.setState({
@@ -104214,7 +104413,7 @@ function (_Component) {
         email: _this.state.email,
         password: _this.state.password
       };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a // .post("http://127.0.0.1:8000/api/auth/login",data)
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a //  .post("http://127.0.0.1:8000/api/auth/login",data)
       .post("https://jiblii.herokuapp.com/api/auth/login", data).then(function (res) {
         js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('token', res.data.access_token); //cookie.set('user',res.data.user);
 
@@ -104249,7 +104448,11 @@ function (_Component) {
     value: function render() {
       var error = this.state.errors;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
+        className: "container",
+        style: {
+          paddingTop: '180px',
+          paddingBottom: '180px'
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row justify-content-center"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -104322,6 +104525,114 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
+/***/ "./resources/js/components/LoginGoogle.js":
+/*!************************************************!*\
+  !*** ./resources/js/components/LoginGoogle.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return LoginGoogle; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var LoginGoogle =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(LoginGoogle, _React$Component);
+
+  function LoginGoogle() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, LoginGoogle);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(LoginGoogle)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      googleLoginUrl: null
+    });
+
+    return _this;
+  }
+
+  _createClass(LoginGoogle, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      // fetch('http://127.0.0.1:8000/api/auth/google/url', { headers: new Headers({ accept: 'application/json' }) })
+      fetch('https://jiblii.herokuapp.com/api/auth/google/url', {
+        headers: new Headers({
+          accept: 'application/json'
+        })
+      }).then(function (response) {
+        if (response.ok) {
+          return response.json();
+        }
+
+        console.log(response);
+        throw new Error('Something went wrong!');
+      }).then(function (data) {
+        return _this2.setState({
+          googleLoginUrl: data.url
+        });
+      })["catch"](function (error) {
+        return console.error(error);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var googleLoginUrl = this.state.googleLoginUrl;
+      console.log(googleLoginUrl);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          backgroundColor: '#ffffff',
+          paddingTop: '100px'
+        }
+      }, googleLoginUrl && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "App-link",
+        href: googleLoginUrl
+      }, "Sign in with Google")));
+    }
+  }]);
+
+  return LoginGoogle;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/NavBar.js":
 /*!*******************************************!*\
   !*** ./resources/js/components/NavBar.js ***!
@@ -104356,6 +104667,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_18__);
 /* harmony import */ var _ListeOfOrdersOfClient__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./ListeOfOrdersOfClient */ "./resources/js/components/ListeOfOrdersOfClient.js");
 /* harmony import */ var _Account__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./Account */ "./resources/js/components/Account.js");
+/* harmony import */ var _Google__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./Google */ "./resources/js/components/Google.js");
+/* harmony import */ var _LoginGoogle__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./LoginGoogle */ "./resources/js/components/LoginGoogle.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -104363,6 +104676,8 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -104456,7 +104771,11 @@ function NavBar(props) {
     to: "/login"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     "class": "btn btn-outline-success mr-4"
-  }, "Login"))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, "Login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/apii"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    "class": "btn btn-outline-success mr-4"
+  }, "google"))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "navbar-nav mr-auto mx-auto"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item"
@@ -104499,7 +104818,15 @@ function NavBar(props) {
     exact: true,
     path: "/register",
     component: _Register__WEBPACK_IMPORTED_MODULE_15__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null)));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
+    path: "/apii",
+    component: _LoginGoogle__WEBPACK_IMPORTED_MODULE_22__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
+    path: "/api/auth/google",
+    component: _Google__WEBPACK_IMPORTED_MODULE_21__["default"]
+  })));
 }
 
 var mapStateToProps = function mapStateToProps(state) {

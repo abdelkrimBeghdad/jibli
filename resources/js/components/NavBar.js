@@ -1,6 +1,6 @@
 import React, { Component , Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {BrowserRouter as Router, Route, Link ,Switch,HashRouter  } from "react-router-dom";
 import Product from './Product';
 import './Navbar.css';
 import CardIcon from './CardIcon';
@@ -21,7 +21,8 @@ import cookie from 'js-cookie';
 import ListeOfOrdersOfClient from './ListeOfOrdersOfClient';
 import Account from './Account';
 import { useState, useEffect } from "react";
-
+import Google from './Google';
+import LoginGoogle from './LoginGoogle';
  
     function NavBar(props) {
         const handleLogout = e => {
@@ -45,7 +46,7 @@ import { useState, useEffect } from "react";
         return () => window.removeEventListener("scroll", listenScrollEvent);
       }, []);
         return(
-            <Router>
+            <Router    >
                 <div className=''>
                
                      <nav className="navbar navbar-expand-sm fixed-top " style={{backgroundColor: Bg}} >
@@ -54,59 +55,13 @@ import { useState, useEffect } from "react";
                             <span className="navbar-toggler-icon"></span>
                         </button>
 
-                      
-
-                      
-            
-
-
-
-
-
-
-
                         <div className="collapse navbar-collapse " id="navbarSupportedContent">
                             <ul className="navbar-nav mr-auto mx-auto">
                             <div style={{margin: '0 auto'}}> 
-                         <input  onChange={(e) =>this.props.searchProducts(this.props.products, e.target.value)}
-            className="form-control" name="search" id="search"/>
-                  </div>
+                            <input  onChange={(e) =>this.props.searchProducts(this.props.products, e.target.value)}
+                             className="form-control" name="search" id="search"/>
+                        </div>
                               
-                        {/*       <li className="nav-item active">
-                                <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
-                            </li>
-                          <li className="nav-item">
-                                <Link className="nav-link" to="/product">Product</Link>
-                            </li>
-                             <li className="nav-item">
-                                <Link className="nav-link" to="/liste">liste</Link>
-                            </li> 
-                            
-
-                            {!props.loggedIn ? (
-                                <Fragment>
-                                     <li className="nav-item">
-                                        <Link className="nav-link" to="/login">Login</Link>
-                                    </li>
-                                    <li className="nav-item">
-                                        <Link className="nav-link" to="/register">Register</Link>
-                                    </li>
-                               
-                                </Fragment>
-                            ) : (
-                                <ul className="navbar-nav mr-auto mx-auto">
-
-                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/profile" >Profile</Link>
-                                 </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/logout" onClick={handleLogout}>Logout</Link>
-                                </li>
-
-                                
-                                 </ul>
-                            )}
-*/}
 
                             </ul>
                             {/* <Provider store={store}> */}
@@ -119,8 +74,11 @@ import { useState, useEffect } from "react";
                                     <Link  to="/login">  
                                         <button class="btn btn-outline-success mr-4">Login</button>
                                         </Link>
-                                 
-                               
+
+                                        <Link  to="/apii">  
+                                        <button class="btn btn-outline-success mr-4">google</button>
+                                        </Link> 
+                                   
                                 </Fragment>
                             ) : (
                                 <ul className="navbar-nav mr-auto mx-auto">
@@ -130,30 +88,27 @@ import { useState, useEffect } from "react";
                                  </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/logout" onClick={handleLogout}>Logout</Link>
-                                </li>
-
-                                
+                                </li>        
                                  </ul>
                             )}
-                        
-                                     
-                                  
-
-
+                  
                               <div className='mr-4'>
                                     <CardIcon  />  
                                     </div>            
                             {/* </Provider>     */} 
                         </div>
-                       
                     </nav>  
 
-                  
                         {/* <Route exact path="/" />
                         {<Route exact path="/product" component={App} />} */}
                         {<Route exact path="/" component={Carousel} />}
                         {<AuthRoute exact path="/cart" component={Cart} />}
                         {<Route exact path="/product" component={App} />}
+
+
+                     {/*    {<Route exact path="/apii" component={LoginGoogle} />}
+                        {<Route exact path="/auth/google/" component={Google} />} */}
+
                         {<AuthRoute exact path="/liste" component={Cart} />}
                         {/* <Provider store={store}> */}
                         {<GuestRoute  exact path="/login" component={Login} />}
@@ -172,7 +127,16 @@ import { useState, useEffect } from "react";
                             
 
                 </div>   
-            </Router>  
+                 <Switch>
+                    <Route exact path="/apii" component={LoginGoogle} /> 
+                 <Route exact path="/api/auth/google" component={Google} />
+                 </Switch>
+                  
+            
+            </Router >  
+             
+             
+         
         
         )   
     }

@@ -24,8 +24,13 @@ if (token) {
       cookie.remove("token");
       token = null;
     } else {
-      //if (decoded.iss !== "http://127.0.0.1:8000/api/auth/login") {
-      if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {
+     // if ((decoded.iss === "http://127.0.0.1:8000/api/auth/login")|| (decoded.iss === "http://127.0.0.1:8000/api/auth/google/callback")){
+      if ((decoded.iss === "https://jiblii.herokuapp.com/api/auth/login")|| (decoded.iss === "https://jiblii.herokuapp.com/api/auth/google/callback")){
+        
+      }else{
+         //  if (decoded.iss !== "http://127.0.0.1:8000/api/auth/google/callback") {
+
+      //if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {
         cookie.remove("token");
         token = null;
       }
@@ -41,7 +46,7 @@ const render = () =>{
 {/*                   <Contact /> */}
                   <NavBar />
                  
-                  <Footer />
+                 
                </Provider> 
                , document.getElementById('example')
    )
@@ -50,8 +55,11 @@ const render = () =>{
 
 if (token) {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-    //axios.post("http://127.0.0.1:8000/api/auth/me").then(res => {
+   // axios.post("http://127.0.0.1:8000/api/auth/me").then(res => {
     axios.post("https://jiblii.herokuapp.com/api/auth/me").then(res => {
+      console.log(res.data)
+      console.log('res.data')
+
       store.dispatch({ type: "SET_LOGIN", payload: res.data });
       render();
     });

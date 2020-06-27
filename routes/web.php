@@ -24,8 +24,8 @@ Route::get('/Admin', function () {
 });
 
 
-
-
+/* Route::get('/{path?}', function($path = null){ return View::make('welcome'); })->where('path', '.*');
+ */
 Route::prefix('Admin')->group(function () {
     Route::resource('/client','ClientController');
     Route::resource('product','ProductController');

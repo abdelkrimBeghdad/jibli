@@ -13,7 +13,7 @@ import {connect} from 'react-redux'
       componentDidMount () {
         const id = this.props.id
         
-        //axios.get(`http://127.0.0.1:8000//api/auth/ListeOrders/${id}`).then(response => {
+         // axios.get(`http://127.0.0.1:8000//api/auth/ListeOrders/${id}`).then(response => {
         axios.get(`https://jiblii.herokuapp.com/api/auth/ListeOrders/${id}`).then(response => {
             this.setState ( {data :response.data});
             console.log(this.state.data)

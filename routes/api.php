@@ -21,9 +21,22 @@ use Illuminate\Http\Request;
 
   Route::get('categorie', 'Api\productController@indexApi');
 
+
+
+
+  //loginGoogleURL
+  
+ 
+  //ensLoginGoogleURL
+
+
+
 Route::middleware('jwt.auth')->group( function(){
  
+
   
+
+
 
 } );
 
@@ -43,6 +56,11 @@ Route::group([
 
     Route::post('order', 'OrderController@store');
   Route::get('ListeOrders/{id}', 'OrderController@ListeOfOrdersOfClientFrontend');
-
+  
 
 });
+Route::get('auth/google/url', 'GoogleController@loginUrl');
+Route::get('auth/google/callback', 'GoogleController@loginCallback');
+Route::get('/{path?}', function($path = null){ return View::make('welcome'); })->where('path', '^(?!api).*$');
+
+

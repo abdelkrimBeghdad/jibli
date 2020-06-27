@@ -17,19 +17,12 @@
             <form action="{{route('client.store')}}" method="post">
                 @csrf
                     <div class="form-group row">
-                        <label for="firsName" class="col-sm-2 col-form-label">First Name</label>
+                        <label for="name" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" name="firstName" id="firstName" >
+                          <input type="text" class="form-control" name="name" id="name" >
                         </div>
                     </div>
 
-                    <div class="form-group row">
-                        <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" name="lastName" id="lastName" >
-                        </div>
-                    </div>
-                    
                     <div class="form-group row">
                         <label for="address" class="col-sm-2 col-form-label">Address</label>
                         <div class="col-sm-10">

@@ -47,8 +47,7 @@ class ClientController extends Controller
     {
         
         $form_data = array(
-            'firstName'       =>   $request->firstName,
-            'lastName'        =>   $request->lastName,
+            'name'       =>   $request->name,
             'address'        =>   $request->address,
             'phone'        =>   $request->phone,
             'point'        =>   $request->point,
