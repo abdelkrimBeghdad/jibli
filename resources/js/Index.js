@@ -26,7 +26,7 @@ if (token) {
     } else {
      // if ((decoded.iss === "http://127.0.0.1:8000/api/auth/login")|| (decoded.iss === "http://127.0.0.1:8000/api/auth/google/callback")){
       if ((decoded.iss === "https://jiblii.herokuapp.com/api/auth/login")|| (decoded.iss === "https://jiblii.herokuapp.com/api/auth/google/callback")){
-        
+        console.log('c')
       }else{
          //  if (decoded.iss !== "http://127.0.0.1:8000/api/auth/google/callback") {
 
