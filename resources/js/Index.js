@@ -24,7 +24,8 @@ if (token) {
     if (err) {
       cookie.remove("token");
       token = null;
-      console.log(err)
+      console.log('err',err)
+      console.log('decode',decoded)
     } else {
      // if ((decoded.iss === "http://127.0.0.1:8000/api/auth/login")|| (decoded.iss === "http://127.0.0.1:8000/api/auth/google/callback")){
       
