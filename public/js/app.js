@@ -102286,19 +102286,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var jwt_secret = 'MYqAWQBdM6Qjqgtp42mnZTP57EitWPBawqwLVUX5o8LBVbLwePxRU8zyBQiLR9ds';
+var JWT_SECRET = 'MYqAWQBdM6Qjqgtp42mnZTP57EitWPBawqwLVUX5o8LBVbLwePxRU8zyBQiLR9ds';
 var token = js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get("token");
 
 if (token) {
-  jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, jwt_secret, function (err, decoded) {
+  jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, JWT_SECRET, function (err, decoded) {
     if (err) {
+      console.log('JWT_SECRET', JWT_SECRET);
+      console.log('err', err);
+      console.log('decoded', decoded);
       js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
       token = null;
-      console.log('err', err);
-      console.log('decode', decoded);
     } else {
       // if ((decoded.iss === "http://127.0.0.1:8000/api/auth/login")|| (decoded.iss === "http://127.0.0.1:8000/api/auth/google/callback")){
-      if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {
+      if (decoded.iss === "https://jiblii.herokuapp.com/api/auth/login" || decoded.iss === "https://jiblii.herokuapp.com/api/auth/google/callback") {} else {
         //  if (decoded.iss !== "http://127.0.0.1:8000/api/auth/google/callback") {
         //if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {
         js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");

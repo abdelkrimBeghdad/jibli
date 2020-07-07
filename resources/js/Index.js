@@ -15,21 +15,23 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import RightSideBar from './components/RightSideBar';
 
-const jwt_secret = 'MYqAWQBdM6Qjqgtp42mnZTP57EitWPBawqwLVUX5o8LBVbLwePxRU8zyBQiLR9ds'
+const JWT_SECRET = 'MYqAWQBdM6Qjqgtp42mnZTP57EitWPBawqwLVUX5o8LBVbLwePxRU8zyBQiLR9ds'
 
 let token = cookie.get("token");
-
 if (token) {
-  jwt.verify(token, jwt_secret, (err, decoded) => {
+  jwt.verify(token, JWT_SECRET, (err, decoded) => {
     if (err) {
+      console.log('JWT_SECRET',JWT_SECRET)
+      console.log('err',err)
+      console.log('decoded',decoded)
+
       cookie.remove("token");
       token = null;
-      console.log('err',err)
-      console.log('decode',decoded)
     } else {
      // if ((decoded.iss === "http://127.0.0.1:8000/api/auth/login")|| (decoded.iss === "http://127.0.0.1:8000/api/auth/google/callback")){
-      
-      if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {	
+      if ((decoded.iss === "https://jiblii.herokuapp.com/api/auth/login")|| (decoded.iss === "https://jiblii.herokuapp.com/api/auth/google/callback")){
+        
+      }else{
          //  if (decoded.iss !== "http://127.0.0.1:8000/api/auth/google/callback") {
 
       //if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {
