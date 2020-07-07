@@ -102287,11 +102287,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var JWT_SECRET = 'MYqAWQBdM6Qjqgtp42mnZTP57EitWPBawqwLVUX5o8LBVbLwePxRU8zyBQiLR9ds';
-var token = js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get("token");
+var token = js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get('token');
 
 if (token) {
   jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, JWT_SECRET, function (err, decoded) {
     if (err) {
+      console.log('token', token);
       console.log('JWT_SECRET', JWT_SECRET);
       console.log('err', err);
       console.log('decoded', decoded);

@@ -17,10 +17,11 @@ import RightSideBar from './components/RightSideBar';
 
 const JWT_SECRET = 'MYqAWQBdM6Qjqgtp42mnZTP57EitWPBawqwLVUX5o8LBVbLwePxRU8zyBQiLR9ds'
 
-let token = cookie.get("token");
+let token = cookie.get('token');
 if (token) {
   jwt.verify(token, JWT_SECRET, (err, decoded) => {
     if (err) {
+      console.log('token',token)
       console.log('JWT_SECRET',JWT_SECRET)
       console.log('err',err)
       console.log('decoded',decoded)
