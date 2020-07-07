@@ -18,6 +18,7 @@ import RightSideBar from './components/RightSideBar';
 const jwt_secret = 'MYqAWQBdM6Qjqgtp42mnZTP57EitWPBawqwLVUX5o8LBVbLwePxRU8zyBQiLR9ds'
 
 let token = cookie.get("token");
+
 if (token) {
   jwt.verify(token, jwt_secret, (err, decoded) => {
     if (err) {
@@ -26,9 +27,8 @@ if (token) {
       console.log(err)
     } else {
      // if ((decoded.iss === "http://127.0.0.1:8000/api/auth/login")|| (decoded.iss === "http://127.0.0.1:8000/api/auth/google/callback")){
-      if (decoded.iss === "https://jiblii.herokuapp.com/api/auth/login"){
-        console.log('c')
-      }else{
+      
+      if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {	
          //  if (decoded.iss !== "http://127.0.0.1:8000/api/auth/google/callback") {
 
       //if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {
