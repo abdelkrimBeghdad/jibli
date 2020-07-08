@@ -66,9 +66,9 @@ class Basket extends Component {
 
                        
                        <div className ='divFooter'> 
-                        <button class="footer">
-    <a class="checkout">Checkout</a>
-    <span class="s">{cartItems.reduce((a, c) => (a + c.price * c.count), 0) }Da</span>
+                        <button className="footer">
+    <a className="checkout">Checkout</a>
+    <span className="s">{cartItems.reduce((a, c) => (a + c.price * c.count), 0) }Da</span>
     </button>
                     </div>
                     </div>

@@ -7,7 +7,7 @@ export default class LoginGoogle extends React.Component {
     };
     
       componentDidMount() {
-       // fetch('http://127.0.0.1:8000/api/auth/google/url', { headers: new Headers({ accept: 'application/json' }) })
+      // fetch('http://127.0.0.1:8000/api/auth/google/url', { headers: new Headers({ accept: 'application/json' }) })
         fetch('https://jiblii.herokuapp.com/api/auth/google/url', { headers: new Headers({ accept: 'application/json' }) })
          
         .then((response) => {

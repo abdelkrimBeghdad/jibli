@@ -25,7 +25,7 @@ class RightSideBar extends React.Component{
            <span className='spanItems'>{cartItems.length}  Items</span>
       
 
-           <span class="spanPrice">{price} Da</span>
+           <span className="spanPrice">{price} Da</span>
             {/* {cartItems.length === 0  ? "0" : <h6>You have  items in the basket.</h6> }
              */}
            {/*  {price === 0 ? <div>0</div>: <h2><span  className="badge badge-light">{price} DA</span></h2>} */}

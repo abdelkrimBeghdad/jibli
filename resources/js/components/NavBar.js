@@ -58,8 +58,8 @@ import LoginGoogle from './LoginGoogle';
                         <div className="collapse navbar-collapse " id="navbarSupportedContent">
                             <ul className="navbar-nav mr-auto mx-auto">
                             <div style={{margin: '0 auto'}}> 
-                            <input  onChange={(e) =>this.props.searchProducts(this.props.products, e.target.value)}
-                             className="form-control" name="search" id="search"/>
+                            {/* <input  onChange={(e) =>this.props.searchProducts(this.props.products, e.target.value)}
+                             className="form-control" name="search" id="search"/> */}
                         </div>
                               
 
@@ -72,11 +72,11 @@ import LoginGoogle from './LoginGoogle';
                             {!props.loggedIn ? (
                                 <Fragment>
                                     <Link  to="/login">  
-                                        <button class="btn btn-outline-success mr-4">Login</button>
+                                        <button className="btn btn-outline-success mr-4">Login</button>
                                         </Link>
 
                                         <Link  to="/apii">  
-                                        <button class="btn btn-outline-success mr-4">google</button>
+                                        <button className="btn btn-outline-success mr-4">google</button>
                                         </Link> 
                                    
                                 </Fragment>

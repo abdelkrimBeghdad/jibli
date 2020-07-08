@@ -27,7 +27,7 @@ class Cart extends Component {
     }
 
     axios
-     // .post('http://127.0.0.1:8000/api/auth/order', data)
+    //  .post('http://127.0.0.1:8000/api/auth/order', data)
       .post('https://jiblii.herokuapp.com/api/auth/order', data)
       .then(res => { 
         console.log('regle')
