@@ -102286,7 +102286,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var jwt_secret = 'MYqAWQBdM6Qjqgtp42mnZTP57EitWPBawqwLVUX5o8LBVbLwePxRU8zyBQiLR9ds';
+var jwt_secret = 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ';
 var token = js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get("token");
 
 if (token) {

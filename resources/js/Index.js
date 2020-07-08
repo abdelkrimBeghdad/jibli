@@ -15,7 +15,7 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import RightSideBar from './components/RightSideBar';
 
-const jwt_secret = 'BGplL5Z9dM9HQjvtF0qt2XB3eYR7ZACAaNL1vXhrRY4ZhdS0Vr7GKAsiGnWRRA8W'
+const jwt_secret = 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ'
 
 let token = cookie.get("token");
 if (token) {
