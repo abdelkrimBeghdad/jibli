@@ -15,7 +15,7 @@ class Google extends Component {
     
 
     componentDidMount() {
-      //  fetch(`http://127.0.0.1:8000/api/auth/google/callback${this.props.location.search}`, { headers: new Headers({ accept: 'application/json' }) })
+        //fetch(`http://127.0.0.1:8000/api/auth/google/callback${this.props.location.search}`, { headers: new Headers({ accept: 'application/json' }) })
         fetch(`https://jiblii.herokuapp.com/api/auth/google/callback${this.props.location.search}`, { headers: new Headers({ accept: 'application/json' }) })
         
         .then((response) => {

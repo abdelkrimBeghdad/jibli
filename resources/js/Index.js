@@ -15,21 +15,14 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import RightSideBar from './components/RightSideBar';
 
-const jwt_secret = 'MYqAWQBdM6Qjqgtp42mnZTP57EitWPBawqwLVUX5o8LBVbLwePxRU8zyBQiLR9ds'
+const jwt_secret = 'BGplL5Z9dM9HQjvtF0qt2XB3eYR7ZACAaNL1vXhrRY4ZhdS0Vr7GKAsiGnWRRA8W'
 
 let token = cookie.get("token");
 if (token) {
   jwt.verify(token, jwt_secret, (err, decoded) => {
-     console.log('err',err)
-      console.log('jwtSecret',jwt_secret)
-      console.log('decode',decoded)
-      
     if (err) {
-     
-
       cookie.remove("token");
       token = null;
-
     } else {
      // if ((decoded.iss === "http://127.0.0.1:8000/api/auth/login")|| (decoded.iss === "http://127.0.0.1:8000/api/auth/google/callback")){
       if ((decoded.iss === "https://jiblii.herokuapp.com/api/auth/login")|| (decoded.iss === "https://jiblii.herokuapp.com/api/auth/google/callback")){
@@ -62,8 +55,8 @@ const render = () =>{
 
 if (token) {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-//    axios.post("http://127.0.0.1:8000/api/auth/me").then(res => {
-   axios.post("https://jiblii.herokuapp.com/api/auth/me").then(res => {
+   // axios.post("http://127.0.0.1:8000/api/auth/me").then(res => {
+    axios.post("https://jiblii.herokuapp.com/api/auth/me").then(res => {
       console.log(res.data)
       console.log('res.data')
 

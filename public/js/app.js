@@ -102291,10 +102291,6 @@ var token = js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get("token");
 
 if (token) {
   jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, jwt_secret, function (err, decoded) {
-    console.log('err', err);
-    console.log('jwtSecret', jwt_secret);
-    console.log('decode', decoded);
-
     if (err) {
       js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
       token = null;
@@ -102317,7 +102313,7 @@ var render = function render() {
 };
 
 if (token) {
-  axios.defaults.headers.common["Authorization"] = "Bearer ".concat(token); //    axios.post("http://127.0.0.1:8000/api/auth/me").then(res => {
+  axios.defaults.headers.common["Authorization"] = "Bearer ".concat(token); // axios.post("http://127.0.0.1:8000/api/auth/me").then(res => {
 
   axios.post("https://jiblii.herokuapp.com/api/auth/me").then(function (res) {
     console.log(res.data);
@@ -103994,7 +103990,7 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      //  fetch(`http://127.0.0.1:8000/api/auth/google/callback${this.props.location.search}`, { headers: new Headers({ accept: 'application/json' }) })
+      //fetch(`http://127.0.0.1:8000/api/auth/google/callback${this.props.location.search}`, { headers: new Headers({ accept: 'application/json' }) })
       fetch("https://jiblii.herokuapp.com/api/auth/google/callback".concat(this.props.location.search), {
         headers: new Headers({
           accept: 'application/json'
@@ -104417,7 +104413,7 @@ function (_Component) {
         email: _this.state.email,
         password: _this.state.password
       };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a // .post("http://127.0.0.1:8000/api/auth/login",data)
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a //  .post("http://127.0.0.1:8000/api/auth/login",data)
       .post("https://jiblii.herokuapp.com/api/auth/login", data).then(function (res) {
         js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('token', res.data.access_token); //cookie.set('user',res.data.user);
 
