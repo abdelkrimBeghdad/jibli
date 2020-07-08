@@ -21,7 +21,6 @@ let token = cookie.get("token");
 if (token) {
   jwt.verify(token, jwt_secret, (err, decoded) => {
      console.log('err',err)
-      console.log('token',token)
       console.log('jwtSecret',jwt_secret)
       console.log('decode',decoded)
       

@@ -102292,7 +102292,6 @@ var token = js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get("token");
 if (token) {
   jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, jwt_secret, function (err, decoded) {
     console.log('err', err);
-    console.log('token', token);
     console.log('jwtSecret', jwt_secret);
     console.log('decode', decoded);
 
