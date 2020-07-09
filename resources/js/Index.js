@@ -21,8 +21,7 @@ let token = cookie.get("token");
 if (token) {
   jwt.verify(token, {jwt_secret}, (err, decoded) => {
     if (err) {
-      cookie.remove("token");
-      token = null;
+    
     } else {
      // if ((decoded.iss === "http://127.0.0.1:8000/api/auth/login")|| (decoded.iss === "http://127.0.0.1:8000/api/auth/google/callback")){
       if ((decoded.iss === "https://jiblii.herokuapp.com/api/auth/login")|| (decoded.iss === "https://jiblii.herokuapp.com/api/auth/google/callback")){

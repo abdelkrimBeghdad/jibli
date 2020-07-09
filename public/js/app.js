@@ -102293,10 +102293,7 @@ if (token) {
   jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, {
     jwt_secret: jwt_secret
   }, function (err, decoded) {
-    if (err) {
-      js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
-      token = null;
-    } else {
+    if (err) {} else {
       // if ((decoded.iss === "http://127.0.0.1:8000/api/auth/login")|| (decoded.iss === "http://127.0.0.1:8000/api/auth/google/callback")){
       if (decoded.iss === "https://jiblii.herokuapp.com/api/auth/login" || decoded.iss === "https://jiblii.herokuapp.com/api/auth/google/callback") {} else {
         //  if (decoded.iss !== "http://127.0.0.1:8000/api/auth/google/callback") {
