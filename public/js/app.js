@@ -102287,17 +102287,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var jwt_secret = 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ';
-var JWT_SECRET = "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ";
 var token = js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get("token");
 
 if (token) {
-  jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, JWT_SECRET, function (err, decoded) {
-    console.log('decoded', decoded);
-    console.log('token', token);
-    console.log('jwt_secret', jwt_secret);
-    console.log('JWT_SECRET', JWT_SECRET);
-    console.log('eroore', err);
-
+  jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, jwt_secret, function (err, decoded) {
     if (err) {
       js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
       token = null;

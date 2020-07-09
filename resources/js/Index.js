@@ -16,19 +16,10 @@ import Footer from './components/Footer';
 import RightSideBar from './components/RightSideBar';
 
 const jwt_secret = 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ'
-const JWT_SECRET = "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ"
 
 let token = cookie.get("token");
 if (token) {
-  jwt.verify(token, JWT_SECRET, (err, decoded) => {
-    console.log('decoded',decoded)
-    console.log('token',token)
-    console.log('jwt_secret',jwt_secret)
-    console.log('JWT_SECRET',JWT_SECRET)
-    console.log('eroore',err)
-
-    
-
+  jwt.verify(token, jwt_secret, (err, decoded) => {
     if (err) {
       cookie.remove("token");
       token = null;
