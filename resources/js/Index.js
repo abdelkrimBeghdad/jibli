@@ -24,7 +24,7 @@ if (token) {
       cookie.remove("token");
       token = null;
     } else {
-      if (decoded.iss !== "http://127.0.0.1:8000/api/auth/login") {
+      if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {
         cookie.remove("token");
         token = null;
       }

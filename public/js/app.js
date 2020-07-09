@@ -102295,7 +102295,7 @@ if (token) {
       js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
       token = null;
     } else {
-      if (decoded.iss !== "http://127.0.0.1:8000/api/auth/login") {
+      if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {
         js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
         token = null;
       }
