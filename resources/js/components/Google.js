@@ -35,10 +35,7 @@ class Google extends Component {
                
 
                /*  cookie.set('token',data.user.name); */
-
-               localStorage.setItem('token', data.access_token)
-
-              // cookie.set('token',data.access_token); 
+               cookie.set('token',data.access_token); 
                this.props.setLogin(data.user);
                this.props.history.push('/profile');
               // cookie.set('user',data.user);
