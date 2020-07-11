@@ -102296,7 +102296,7 @@ var token = js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get("token");
 console.log("token", _typeof(token));
 
 if (token) {
-  jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, jwt_secret1, function (err, decoded) {
+  jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ", function (err, decoded) {
     if (err) {
       js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
       token = null;

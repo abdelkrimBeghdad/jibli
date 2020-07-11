@@ -27,7 +27,7 @@ let token = cookie.get("token");
 console.log("token",typeof(token));
 
 if (token) {
-  jwt.verify(token, jwt_secret1, (err, decoded) => {
+  jwt.verify(token, "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ", (err, decoded) => {
     if (err) {
       cookie.remove("token");
       token = null;
