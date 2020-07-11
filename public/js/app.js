@@ -102287,7 +102287,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var jwt_secret = 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ';
-var token = js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get("token");
+/* let token = cookie.get(""); */
+
+var token = localStorage.getItem('token');
 
 if (token) {
   jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, jwt_secret, function (err, decoded) {
@@ -104415,8 +104417,8 @@ function (_Component) {
       };
       axios__WEBPACK_IMPORTED_MODULE_1___default.a //  .post("http://127.0.0.1:8000/api/auth/login",data)
       .post("https://jiblii.herokuapp.com/api/auth/login", data).then(function (res) {
-        console.log('data', res.data);
-        js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('token', res.data.access_token); //cookie.set('user',res.data.user);
+        localStorage.setItem('token', res.data.access_token); // cookie.set('token',res.data.access_token);
+        //cookie.set('user',res.data.user);
 
         _this.props.setLogin(res.data.user);
 
