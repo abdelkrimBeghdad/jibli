@@ -102292,7 +102292,7 @@ var jwt_secret = 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccE
 console.log("jwt_secret", _typeof(jwt_secret));
 var jwt_secret1 = "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ";
 console.log("jwt_secret1", _typeof(jwt_secret1));
-var token = js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get("token");
+var token = js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get('token');
 console.log("token", _typeof(token));
 
 if (token) {

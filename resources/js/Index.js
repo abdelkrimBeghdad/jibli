@@ -23,7 +23,7 @@ console.log("jwt_secret1",typeof(jwt_secret1));
 
 
 
-let token = cookie.get("token");
+let token = cookie.get('token');
 console.log("token",typeof(token));
 
 if (token) {
