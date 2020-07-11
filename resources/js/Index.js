@@ -10,27 +10,19 @@ import Offre_To_Client from './components/Offre_to_Client';
 import store from './components/Store';
 import {Provider} from 'react-redux';
 import cookie from 'js-cookie';
-import jwt from 'jsonwebtoken';
+import jwt, { decode } from 'jsonwebtoken';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import RightSideBar from './components/RightSideBar';
 
-const jwt_secret = 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ';
-console.log("jwt_secret",typeof(jwt_secret));
+const jwt_secret = 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ'
 
-const jwt_secret1 = "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ";
-console.log("jwt_secret1",typeof(jwt_secret1));
-
-
-
-let token = cookie.get('token');
-console.log("token",typeof(token));
-
+let token = cookie.get("token");
 if (token) {
-  console.log('teken existe');
-  var decode1 = jwt.decode(token);
-console.log('decode = '+decode1)
-  jwt.verify(cookie.get('token'), "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ", (err, decoded) => {
+  jwt.verify(token, jwt_secret, (err, decoded) => {
+    console.log('decoded',decoded)
+    console.log('err',err)
+
     if (err) {
       cookie.remove("token");
       token = null;
