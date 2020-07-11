@@ -102292,12 +102292,15 @@ var jwt_secret = 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccE
 console.log("jwt_secret", _typeof(jwt_secret));
 var jwt_secret1 = "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ";
 console.log("jwt_secret1", _typeof(jwt_secret1));
+ComponentD;
 var token = js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get('token');
 console.log("token", _typeof(token));
 
 if (token) {
   console.log('teken existe');
-  jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ", function (err, decoded) {
+  var decode1 = jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.decode(token1);
+  console.log('decode = ' + decode1);
+  jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get('token'), "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ", function (err, decoded) {
     if (err) {
       js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
       token = null;

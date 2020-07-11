@@ -21,6 +21,7 @@ console.log("jwt_secret",typeof(jwt_secret));
 const jwt_secret1 = "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ";
 console.log("jwt_secret1",typeof(jwt_secret1));
 
+ComponentD
 
 
 let token = cookie.get('token');
@@ -28,7 +29,9 @@ console.log("token",typeof(token));
 
 if (token) {
   console.log('teken existe');
-  jwt.verify(token, "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ", (err, decoded) => {
+  var decode1 = jwt.decode(token1);
+console.log('decode = '+decode1)
+  jwt.verify(cookie.get('token'), "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ", (err, decoded) => {
     if (err) {
       cookie.remove("token");
       token = null;
