@@ -15,11 +15,11 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import RightSideBar from './components/RightSideBar';
 
-const jwt_secret = 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ'
-console.log("jwt_secret",typeof(jwt_secret))
+const jwt_secret = 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ';
+console.log("jwt_secret",typeof(jwt_secret));
 
-const jwt_secret1 = "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ"
-console.log("jwt_secret1",typeof(jwt_secret1))
+const jwt_secret1 = "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ";
+console.log("jwt_secret1",typeof(jwt_secret1));
 
 
 
