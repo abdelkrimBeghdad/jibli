@@ -104010,7 +104010,7 @@ function (_Component) {
 
         /*  cookie.set('token',data.user.name); */
 
-        js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('token', data.access_token);
+        localStorage.setItem('token', data.access_token); // cookie.set('token',data.access_token); 
 
         _this2.props.setLogin(data.user);
 
