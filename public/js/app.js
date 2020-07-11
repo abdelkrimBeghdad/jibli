@@ -102295,7 +102295,7 @@ console.log("jwt_secret1", _typeof(jwt_secret1));
 var token = js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get("token");
 
 if (token) {
-  jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, jwt_secret, function (err, decoded) {
+  jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(token, jwt_secret.toString(), function (err, decoded) {
     if (err) {
       js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
       token = null;
