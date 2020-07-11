@@ -102297,7 +102297,7 @@ console.log("token", _typeof(token));
 
 if (token) {
   console.log('teken existe');
-  var decode1 = jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.decode(token1);
+  var decode1 = jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.decode(token);
   console.log('decode = ' + decode1);
   jsonwebtoken__WEBPACK_IMPORTED_MODULE_11___default.a.verify(js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.get('token'), "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ", function (err, decoded) {
     if (err) {

@@ -28,7 +28,7 @@ console.log("token",typeof(token));
 
 if (token) {
   console.log('teken existe');
-  var decode1 = jwt.decode(token1);
+  var decode1 = jwt.decode(token);
 console.log('decode = '+decode1)
   jwt.verify(cookie.get('token'), "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ", (err, decoded) => {
     if (err) {
