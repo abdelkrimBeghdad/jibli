@@ -15,10 +15,11 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import RightSideBar from './components/RightSideBar';
 
+const jwt_secret = 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ'
 
 let token = cookie.get("token");
 if (token) {
-  jwt.verify(token, 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ', (err, decoded) => {
+  jwt.verify(token, jwt_secret, (err, decoded) => {
     if (err) {
       cookie.remove("token");
       token = null;
