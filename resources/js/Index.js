@@ -21,7 +21,6 @@ console.log("jwt_secret",typeof(jwt_secret));
 const jwt_secret1 = "my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ";
 console.log("jwt_secret1",typeof(jwt_secret1));
 
-ComponentD
 
 
 let token = cookie.get('token');
