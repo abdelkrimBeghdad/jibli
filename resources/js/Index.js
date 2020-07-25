@@ -29,7 +29,9 @@ jwt.verify(token, jwt_secret, (err, decoded) => {
     token = null;
   }
   else {
-    if(decoded.iss !== "http://jiblii.herokuapp.com/api/auth/login"){
+    d = ["http://jiblii.herokuapp.com/api/auth/login","http://jiblii.herokuapp.com/api/auth/google/callback"]
+    console.log('T/F',d.includes(decoded.iss))
+    if(d.includes(decoded.iss)){
       cookie.remove("token");
       token = null;
     }
