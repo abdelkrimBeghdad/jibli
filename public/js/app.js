@@ -102294,6 +102294,11 @@ if (token) {
     if (err) {
       js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
       token = null;
+    } else {
+      if (decoded.iss !== "http://jiblii.herokuapp.com/api/auth/google/callback") {
+        js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
+        token = null;
+      }
     }
 
     console.log('err', err);
