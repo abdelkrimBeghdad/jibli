@@ -102296,7 +102296,7 @@ if (token) {
       token = null;
     } else {
       var d = ["http://jiblii.herokuapp.com/api/auth/login", "http://jiblii.herokuapp.com/api/auth/google/callback"];
-      console.log('T/F', d.includes(decoded.iss));
+      console.log('T/F', !d.includes(decoded.iss));
 
       if (!d.includes(decoded.iss)) {
         js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
