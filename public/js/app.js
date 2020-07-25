@@ -102294,17 +102294,33 @@ if (token) {
     if (err) {
       js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
       token = null;
+    }
+
+    console.log('err', err);
+    console.log('decoded');
+    console.log('decoded', decoded);
+  });
+}
+/* if (token) {
+  jwt.verify(token, jwt_secret, (err, decoded) => {
+    if (err) {
+      cookie.remove("token");
+      token = null;
     } else {
-      // if ((decoded.iss === "http://127.0.0.1:8000/api/auth/login")|| (decoded.iss === "http://127.0.0.1:8000/api/auth/google/callback")){
-      if (decoded.iss === "https://jiblii.herokuapp.com/api/auth/login" || decoded.iss === "https://jiblii.herokuapp.com/api/auth/google/callback") {} else {
-        //  if (decoded.iss !== "http://127.0.0.1:8000/api/auth/google/callback") {
-        //if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {
-        js_cookie__WEBPACK_IMPORTED_MODULE_10___default.a.remove("token");
+     // if ((decoded.iss === "http://127.0.0.1:8000/api/auth/login")|| (decoded.iss === "http://127.0.0.1:8000/api/auth/google/callback")){
+      if ((decoded.iss === "https://jiblii.herokuapp.com/api/auth/login")|| (decoded.iss === "https://jiblii.herokuapp.com/api/auth/google/callback")){
+        
+      }else{
+         //  if (decoded.iss !== "http://127.0.0.1:8000/api/auth/google/callback") {
+
+      //if (decoded.iss !== "https://jiblii.herokuapp.com/api/auth/login") {
+        cookie.remove("token");
         token = null;
       }
     }
   });
-}
+} */
+
 
 var render = function render() {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_9__["Provider"], {
