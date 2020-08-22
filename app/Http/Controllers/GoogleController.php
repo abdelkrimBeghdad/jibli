@@ -68,6 +68,64 @@ class GoogleController extends Controller
     
  }
 
+
+public function data(){
+    return response()->json(['access_token' => "abdelkrim"]);
+}
+
+
+ public function loginCallback1()
+ {
+     /* $user = Socialite::driver('google')->user(); // Fetch authenticated user
+     dd($user); */ 
+      $googleUser = Socialite::driver('google')->stateless()->user();
+     $user = null;
+     DB::transaction(function () use ($googleUser, &$user) {
+         $socialAccount = SocialAccount::firstOrNew(
+             ['social_id' => $googleUser->getId(), 'social_provider' => 'google'],
+             ['social_name' => $googleUser->getName()]
+         );
+
+         if (!($user = $socialAccount->user)) {
+             $user = User::create([
+                 'email' => $googleUser->getEmail(),
+                 'name' => $googleUser->getName(),
+             ]);
+             $socialAccount->fill(['user_id' => $user->id])->save();
+         }
+     });
+    
+         $tokenn = JWTAuth::fromUser($user);
+         
+         //return $this->respondWithToken($tokenn);
+         
+      return Response()->json([
+         'access_token' => $tokenn,
+         'token_type' => 'bearer',
+         'expires_in' => auth()->factory()->getTTL() * 60,
+         'user' => new UserResource($user),
+          /* 'user' => auth()->user(), */
+
+         /*  'google_user' => $googleUser,
+         'tokenAccess' => $tokenn, */
+     ]); 
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  /* protected function respondWithToken($token)
  {
      return response()->json([
