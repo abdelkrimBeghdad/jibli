@@ -65,6 +65,6 @@ Route::get('auth/google/callback1', 'GoogleController@loginCallback1');
 Route::get('auth/google/callback2', 'GoogleController@loginCallback');
 Route::get('auth/google/callback3', 'GoogleController@data');
 
-//Route::get('/{path?}', function($path = null){ return View::make('welcome'); })->where('path', '^(?!api).*$');
+Route::get('/{path?}', function($path = null){ return View::make('welcome'); })->where('path', '^(?!api).*$');
 
 
