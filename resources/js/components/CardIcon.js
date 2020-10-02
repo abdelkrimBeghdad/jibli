@@ -9,7 +9,7 @@ class CardIcon extends Component{
         const { cartItems } = this.props;
     return <div id="cart-icon">
         <Link to='/cart'>
-            <i className="fa fa-shopping-cart"></i>
+            <i className="fa fa-shopping-bag" style={{fontSize:32,color:'#38c172'}}></i>
             <span className="badge badge-danger">{ cartItems.length }</span>
         </Link>
     </div>

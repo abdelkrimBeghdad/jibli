@@ -44,13 +44,12 @@ class Product extends Component {
 
     const productItems = currentItems.map(item => (
       
-      <div className="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 ftco-animate"  key={item.id}>
+      <div className="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3"  key={item.id}>
         <div >
           <div className="product d-flex flex-column">
-            <a href="#" className="img-prod"><img className="img-fluid" src={"upload/image/" + item.image} alt="Colorlib Template" />
-
-              <div className="overlay"></div>
-            </a>
+            <div  className="img-prod"><img className="img-fluid" src={"upload/image/" + item.image} alt="product" />
+            </div>
+            
             <div className="text py-3 pb-4 px-3">
               <div className="d-flex">
                 <div className="cat">
@@ -58,13 +57,15 @@ class Product extends Component {
                 </div>
               </div>
               <h3>{item.name}</h3>
-              <div className="pricing">
-                <p className="price"><span className="price-sale">{item.price} Da</span></p>
+              <div className="pricing ">
+                <p className="price "><span className="price-sale">{item.price} Da</span></p>
               </div>
+             
+            
               <p className="bottom-area d-flex px-3">
                 <a className="buy-now text-center py-2"
                   onClick={() => this.props.addToCart(this.props.cartItems, item)}>Add To Card</a>
-              </p>
+              </p>           
             </div>
           </div>
         </div>

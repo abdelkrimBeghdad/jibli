@@ -80,6 +80,7 @@ class ProductController extends Controller
         $form_data = array(
             'code'       =>   $request->code,
             'name'        =>   $request->name,
+            'name_ar'        =>   $request->name_ar,
             'description'        =>   $request->description,
             'category_name'        =>   $request->category_name,
             'nameCompany'        =>   $request->nameCompany,

@@ -17,11 +17,14 @@
 }
 
 
-.navbar  a {
+/* .navbar  a {
     font-size: 15px;
     font-weight: 700;
-}
- 
+} */
+
+.navbar-toggler {
+    border-color:'#38c172';
+  }
 
 /* header {
     

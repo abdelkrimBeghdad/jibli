@@ -21,7 +21,7 @@
 
 
   .footer{
-  
+    
     box-sizing: inherit;
     font-family: Lato, sans-serif;
     margin: 0px;
@@ -92,13 +92,16 @@ padding-left: 10px;
 
 
 .divFooter{
+  z-index: 5;
   box-sizing: inherit;
 font-family: Lato, sans-serif;
 margin: 0px;
-width: 100%;
+width: 410px;
 display: flex;
 flex-direction: column;
 margin-top: auto;
+position: fixed;
+bottom: 0;
 }
 
 
@@ -131,7 +134,6 @@ margin-top: auto;
 
   .input-group-prepend label {
     width: 100%;
-    overflow: hidden;
   }
   
 

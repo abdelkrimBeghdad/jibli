@@ -29,9 +29,13 @@
         "sass-loader": "^7.1.0"
     },
     "dependencies": {
+        "i18next": "^19.7.0",
+        "i18next-browser-languagedetector": "^6.0.1",
+        "i18next-http-backend": "^1.0.20",
         "js-cookie": "^2.2.1",
         "jsonwebtoken": "^8.5.1",
         "prop-types": "^15.7.2",
+        "react-i18next": "^11.7.2",
         "react-redux": "^7.1.1",
         "react-router-dom": "^5.0.1",
         "redux": "^4.0.4",

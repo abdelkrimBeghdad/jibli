@@ -41,7 +41,7 @@ class OrderController extends Controller
         $lastIncreament = substr($lastorderId, -4);
 
         // Make a new order id with appending last increment + 1
-        $newOrderId = 'TXT' . date('YmdHi') . str_pad($lastIncreament + 1, 3, 0, STR_PAD_LEFT);
+        $newOrderId = 'HA' . date('YmdHi') . str_pad($lastIncreament + 1, 3, 0, STR_PAD_LEFT);
 
 
         $order->nbrOrder = $newOrderId;

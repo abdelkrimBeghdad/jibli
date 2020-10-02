@@ -23,7 +23,16 @@ import Account from './Account';
 import { useState, useEffect } from "react";
 import Google from './Google';
 import LoginGoogle from './LoginGoogle';
- 
+import Search from './Search'; 
+
+
+
+
+import { useTranslation } from 'react-i18next';
+
+
+
+
     function NavBar(props) {
         const handleLogout = e => {
             e.preventDefault();
@@ -45,24 +54,52 @@ import LoginGoogle from './LoginGoogle';
     
         return () => window.removeEventListener("scroll", listenScrollEvent);
       }, []);
+
+      const [googleLoginUrl, setgoogleLoginUrl] = useState(null);
+
+      useEffect(() => {
+        fetch('https://jiblii.herokuapp.com/api/auth/google/url', { headers: new Headers({ accept: 'application/json' }) })
+         
+        .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                  
+    
+                }  console.log(urlresponse)
+                throw new Error('Something went wrong!');
+            })
+            .then((data) => setgoogleLoginUrl( data.url ) )
+            .catch((error) => console.error(error));
+      }, []);
+
+      const { t, i18n } = useTranslation();
+/* 
+      const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+      } */
+      const changeLanguage = event => {
+        i18n.changeLanguage(event.target.value);
+      };  
         return(
             <Router    >
                 <div className=''>
                
                      <nav className="navbar navbar-expand-sm fixed-top " style={{backgroundColor: Bg}} >
-                        <Link className="navbar-brand" to="/">Navbar</Link>
+                        <Link className="navbar-brand" to="/">KmShop</Link>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
+                        <span className="" role="button" ><i className="fa fa-bars" aria-hidden="true" style={{color:'#38c172'}}></i></span>
                         </button>
 
                         <div className="collapse navbar-collapse " id="navbarSupportedContent">
                             <ul className="navbar-nav mr-auto mx-auto">
-                            <div style={{margin: '0 auto'}}> 
-                            {/* <input  onChange={(e) =>this.props.searchProducts(this.props.products, e.target.value)}
-                             className="form-control" name="search" id="search"/> */}
-                        </div>
-                              
-
+                            {/* <div style={{margin: '0 auto'}}> 
+                            <input  onChange={(e) =>this.props.searchProducts(this.props.products, e.target.value)}
+                             className="form-control" name="search" id="search"/>
+                        </div> */}
+                        { Bg==='#ffffff'?(
+                              <Search />
+                              ):null
+                          }
                             </ul>
                             {/* <Provider store={store}> */}
                       
@@ -72,29 +109,46 @@ import LoginGoogle from './LoginGoogle';
                             {!props.loggedIn ? (
                                 <Fragment>
                                     <Link  to="/login">  
-                                        <button className="btn btn-outline-success mr-4">Login</button>
+                                        <button className="btn btn-outline-success mr-1">{t('Login')}</button>
                                         </Link>
+                                       
+                                        <a href={googleLoginUrl} className="btn btn-outline-success mr-4"role="button" aria-pressed="true" >
+                                            {t('Google')}
+                                        </a>
+                                       {/*  <button className="btn btn-outline-success mr-4" onClick={() => changeLanguage('ar')}>ar</button>
+                                        <button className="btn btn-outline-success mr-4" onClick={() => changeLanguage('en')}>en</button> */}
+                                
+                              {/*   <button className="btn btn-outline-success mr-1"  onClick={() => {i18n.changeLanguage("ar")}}>ar</button>
+                                <button className="btn btn-outline-success mr-2"  onClick={() => {i18n.changeLanguage("en")}}>en</button> */}
+                               
+                               
+                                <div className="select">
+                                  <select className="form-control" onChange={(e) => changeLanguage(e)}>
+                                    <option value="en" id="en">English</option>
+                                    <option value="ar" id="ar">Arabic</option>
 
-                                        <Link  to="/apii">  
-                                        <button className="btn btn-outline-success mr-4">google</button>
-                                        </Link> 
-                                   
+                                  </select>
+                                </div>
+                               
                                 </Fragment>
                             ) : (
                                 <ul className="navbar-nav mr-auto mx-auto">
 
                                  <li className="nav-item">
-                                    <Link className="nav-link" to="/profile" >Profile</Link>
+                                    <Link className="nav-link" to="/profile" >{t('Profile')}</Link>
                                  </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/logout" onClick={handleLogout}>Logout</Link>
+                                    <Link className="nav-link" to="/logout" onClick={handleLogout}>{t('Logout')}</Link>
                                 </li>        
                                  </ul>
                             )}
                   
-                              <div className='mr-4'>
+                             {/*  <div className='mr-4'>
                                     <CardIcon  />  
-                                    </div>            
+                              </div>   */}   
+
+
+
                             {/* </Provider>     */} 
                         </div>
                     </nav>  
@@ -128,7 +182,7 @@ import LoginGoogle from './LoginGoogle';
 
                 </div>   
                  <Switch>
-                    <Route exact path="/apii" component={LoginGoogle} /> 
+                
                  <Route exact path="/api/auth/google" component={Google} />
                  </Switch>
                   
@@ -154,7 +208,7 @@ const mapStateToProps = state => {
       logout: () => dispatch({ type: "SET_LOGOUT" })
     };
   }; 
-  export default connect(
+  export default   connect(
     mapStateToProps,
     mapDispatchToProps 
   )(NavBar);

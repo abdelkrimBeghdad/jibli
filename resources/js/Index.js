@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import ReactDOM from 'react-dom';
 
 import NavBar from './components/NavBar';
@@ -8,41 +8,46 @@ import Contact from './components/Contact';
 import Carousel from './components/Carousel';
 import Offre_To_Client from './components/Offre_to_Client';
 import store from './components/Store';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import cookie from 'js-cookie';
 import jwt from 'jsonwebtoken';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import RightSideBar from './components/RightSideBar';
+import { Router,Redirect } from 'react-router-dom'
+import './components/i18n';
+
+
+
 
 const jwt_secret = 'my4dlu7JnwoGqPymg3jdF1uowWUEthk9hd33KPqLLbpCBS4AW8vAU6WNHgGccEsZ'
 
 let token = cookie.get("token");
 
 
-if(token){
+if (token) {
 
 
-jwt.verify(token, jwt_secret, (err, decoded) => {
-  if (err) {
-    cookie.remove("token");
-    token = null;
-  }
-  else {
-    const d = ["http://jiblii.herokuapp.com/api/auth/login","http://jiblii.herokuapp.com/api/auth/google/callback"]
-    console.log('T/F', !d.includes(decoded.iss))
-    if(!d.includes(decoded.iss)){
+  jwt.verify(token, jwt_secret, (err, decoded) => {
+    if (err) {
       cookie.remove("token");
       token = null;
     }
-    
-  }
-console.log('err',err);
+    else {
+      const d = ["http://jiblii.herokuapp.com/api/auth/login", "http://jiblii.herokuapp.com/api/auth/google/callback"]
+      console.log('T/F', !d.includes(decoded.iss))
+      if (!d.includes(decoded.iss)) {
+        cookie.remove("token");
+        token = null;
+      }
 
-console.log('decoded');
+    }
+    console.log('err', err);
 
-console.log('decoded',decoded);
-})
+    console.log('decoded');
+
+    console.log('decoded', decoded);
+  })
 }
 /* if (token) {
   jwt.verify(token, jwt_secret, (err, decoded) => {
@@ -65,30 +70,31 @@ console.log('decoded',decoded);
 } */
 
 
-const render = () =>{
- ReactDOM.render(
-                <Provider store={store}>  
-                <RightSideBar />
-{/*                   <Contact /> */}
-                  <NavBar />
-                 
-                 
-               </Provider> 
-               , document.getElementById('example')
-   )
+const render = () => {
+  ReactDOM.render(
+    <Provider store={store}>
+      <Suspense fallback={<div>Loading....</div>}>
+        <RightSideBar />
+        {/* <Contact /> */}
+        <NavBar />
+
+      </Suspense>
+    </Provider>
+    , document.getElementById('example')
+  )
 }
 
 
 if (token) {
-    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-   // axios.post("http://127.0.0.1:8000/api/auth/me").then(res => {
-    axios.post("https://jiblii.herokuapp.com/api/auth/me").then(res => {
-      console.log(res.data)
-      console.log('res.data')
+  axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  // axios.post("http://127.0.0.1:8000/api/auth/me").then(res => {
+  axios.post("https://jiblii.herokuapp.com/api/auth/me").then(res => {
+    console.log(res.data)
+    console.log('res.data')
 
-      store.dispatch({ type: "SET_LOGIN", payload: res.data });
-      render();
-    });
-  } else {
+    store.dispatch({ type: "SET_LOGIN", payload: res.data });
     render();
-  }
+  });
+} else {
+  render();
+}

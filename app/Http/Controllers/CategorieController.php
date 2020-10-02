@@ -45,8 +45,38 @@ class CategorieController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        Categorie::create($request->all());
+        request()->validate([
+
+            'image' => 'nullable|sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+            $date=date('YmdHis');
+        if($request->hasFile('image'))
+        {   $image = $request->file('image');
+            $fileName= $request->name.'_'.$date.'.'.$image->getClientOriginalExtension();
+    
+            $destinationPath = public_path('/upload/image');
+            $img = Image::make($image->getRealPath());
+            $img->resize(250, 250, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($destinationPath.'/'.$fileName);
+    
+            $destinationPath = public_path('/images');
+            $image->move($destinationPath, $fileName);
+            
+         
+        }else{ 
+            $fileName = 'noImage.png';
+        }
+
+       
+        $form_data = array(
+            'name'        =>   $request->name,
+            'name_ar'        =>   $request->name_ar,
+            'image'            =>   $fileName
+        );
+
+
+        Categorie::create($form_data);
         return redirect('Admin/categorie/create')->with('success', 'Categorie saved!');
     }
 

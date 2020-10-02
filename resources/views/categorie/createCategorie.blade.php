@@ -22,6 +22,20 @@
                           <input type="text" class="form-control" name="name" id="name" >
                         </div>
                     </div>
+
+                    <div class="form-group row">
+                      <label for="name_ar" class="col-sm-2 col-form-label">Name Arabic</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" name="name_ar" id="name_ar" >
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label for="image" class="col-sm-2 col-form-label">image</label>
+                      <div class="col-sm-10">
+                        <input type="file" name="image" id="image" class="form-control-file">
+                      </div>
+                    </div>
                      <button type="submit" class="btn btn-primary">submit</button>     
                 </form>
             </div>

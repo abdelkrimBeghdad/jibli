@@ -3,6 +3,9 @@ import axios from "axios";
 import cookie from 'js-cookie';
 import {connect} from 'react-redux';
 import AuthErrors from './AuthErrors';
+import { Trans } from 'react-i18next';
+
+import { withTranslation } from 'react-i18next';
 
 
 class Login extends Component {
@@ -39,15 +42,18 @@ class Login extends Component {
         
     }
 
-
+    
     render() {
+      const  {t,i18n} =this.props
+        
         const error = this.state.errors
         return (
             <div className="container" style={{ paddingTop: '180px', paddingBottom: '180px'}}>
                 <div className="row justify-content-center">
                     <div className="col-md-8">
                         <div className="card">
-                            <div className="card-header">Login</div>
+                       
+                            <div className="card-header"><Trans>Login</Trans></div>
 
                             <div className="card-body">
                                 <form onSubmit={this.handelForm}>
@@ -61,7 +67,7 @@ class Login extends Component {
                                     <div className="form-group row">
                                    
                                         <label className="col-md-4 col-form-label text-md-right">
-                                            Email
+                                            {t('Email')}
                                         </label>
                                         <div className="col-md-6">
                                             <input
@@ -82,7 +88,7 @@ class Login extends Component {
                                     </div>
                                     <div className="form-group row">
                                         <label className="col-md-4 col-form-label text-md-right">
-                                            Password
+                                            {t('Password')}
                                         </label>
                                         <div className="col-md-6">
                                             <input
@@ -112,7 +118,7 @@ class Login extends Component {
                                                 className="btn btn-primary"
                                             >
                                                
-                                                Login
+                                                {t('Login')}
                                             </button>
                                         </div>
                                     </div>
@@ -130,4 +136,4 @@ const mapDispatchToProps = dispatch => {
       setLogin: user => dispatch({ type: "SET_LOGIN", payload: user })
     };
   };
-  export default connect(null,mapDispatchToProps)(Login);
+  export default  withTranslation()(connect(null,mapDispatchToProps)(Login));

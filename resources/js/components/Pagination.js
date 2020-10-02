@@ -12,11 +12,11 @@ const Pagination = ({itemsPerPage , totalIems ,paginate}) =>{
         pageNumbers.push(i);
     }
     return(
-        <nav>
+        <nav className='pagination justify-content-center' style={{color:'white',cursor: 'pointer'}}>
             <ul className='pagination'>
                 {pageNumbers.map(number => (
-                    <li key={number} className='page-item'>
-                        <a onClick={()=>paginate(number)}  className='page-link'>
+                    <li key={number} className='page-item' >
+                        <a onClick={()=>paginate(number)}  className='page-link'  style={{backgroundColor:'#38c172'}}>
                             {number}
                         </a>
                     </li>

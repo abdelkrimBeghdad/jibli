@@ -7,11 +7,6 @@
     height: 94px;
     background-color: #009e7f;
  */
- 
-
-
-
-
     box-sizing: inherit;
 font-family: Lato, sans-serif;
 margin: 0px;
@@ -42,34 +37,12 @@ outline: 0px;
  .h2{
      background-color: wheat;
  }
- 
-
-
-
-
- /*
-    DEMO STYLE
-*/
-
-
-.navbar {
-  padding: 15px 10px;
-  background: #fff;
-  border: none;
-  border-radius: 0;
-  margin-bottom: 40px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
 
 /* ---------------------------------------------------
   SIDEBAR STYLE
 ----------------------------------------------------- */
-
 .wrapper {
- 
   display: block;
-
 }
 
 #sidebar { overflow-y: scroll;
@@ -80,75 +53,25 @@ outline: 0px;
   color: black;
   transition: all 0.3s;
   right:0;
-  
   height: 100vh;
   /* top layer */
   z-index: 9999;
 }
 
-
-
-#sidebar .sidebar-header {
-  padding: 20px;
-  background: #ffffff;
-}
-
-#sidebar .sidebar-header strong {
-  display: none;
-  font-size: 1.1em;
-}
-
-
-/* ---------------------------------------------------
-  CONTENT STYLE
------------------------------------------------------ */
-
-#content {
-  width: 100%;
-  padding: 20px;
-  min-height: 100vh;
-  transition: all 0.3s;
-}
-
 /* ---------------------------------------------------
   MEDIAQUERIES
 ----------------------------------------------------- */
-
 @media (max-width: 268px) {
   #sidebar {
       min-width: 80px;
       max-width: 80px;
       text-align: center;
       margin-left: -80px !important;
-  }
-  .dropdown-toggle::after {
-      top: auto;
-      bottom: 10px;
-      right: 50%;
-      -webkit-transform: translateX(50%);
-      -ms-transform: translateX(50%);
-      transform: translateX(50%);
-  }
-  
-  
-  #sidebar .sidebar-header strong {
-      display: block;
-  }
-  
-  
+  } 
   #sidebar {
       margin-left: 0;
   }
-  #sidebarCollapse span {
-      display: none;
-  }
 }
-
-
-
-
-
-
 
 .spanItems{
   cursor: pointer;

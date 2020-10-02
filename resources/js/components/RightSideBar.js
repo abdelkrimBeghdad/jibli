@@ -4,6 +4,9 @@ import './RightSideBar.css';
 import {connect} from 'react-redux';
 import SideBar from './sideBar';
 
+import { withTranslation } from 'react-i18next';
+
+
 class RightSideBar extends React.Component{
 
         state={
@@ -15,17 +18,17 @@ class RightSideBar extends React.Component{
         }
 
     render(){
-      
+        const {t} =this.props;
         const { cartItems } = this.props;
         const price =cartItems.reduce((a, c) => (a + c.price * c.count), 0)
         return(
             <div>
         <div className='sidebar ' onClick={()=>this.operation()}>
   
-           <span className='spanItems'>{cartItems.length}  Items</span>
+           <span className='spanItems'>{cartItems.length}  {t('Items')}</span>
       
 
-           <span className="spanPrice">{price} Da</span>
+           <span className="spanPrice">{price} {t('Da')}</span>
             {/* {cartItems.length === 0  ? "0" : <h6>You have  items in the basket.</h6> }
              */}
            {/*  {price === 0 ? <div>0</div>: <h2><span  className="badge badge-light">{price} DA</span></h2>} */}
@@ -33,7 +36,7 @@ class RightSideBar extends React.Component{
          </div>
          
          <div >
-      
+    
          {this.state.ShowMe ?
              <SideBar onClick={this.operation.bind(this)}/>
          :null
@@ -53,7 +56,7 @@ class RightSideBar extends React.Component{
       id_user: state.auth.user.id,
   })
 
-  export default connect(mapStateToProps)(RightSideBar);
+  export default withTranslation()( connect(mapStateToProps)(RightSideBar));
     
     
 

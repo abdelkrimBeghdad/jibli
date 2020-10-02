@@ -8,7 +8,7 @@ use App\Products;
 
 class Categorie extends Model
 {
-    protected $fillable = ['name']; 
+    protected $fillable = ['name','name_ar','image']; 
     public function product() {
         return $this->hasMany(Products::class);
     }
