@@ -184,7 +184,7 @@
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         @foreach (auth()->user()->unreadNotifications as $unreadNotification)
-                                    <a href="{{route('showNotification',['order' =>$unreadNotification->data['ordersId'], 'notification' => $unreadNotification->id])}}" class="dropdown-item"><strong>{{$unreadNotification->data['lastNameUser']}}
+                                    <a href="{{route('showNotification',['order' =>$unreadNotification->data['ordersId'], 'notification' => $unreadNotification->id])}}" class="dropdown-item"><strong>
                                         {{$unreadNotification->data['firstNameUser']}}</strong> has an order </a>
                                         @endforeach
                                        </div> 
