@@ -111559,7 +111559,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
 var SideBar =
 /*#__PURE__*/
 function (_Component) {
@@ -111625,7 +111624,7 @@ function (_Component) {
       if (redirect) {
         this.props.resetCart();
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Redirect"], {
-          to: "/Login"
+          to: "/product"
         });
       }
 
