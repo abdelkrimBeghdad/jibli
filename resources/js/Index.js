@@ -76,8 +76,9 @@ const render = () => {
       <Suspense fallback={<div>Loading....</div>}>
         <RightSideBar />
         {/* <Contact /> */}
+        <Router>
         <NavBar />
-
+        </Router>
       </Suspense>
     </Provider>
     , document.getElementById('example')
