@@ -104,7 +104,7 @@ class SideBar extends Component {
                                 </ul>
 
 
-                                {!props.loggedIn ? ( <Redirect to="/login" /> ) :
+                                {!this.props.loggedIn ? ( <Redirect to="/login" /> ) :
                                 
                                 <div className='divFooter'>
                                     <button className="footer" onClick={this.validate}>
@@ -133,5 +133,7 @@ class SideBar extends Component {
 const mapStateToProps = state => ({
     cartItems: state.cart.items,
     id_user: state.auth.user.id,
+    loggedIn: state.auth.loggedIn,
+
 })
 export default withTranslation()(connect(mapStateToProps, {resetCart,removeFromCart, addToCart, decriseToCart })(SideBar));

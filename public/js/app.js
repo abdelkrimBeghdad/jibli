@@ -111701,7 +111701,7 @@ function (_Component) {
           className: "fa fa-trash ",
           "aria-hidden": "true"
         })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
-      })), !props.loggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Redirect"], {
+      })), !this.props.loggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Redirect"], {
         to: "/login"
       }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "divFooter"
@@ -111724,7 +111724,8 @@ function (_Component) {
 var mapStateToProps = function mapStateToProps(state) {
   return {
     cartItems: state.cart.items,
-    id_user: state.auth.user.id
+    id_user: state.auth.user.id,
+    loggedIn: state.auth.loggedIn
   };
 };
 
