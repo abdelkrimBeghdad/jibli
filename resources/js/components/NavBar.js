@@ -29,7 +29,6 @@ import Search from './Search';
 
 
 import { useTranslation } from 'react-i18next';
-import sideBar from './sideBar';
 
 
 
@@ -158,7 +157,6 @@ import sideBar from './sideBar';
                         {<Route exact path="/product" component={App} />} */}
                         {<Route exact path="/" component={Carousel} />}
                         {<AuthRoute exact path="/cart" component={Cart} />}
-                        {<AuthRoute exact path="/side" component={sideBar} />}
                         {<Route exact path="/product" component={App} />}
 
 

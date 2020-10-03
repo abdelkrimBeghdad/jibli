@@ -41,8 +41,11 @@ class SideBar extends Component {
         const { redirect } = this.state;
       
         if(redirect)
-        {    this.props.resetCart()
+        {   <Router>
+             this.props.resetCart()
             return <Redirect to='/' />;
+               </Router>
+       
         }
         return (
             <div className="wrapper">

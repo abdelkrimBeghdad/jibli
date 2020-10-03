@@ -109723,7 +109723,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _LoginGoogle__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./LoginGoogle */ "./resources/js/components/LoginGoogle.js");
 /* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./Search */ "./resources/js/components/Search.js");
 /* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/es/index.js");
-/* harmony import */ var _sideBar__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./sideBar */ "./resources/js/components/sideBar.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -109731,7 +109730,6 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 
 
 
@@ -109900,10 +109898,6 @@ function NavBar(props) {
     exact: true,
     path: "/cart",
     component: _Cart__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AuthRoute__WEBPACK_IMPORTED_MODULE_17__["default"], {
-    exact: true,
-    path: "/side",
-    component: _sideBar__WEBPACK_IMPORTED_MODULE_25__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     exact: true,
     path: "/product",
@@ -111628,10 +111622,9 @@ function (_Component) {
       var redirect = this.state.redirect;
 
       if (redirect) {
-        this.props.resetCart();
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Redirect"], {
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["BrowserRouter"], null, "this.props.resetCart() return ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Redirect"], {
           to: "/"
-        });
+        }), ";");
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
