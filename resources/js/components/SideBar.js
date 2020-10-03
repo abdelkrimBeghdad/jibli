@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Basket from './Basket';
 import { removeFromCart, addToCart, decriseToCart,resetCart  } from './action/cartAction';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router';
+import { Redirect } from "react-router-dom";
 
 import { withTranslation } from 'react-i18next';
 import {BrowserRouter , Route, Link ,Switch,HashRouter  } from "react-router-dom";
