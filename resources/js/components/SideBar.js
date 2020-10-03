@@ -44,8 +44,9 @@ class SideBar extends Component {
         {    this.props.resetCart();
             
             
-          <BrowserRouter >  <Redirect to='/Login' /> </BrowserRouter >  
-            
+        return <Redirect to='/Login' /> 
+       
+  
            
         }
         return (
