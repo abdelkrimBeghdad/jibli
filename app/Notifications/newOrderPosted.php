@@ -66,7 +66,7 @@ class newOrderPosted extends Notification
         return [
             'ordersUser_id' =>$this->orders->user_id,
             'firstNameUser' => $this->orders->user_id,
-            'lastNameUser' => $this->orders->userName->lastName,
+            'lastNameUser' => $this->orders->userName->name,
             'ordersnbrOrder' =>$this->orders->nbrOrder,
             'ordersTotale' =>$this->orders->priceTotale,
             'ordersId' =>$this->orders->id,
