@@ -45,7 +45,7 @@
                         @foreach ($order as $item)
                         <tr>
                             <td scope="row">{{$item->id}}</td>
-                        <td>{{$item->userName->name}} </td>
+                        <td>$item->userName->name </td>
                         <td>{{$item->userName->email}}</td>
                             
                            {{--  <td >
