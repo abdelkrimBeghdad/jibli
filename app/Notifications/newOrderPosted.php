@@ -62,11 +62,11 @@ class newOrderPosted extends Notification
      */
     public function toArray($notifiable)
     {   $user =auth('api')->user();
-            dd($user);
+
         return [
             'ordersUser_id' =>$this->orders->user_id,
             'firstNameUser' => $this->orders->user_id,
-            'lastNameUser' => $this->orders->userName->name,
+            'lastNameUser' => $this->orders->userName->lastName,
             'ordersnbrOrder' =>$this->orders->nbrOrder,
             'ordersTotale' =>$this->orders->priceTotale,
             'ordersId' =>$this->orders->id,
