@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Basket from './Basket';
 import { removeFromCart, addToCart, decriseToCart,resetCart  } from './action/cartAction';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Route, NavLink } from "react-router-dom";
 
 import { withTranslation } from 'react-i18next';
 
@@ -104,14 +104,14 @@ class SideBar extends Component {
                                 </ul>
 
 
-
-
+                                {!props.loggedIn ? ( <Redirect to="/login" /> ) :
+                                
                                 <div className='divFooter'>
                                     <button className="footer" onClick={this.validate}>
                                         <a className="checkout">Checkout</a>
                                         <span className="s">{cartItems.reduce((a, c) => (a + c.price * c.count), 0)}Da</span>
                                     </button>
-                                </div>
+                                </div>}
                             </div>
 
 

@@ -111701,7 +111701,9 @@ function (_Component) {
           className: "fa fa-trash ",
           "aria-hidden": "true"
         })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), !props.loggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Redirect"], {
+        to: "/login"
+      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "divFooter"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "footer",
