@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Basket from './Basket';
 import { removeFromCart, addToCart, decriseToCart,resetCart  } from './action/cartAction';
 import { connect } from 'react-redux';
-import { Redirect, Route, NavLink } from "react-router-dom";
+import { Redirect } from 'react-router';
 
 import { withTranslation } from 'react-i18next';
 
@@ -34,21 +34,14 @@ class SideBar extends Component {
         })
         .catch(e => this.setState({ errors: e.response.data }));
     }
-    render() { 
+    render() {
         const { onClick } = this.props;
         const { cartItems } = this.props;
         const {t} =this.props;
         const { redirect } = this.state;
-      
         if(redirect)
-        {  this.props.resetCart()
-           
-             return(  <Route><Redirect  to={{
-                pathname: "/login",
-                state: { from: props.location }
-              }}/></Route>)
-              
-       
+        {    this.props.resetCart()
+            return <Redirect to='/product' />;
         }
         return (
             <div className="wrapper">
@@ -109,19 +102,16 @@ class SideBar extends Component {
 
                                     }
                                 </ul>
-<Route>
 
-                                 {!this.props.loggedIn ? ( <Redirect to="/login" /> ) :
-                                
+
+
+
                                 <div className='divFooter'>
                                     <button className="footer" onClick={this.validate}>
                                         <a className="checkout">Checkout</a>
                                         <span className="s">{cartItems.reduce((a, c) => (a + c.price * c.count), 0)}Da</span>
                                     </button>
                                 </div>
-    }
-</Route>
-        
                             </div>
 
 
@@ -143,7 +133,5 @@ class SideBar extends Component {
 const mapStateToProps = state => ({
     cartItems: state.cart.items,
     id_user: state.auth.user.id,
-    loggedIn: state.auth.loggedIn,
-
 })
 export default withTranslation()(connect(mapStateToProps, {resetCart,removeFromCart, addToCart, decriseToCart })(SideBar));
