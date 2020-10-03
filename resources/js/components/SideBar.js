@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Basket from './Basket';
 import { removeFromCart, addToCart, decriseToCart,resetCart  } from './action/cartAction';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router ,Redirect, Route, NavLink } from "react-router-dom";
+import { Redirect, Route, NavLink } from "react-router-dom";
 
 import { withTranslation } from 'react-i18next';
 
@@ -43,7 +43,10 @@ class SideBar extends Component {
         if(redirect)
         {  this.props.resetCart()
            
-             return(  <Router><Redirect to='/' /></Router>)
+             return(  <Route><Redirect  to={{
+                pathname: "/login",
+                state: { from: props.location }
+              }}/></Route>)
               
        
         }
@@ -106,17 +109,18 @@ class SideBar extends Component {
 
                                     }
                                 </ul>
+<Route>
 
-
-                                {/* {!this.props.loggedIn ? ( <Redirect to="/login" /> ) :
- */}                                
+                                 {!this.props.loggedIn ? ( <Redirect to="/login" /> ) :
+                                
                                 <div className='divFooter'>
                                     <button className="footer" onClick={this.validate}>
                                         <a className="checkout">Checkout</a>
                                         <span className="s">{cartItems.reduce((a, c) => (a + c.price * c.count), 0)}Da</span>
                                     </button>
                                 </div>
-
+    }
+</Route>
         
                             </div>
 
