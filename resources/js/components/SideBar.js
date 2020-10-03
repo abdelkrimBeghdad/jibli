@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router';
 
 import { withTranslation } from 'react-i18next';
+import {BrowserRouter , Route, Link ,Switch,HashRouter  } from "react-router-dom";
 
 
 class SideBar extends Component {
@@ -41,7 +42,11 @@ class SideBar extends Component {
         const { redirect } = this.state;
         if(redirect)
         {    this.props.resetCart()
-            return <Redirect to='/product' />;
+            
+            
+                return ( <BrowserRouter >  <Redirect to='/product' /> </BrowserRouter >  )
+            
+           
         }
         return (
             <div className="wrapper">
