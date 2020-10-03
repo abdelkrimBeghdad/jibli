@@ -34,15 +34,15 @@ class SideBar extends Component {
         })
         .catch(e => this.setState({ errors: e.response.data }));
     }
-    render() {
+    render() { 
         const { onClick } = this.props;
         const { cartItems } = this.props;
         const {t} =this.props;
         const { redirect } = this.state;
+      
         if(redirect)
         {    this.props.resetCart()
-            return <Router>
-            <Redirect to='/product' /></Router>
+            return <Redirect to='/' />;
         }
         return (
             <div className="wrapper">
