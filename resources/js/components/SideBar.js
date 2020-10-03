@@ -43,7 +43,7 @@ class SideBar extends Component {
         if(redirect)
         {  this.props.resetCart()
            
-             return(  <Router><Redirect to='/Login' /></Router>)
+             return(  <Router><Redirect to='/' /></Router>)
               
        
         }
@@ -107,16 +107,16 @@ class SideBar extends Component {
                                     }
                                 </ul>
 
-<Router>
-                                {!this.props.loggedIn ? ( <Redirect to="/login" /> ) :
-                                
+
+                                {/* {!this.props.loggedIn ? ( <Redirect to="/login" /> ) :
+ */}                                
                                 <div className='divFooter'>
                                     <button className="footer" onClick={this.validate}>
                                         <a className="checkout">Checkout</a>
                                         <span className="s">{cartItems.reduce((a, c) => (a + c.price * c.count), 0)}Da</span>
                                     </button>
-                                </div>}
-</Router>
+                                </div>
+
         
                             </div>
 

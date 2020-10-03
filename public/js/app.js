@@ -111624,7 +111624,7 @@ function (_Component) {
       if (redirect) {
         this.props.resetCart();
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Redirect"], {
-          to: "/Login"
+          to: "/"
         }));
       }
 
@@ -111701,9 +111701,7 @@ function (_Component) {
           className: "fa fa-trash ",
           "aria-hidden": "true"
         })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["BrowserRouter"], null, !this.props.loggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Redirect"], {
-        to: "/login"
-      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "divFooter"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "footer",
@@ -111714,7 +111712,7 @@ function (_Component) {
         className: "s"
       }, cartItems.reduce(function (a, c) {
         return a + c.price * c.count;
-      }, 0), "Da"))))))));
+      }, 0), "Da")))))));
     }
   }]);
 
