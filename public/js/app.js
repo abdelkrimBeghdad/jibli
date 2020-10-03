@@ -111623,7 +111623,7 @@ function (_Component) {
 
       if (redirect) {
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["BrowserRouter"], null, "this.props.resetCart() return ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Redirect"], {
-          to: "/"
+          to: "/Login"
         }), ";");
       }
 
